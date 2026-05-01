@@ -1,0 +1,14 @@
+{
+  "name": "gentlelaughter-website",
+  "version": "1.0.0",
+  "description": "Gentle Laughter — produção, agenciamento, nove linhas. Site estático.",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve .",
+    "purge": "npx purgecss --css css/styles.css --content '*.html' --output css/styles.purged.css",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "devDependencies": {
+    "purgecss": "^7.0.2"
+  }
+}

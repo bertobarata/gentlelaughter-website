@@ -1,0 +1,81 @@
+/**
+ * Gentle Laughter — Service Worker
+ * Cache-first for static, network-first for HTML.
+ * Bump CACHE_NAME when shipping changes that touch precached assets.
+ */
+
+const CACHE_NAME = 'gl-cache-v2';
+const RUNTIME_CACHE = 'gl-runtime-v2';
+
+const PRECACHE_ASSETS = [
+  './',
+  'index.html',
+  'css/styles.css?v=2',
+  'js/site.js',
+  'js/cookie-consent.js',
+  'manifest.json',
+  'assets/logos/azul-removebg-preview.png',
+  'assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-preview.png'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(PRECACHE_ASSETS).catch(() => {}))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((names) =>
+      Promise.all(
+        names
+          .filter((n) => n !== CACHE_NAME && n !== RUNTIME_CACHE)
+          .map((n) => caches.delete(n))
+      )
+    ).then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  if (url.origin !== location.origin) return;
+  if (request.method !== 'GET') return;
+
+  if (request.mode === 'navigate' || request.destination === 'document') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(RUNTIME_CACHE).then((c) => c.put(request, clone));
+          return response;
+        })
+        .catch(() => caches.match(request).then((r) => r || caches.match('index.html')))
+    );
+    return;
+  }
+
+  if (['style', 'script', 'image', 'font'].includes(request.destination)) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          if (!response || response.status !== 200 || response.type === 'error') return response;
+          const clone = response.clone();
+          caches.open(RUNTIME_CACHE).then((c) => c.put(request, clone));
+          return response;
+        });
+      })
+    );
+    return;
+  }
+
+  event.respondWith(fetch(request).catch(() => caches.match(request)));
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data === 'skipWaiting') self.skipWaiting();
+});

@@ -1,0 +1,19 @@
+{
+  "name": "Gentle Laughter",
+  "short_name": "Gentle Laughter",
+  "description": "Produção de eventos, agenciamento de artistas, efeitos especiais e mais. Um só interlocutor, 24/7.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#eae0d5",
+  "background_color": "#eae0d5",
+  "icons": [
+    {
+      "src": "assets/logos/logo-2026.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
