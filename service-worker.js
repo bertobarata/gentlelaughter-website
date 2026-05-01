@@ -4,18 +4,17 @@
  * Bump CACHE_NAME when shipping changes that touch precached assets.
  */
 
-const CACHE_NAME = 'gl-cache-v2';
-const RUNTIME_CACHE = 'gl-runtime-v2';
+const CACHE_NAME = 'gl-cache-v7';
+const RUNTIME_CACHE = 'gl-runtime-v7';
 
 const PRECACHE_ASSETS = [
   './',
   'index.html',
-  'css/styles.css?v=2',
+  'css/styles.css?v=8',
   'js/site.js',
   'js/cookie-consent.js',
   'manifest.json',
-  'assets/logos/azul-removebg-preview.png',
-  'assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-preview.png'
+  'assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png'
 ];
 
 self.addEventListener('install', (event) => {
