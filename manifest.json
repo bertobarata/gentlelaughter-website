@@ -13,7 +13,7 @@
       "src": "assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable any"
     }
   ]
 }

@@ -59,14 +59,22 @@
       // Check if URL has a specific intent
       var params = new URLSearchParams(window.location.search);
       var isBookCall = params.get('intent') === 'book-a-call';
+      var isGuide    = params.get('intent') === 'guide';
       
       if (isBookCall) {
         var asideH1 = document.querySelector('.form-aside h1');
         if (asideH1) asideH1.textContent = 'Marcar Chamada. / Book a Call.';
       }
 
+      if (isGuide) {
+        var asideH1 = document.querySelector('.form-aside h1');
+        if (asideH1) asideH1.textContent = 'Receber Guia Gratuito.';
+        var asideP = document.querySelector('.form-aside p');
+        if (asideP) asideP.textContent = 'Preencha os dados e peça o seu guia prático via WhatsApp.';
+      }
+
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
+        // ... (existing validation) ...
         if (form.checkValidity && !form.checkValidity()) {
           form.reportValidity();
           return;
@@ -78,21 +86,24 @@
         var email    = (data.get('email')    || '').toString().trim();
         var assunto  = (data.get('assunto')  || '').toString().trim();
         var msg      = (data.get('mensagem') || '').toString().trim();
+        var pref     = (data.get('preferencia') || 'WhatsApp').toString().trim();
 
         var lines = [];
         if (isBookCall) {
           lines.push('Olá Gentle Laughter, gostaria de MARCAR UMA CHAMADA:');
+        } else if (isGuide) {
+          lines.push('Olá, gostaria de receber o vosso GUIA GRATUITO de planeamento.');
         } else {
-          lines.push('Olá Gentle Laughter,');
+          lines.push('Olá, tenho interesse na linha: ' + assunto);
         }
         lines.push('');
         if (nome || apelido) lines.push('Nome: ' + (nome + ' ' + apelido).trim());
-        if (assunto)         lines.push('Interesse: ' + assunto);
         if (email)           lines.push('Email: ' + email);
         if (telefone)        lines.push('Telefone: ' + telefone);
+        if (pref)            lines.push('Preferência de contacto: ' + pref);
         if (msg) {
           lines.push('');
-          lines.push('Mensagem: ' + msg);
+          lines.push('Detalhes: ' + msg);
         }
         var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
         window.open(url, '_blank', 'noopener');
@@ -102,6 +113,11 @@
           status.hidden = false;
           status.textContent = 'A abrir o WhatsApp com a sua mensagem. Se nada acontecer, contacte-nos directamente.';
         }
+
+        // Redirect to success page after 2 seconds
+        setTimeout(function() {
+          window.location.href = 'sucesso.html';
+        }, 2000);
       });
     }
 

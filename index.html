@@ -36,7 +36,7 @@
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="formulario.html">Contacto</a></li>
+          <li><a href="formulario.html" class="nav-cta">Contacto</a></li>
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
@@ -46,223 +46,126 @@
   </header>
 
   <main>
-    <section class="hero shell" aria-labelledby="hero-title">
-      <p class="eyebrow reveal">Gentle Laughter · Lisboa · Produção e coordenação premium</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow reveal">Gentle Laughter · Produção e logística premium</p>
       <h1 class="hero__wordmark reveal" id="hero-title">
-        Eventos com<br>rigor, presença<br>e personalidade.
+        Produção premium.<br>Execução silenciosa.
       </h1>
       <p class="hero__lede reveal">
-        Produção, agenciamento e operação com um só interlocutor, para marcas, artistas e clientes privados que exigem detalhe, discrição e execução sem ruído.
+        Removemos a complexidade da logística e produção para que se foque no essencial. Eventos, agenciamento e operação com resposta no próprio dia.
       </p>
       <div class="hero__meta reveal">
         <div>
           <strong>Resposta</strong>
-          No próprio dia.
+          Em poucas horas.
         </div>
         <div>
           <strong>Modelo</strong>
-          Coordenação ponta a ponta.
+          Coordenação total.
         </div>
         <div>
-          <strong>Cobertura</strong>
-          Lisboa e todo o país.
+          <strong>Foco</strong>
+          Rigor e discrição.
         </div>
       </div>
     </section>
 
-    <section class="shell" aria-labelledby="index-title">
-      <h2 class="eyebrow reveal" id="index-title" style="margin-bottom: 0.5rem;">Serviços</h2>
+    <!-- Seção de Prova Social (Logos) -->
+    <section class="section--tight shell reveal">
+      <p class="eyebrow" style="text-align: center; margin-bottom: 2rem;">Confiam na nossa coordenação</p>
+      <div class="logo-cloud">
+        <!-- Substituir os spans por <img> quando tiver os logos dos clientes -->
+        <div class="logo-cloud__item">Cliente 01</div>
+        <div class="logo-cloud__item">Cliente 02</div>
+        <div class="logo-cloud__item">Cliente 03</div>
+        <div class="logo-cloud__item">Cliente 04</div>
+        <div class="logo-cloud__item">Cliente 05</div>
+      </div>
+    </section>
 
-      <div class="index">
+    <section class="shell" id="servicos" aria-labelledby="index-title">
+      <div class="section-header">
+        <h2 class="eyebrow reveal" id="index-title">Linhas de Serviço</h2>
+        <p class="section-lede reveal">Soluções modulares para cada etapa da produção.</p>
+      </div>
 
-        <details class="index-row reveal delay-100" id="eventos">
-          <summary>
-            <span class="index-row__num">01</span>
-            <span>
-              <span class="index-row__name">Organização de eventos</span>
-              <span class="index-row__hint">Batizados, casamentos e eventos privados.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Batizados</li>
-              <li>Casamentos</li>
-              <li>Eventos privados</li>
-            </ul>
-            <a class="index-row__cta" href="eventos.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
+      <div class="services-grid">
+        <a href="eventos.html" class="service-card reveal delay-100">
+          <span class="service-card__num">01</span>
+          <h3 class="service-card__title">Organização de Eventos</h3>
+          <p class="service-card__desc">Casamentos, batizados e eventos privados com coordenação ponta a ponta.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="agenciamento.html" class="service-card reveal delay-200">
+          <span class="service-card__num">02</span>
+          <h3 class="service-card__title">Agenciamento de Artistas</h3>
+          <p class="service-card__desc">Booking nacional e internacional com foco no Fado e PALOP.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="prestacao.html" class="service-card reveal delay-300">
+          <span class="service-card__num">03</span>
+          <h3 class="service-card__title">Prestação de Serviços</h3>
+          <p class="service-card__desc">Stagehands, motoristas e equipas operacionais para produções.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="efeitos-especiais.html" class="service-card reveal delay-400">
+          <span class="service-card__num">04</span>
+          <h3 class="service-card__title">Efeitos Especiais</h3>
+          <p class="service-card__desc">Pirotecnia fria, CO2, fumos e confetes com operação licenciada.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="producao.html" class="service-card reveal delay-500">
+          <span class="service-card__num">05</span>
+          <h3 class="service-card__title">Assistência de Produção</h3>
+          <p class="service-card__desc">Cenografia e coordenação técnica de palco para eventos.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="aluguer.html" class="service-card reveal delay-600">
+          <span class="service-card__num">06</span>
+          <h3 class="service-card__title">Aluguer de Equipamento</h3>
+          <p class="service-card__desc">Rádios, baias e material técnico com entrega imediata.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Nova Secção: Portfólio / Casos de Estudo -->
+    <section class="section shell reveal">
+      <div class="two-col">
+        <div>
+          <p class="eyebrow">No Terreno</p>
+          <h2 class="section__title">Resultados que falam por nós.</h2>
+          <p class="lede">Da discrição de um casamento privado à energia de um festival. Veja como aplicamos o rigor Gentle Laughter em cada projeto.</p>
+          <a href="formulario.html" class="btn btn--ghost" style="margin-top: 1.5rem;">Pedir referências</a>
+        </div>
+        <div class="portfolio-highlight">
+          <div class="portfolio-item">
+            <div class="portfolio-item__img" style="background: var(--rule);">
+              <!-- Substituir por foto real: assets/hero-background.webp ou específica -->
+              <span style="opacity: 0.3;">Galeria em breve</span>
+            </div>
+            <div class="portfolio-item__meta">
+              <strong>Produção de Palco</strong>
+              <span>Festival Tejo · 2025</span>
+            </div>
           </div>
-        </details>
+        </div>
+      </div>
+    </section>
 
-        <details class="index-row reveal delay-200" id="agenciamento">
-          <summary>
-            <span class="index-row__num">02</span>
-            <span>
-              <span class="index-row__name">Agenciamento de artistas</span>
-              <span class="index-row__hint">Booking, riders e hospitalidade.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Vanessa Alves</li>
-              <li>Roster internacional</li>
-            </ul>
-            <a class="index-row__cta" href="agenciamento.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal delay-300" id="prestacao">
-          <summary>
-            <span class="index-row__num">03</span>
-            <span>
-              <span class="index-row__name">Prestação de serviços</span>
-              <span class="index-row__hint">Stagehands, transfer e motoristas.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Stagehands</li>
-              <li>Transfer</li>
-              <li>Motoristas</li>
-            </ul>
-            <a class="index-row__cta" href="prestacao.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal delay-400" id="efeitos">
-          <summary>
-            <span class="index-row__num">04</span>
-            <span>
-              <span class="index-row__name">Efeitos especiais</span>
-              <span class="index-row__hint">Pirotecnia fria, CO₂, fumos e confetes.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Pirotecnia</li>
-              <li>CO₂</li>
-              <li>Fumos</li>
-            </ul>
-            <a class="index-row__cta" href="efeitos-especiais.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal delay-500" id="producao">
-          <summary>
-            <span class="index-row__num">05</span>
-            <span>
-              <span class="index-row__name">Assistência de produção</span>
-              <span class="index-row__hint">Cenografia e coordenação técnica.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Cenografia</li>
-              <li>Coordenação</li>
-              <li>Logística</li>
-            </ul>
-            <a class="index-row__cta" href="producao.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal" id="aluguer" style="transition-delay: 600ms;">
-          <summary>
-            <span class="index-row__num">06</span>
-            <span>
-              <span class="index-row__name">Aluguer de equipamentos</span>
-              <span class="index-row__hint">Rádios, baias e material técnico.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Rádios</li>
-              <li>Baias</li>
-              <li>Extintores</li>
-            </ul>
-            <a class="index-row__cta" href="aluguer.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal" id="roulote" style="transition-delay: 700ms;">
-          <summary>
-            <span class="index-row__num">07</span>
-            <span>
-              <span class="index-row__name">Roulote</span>
-              <span class="index-row__hint">Chamuças e wraps para eventos.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Chamuças</li>
-              <li>Wraps</li>
-              <li>Festivais</li>
-            </ul>
-            <a class="index-row__cta" href="roulote.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal" id="parceiros" style="transition-delay: 800ms;">
-          <summary>
-            <span class="index-row__num">08</span>
-            <span>
-              <span class="index-row__name">Parceiros</span>
-              <span class="index-row__hint">Auto, imobiliária, crédito e contabilidade.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Stand de carros</li>
-              <li>Imobiliária</li>
-              <li>Intermediação de crédito</li>
-              <li>Contabilidade</li>
-            </ul>
-            <a class="index-row__cta" href="parceiros.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
-        <details class="index-row reveal" id="livro" style="transition-delay: 900ms;">
-          <summary>
-            <span class="index-row__num">09</span>
-            <span>
-              <span class="index-row__name">Livro</span>
-              <span class="index-row__hint">«A noite de Célio Correia», editado pela Gentle Laughter.</span>
-            </span>
-            <span class="index-row__sigil" aria-hidden="true">+</span>
-          </summary>
-          <div class="index-row__body">
-            <ul class="index-row__sublist">
-              <li>Capa mole</li>
-              <li>À venda na Wook</li>
-            </ul>
-            <a class="index-row__cta" href="livro.html">Saber mais
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </details>
-
+    <!-- Nova Secção: Lead Magnet -->
+    <section class="section--tight shell reveal">
+      <div class="lead-magnet">
+        <div class="lead-magnet__content">
+          <h2 class="lead-magnet__title">Guia: Como planear um evento sem ruído.</h2>
+          <p>Um checklist prático de 20 pontos sobre o que não pode falhar na produção, logística e segurança.</p>
+          <a href="formulario.html?intent=guide" class="btn btn--accent">Receber Guia Gratuito</a>
+        </div>
       </div>
     </section>
 

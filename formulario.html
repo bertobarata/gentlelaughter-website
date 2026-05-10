@@ -103,19 +103,37 @@
 
           <div class="field">
             <label for="f-msg">Mensagem *</label>
-            <textarea id="f-msg" name="mensagem" required placeholder="Conte-nos a data, o local, o número de convidados, e o que é essencial para si."></textarea>
+            <textarea id="f-msg" name="mensagem" required placeholder="Conte-nos os detalhes essenciais: data prevista, local, número de convidados e o que é prioritário para si."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Como prefere ser contactado? *</label>
+            <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+              <label class="check" style="margin: 0;">
+                <input type="radio" name="preferencia" value="WhatsApp" checked />
+                <span>WhatsApp</span>
+              </label>
+              <label class="check" style="margin: 0;">
+                <input type="radio" name="preferencia" value="Email" />
+                <span>Email</span>
+              </label>
+              <label class="check" style="margin: 0;">
+                <input type="radio" name="preferencia" value="Chamada" />
+                <span>Chamada</span>
+              </label>
+            </div>
           </div>
 
           <label class="check">
             <input type="checkbox" name="rgpd" required />
-            <span>Li e aceito a <a href="politica-privacidade.html">Política de Privacidade</a> e os <a href="termos-condicoes.html">Termos</a>.</span>
+            <span>Li e aceito a <a href="politica-privacidade.html">Política de Privacidade</a>.</span>
           </label>
 
           <div class="actions">
-            <button type="submit" class="btn btn--accent">Enviar via WhatsApp
+            <button type="submit" class="btn btn--accent">Enviar Pedido
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <span class="note">Abre uma conversa em <strong>+351 961 154 740</strong>.</span>
+            <span class="note">Iremos processar o seu pedido e responder em poucas horas.</span>
           </div>
 
           <p id="formStatus" hidden role="status" style="margin-top: 1rem; color: var(--ink-soft); font-size: var(--text-sm);"></p>
