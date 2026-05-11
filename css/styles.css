@@ -3,7 +3,7 @@
    Light only. Single source of truth for the visual system.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&f[]=gambarino@400&display=swap');
 
 /* ===== Tokens ===== */
 :root {
@@ -19,8 +19,8 @@
   --shadow-1: 0 4px 20px rgba(39, 36, 28, 0.04);
   --shadow-2: 0 10px 40px rgba(39, 36, 28, 0.08);
 
-  --font-sans:  'Hanken Grotesk', system-ui, sans-serif;
-  --font-serif: 'Fraunces', serif;
+  --font-sans:  'Switzer', system-ui, sans-serif;
+  --font-serif: 'Gambarino', Georgia, serif;
 
   --text-xs:    clamp(0.78rem, 0.76rem + 0.10vw, 0.85rem);
   --text-sm:    clamp(0.88rem, 0.85rem + 0.16vw, 0.98rem);
@@ -70,6 +70,12 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+p {
+  font-family: var(--font-sans);
+}
 img, picture, svg, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; background: none; border: 0; color: inherit; }
@@ -97,6 +103,25 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .prose { max-width: var(--measure); }
 .prose p { margin: 0 0 1em; }
 .prose p + p { margin-top: 1em; }
+.prose a,
+.page-hero__lede a,
+.contact-slab__lede a,
+.service-card__desc a,
+.faq .answer a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(39, 36, 28, 0.24);
+  transition: color 0.2s var(--ease-out), text-decoration-color 0.2s var(--ease-out);
+}
+.prose a:hover,
+.page-hero__lede a:hover,
+.contact-slab__lede a:hover,
+.service-card__desc a:hover,
+.faq .answer a:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
 .prose h2 {
   font-family: var(--font-serif);
   font-size: var(--text-2xl);
@@ -104,6 +129,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   margin: 2.5em 0 0.8em;
   letter-spacing: -0.02em;
 }
+.prose strong { font-weight: 600; color: var(--ink); }
 .prose ul { padding-left: 1.2em; margin: 0 0 1em; }
 .prose li { margin-bottom: 0.35em; }
 
@@ -311,7 +337,6 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .hero__wordmark {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.05em;
   font-size: var(--text-display);
   line-height: 0.82;
@@ -481,12 +506,12 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   color: var(--ink-soft);
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 .page-hero__title {
   font-family: var(--font-serif);
   font-size: var(--text-display);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.04em;
   line-height: 0.9;
   margin: clamp(0.6rem, 2vw, 1.2rem) 0 0;
@@ -499,6 +524,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   max-width: 56ch;
   line-height: 1.4;
 }
+.page-hero--compact .page-hero__title { max-width: 12ch; }
+.page-hero--compact .page-hero__lede { max-width: 48ch; }
 
 /* ===== Section ===== */
 .section { padding-block: clamp(3rem, 6vw, 5.5rem); }
@@ -826,7 +853,6 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   font-family: var(--font-serif);
   font-size: var(--text-3xl);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.03em;
   line-height: 1;
   margin: 0 0 1rem;
@@ -936,6 +962,94 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   color: var(--ink-soft);
   max-width: var(--measure);
   animation: fadeIn 0.3s var(--ease-out) both;
+}
+
+/* ===== Interior page editorial helpers ===== */
+.surface-panel {
+  background: rgba(244, 237, 230, 0.7);
+  border: 1px solid rgba(39, 36, 28, 0.08);
+  border-radius: 28px;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  box-shadow: var(--shadow-1);
+}
+.book-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.book-facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(39, 36, 28, 0.08);
+  font-size: var(--text-sm);
+}
+.book-facts li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.book-facts strong {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.book-facts span {
+  color: var(--ink-soft);
+  text-align: right;
+}
+.partner-directory {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.partner-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  padding: clamp(1.2rem, 2.2vw, 1.6rem) 0;
+  border-top: 1px solid var(--rule);
+}
+.partner-entry:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.partner-entry h2 {
+  margin: 0;
+}
+.partner-entry p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 44ch;
+}
+.inline-note {
+  color: var(--ink-soft);
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+.cta-inline {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .partner-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .book-facts li {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .book-facts span {
+    text-align: left;
+  }
 }
 
 /* ===== Floating WhatsApp ===== */
@@ -1259,7 +1373,6 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   font-family: var(--font-serif);
   font-size: var(--text-3xl);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.03em;
   margin: 0 0 1.5rem;
   color: white;

@@ -1,61 +1,76 @@
-# Ativos em Falta — Gentle Laughter
+# Em Falta — material para melhorar o website
 
-Este documento lista todos os elementos necessários para concluir a modernização do website e garantir o posicionamento **Premium** planeado.
+Lista atualizada do que ainda falta fornecer para substituir placeholders, reforçar credibilidade e fechar páginas que continuam provisórias.
 
-## 1. Fotografia de Alto Impacto (Prioritário)
+## Prioridade alta
 
-Para substituir os fundos abstratos e placeholders, necessitamos de fotografias reais que transmitam "Rigor" e "Quiet Luxury".
+### 1. Logótipos reais para a home
+- Faltam os 5 logótipos da secção "Confiam na nossa coordenação".
+- Neste momento continuam como `Cliente 01` a `Cliente 05`.
+- Ideal:
+  nomes finais + ficheiros em PNG/SVG com fundo transparente.
 
-### A. Imagem de Hero (Home Page)
-*   **O que é:** A primeira imagem que o utilizador vê.
-*   **Descrição:** Uma foto de grande plano ou detalhe que evoque produção de elite. Ex: um técnico de régie focado, um detalhe de um arranjo de luxo, ou o "backstage" de um palco impecável.
-*   **Orientação:** Horizontal (Landscape).
-*   **Estética:** Tons neutros, sépia ou desaturados. Evitar cores berrantes.
+### 2. Portfólio real para a secção "No Terreno"
+- Falta pelo menos 1 caso real para substituir "Galeria em breve".
+- Ideal:
+  1 imagem principal horizontal.
+- Ideal:
+  nome do projeto, tipo de evento, local e ano.
+- Ideal:
+  1 frase curta a explicar o que a Gentle Laughter assegurou nesse trabalho.
 
-### B. Imagens de Portfólio (Secção "No Terreno")
-*   **O que é:** Exemplos reais de eventos realizados.
-*   **Necessário:** 3 a 5 fotos de projetos diferentes.
-*   **Exemplos:**
-    *   Casamento (detalhe da mesa ou cerimónia).
-    *   Festival/Concerto (vista do palco ou efeitos especiais em ação).
-    *   Evento Corporativo (cenografia ou logística).
-*   **Formato:** WebP (preferencial) ou JPG de alta qualidade.
+### 3. Conteúdo legal definitivo
+- `politica-privacidade.html` ainda está em modo provisório.
+- `politica-cookies.html` ainda está em modo provisório.
+- `termos-condicoes.html` ainda está em modo provisório.
+- Falta entregar os textos finais aprovados para publicação.
 
-### C. Fotos por Linha de Serviço
-*   **Linha 04 (Efeitos):** Foto de jactos de CO2 ou pirotecnia fria num momento de clímax.
-*   **Linha 07 (Roulote):** Foto da roulote fardada e iluminada num evento, com os produtos (chamuças/wraps) visíveis.
-*   **Linha 09 (Livro):** Uma foto de estilo "lifestyle" do livro sobre uma mesa de café ou num ambiente de leitura sofisticado.
+## Prioridade média
 
----
+### 4. Parceiros com identidade completa
+- Na página `parceiros.html` ainda faltam dados concretos para:
+  Stand de carros, Imobiliária, Intermediação de crédito, Contabilidade.
+- Para cada parceiro faz falta:
+  nome comercial, descrição curta, benefício para clientes Gentle Laughter e website/contacto.
+- Para `Developer Berto Barata` falta o URL final do website.
 
-## 2. Prova Social e Credibilidade
+### 5. Livro com material editorial
+- A página `livro.html` já está funcional, mas falta reforço visual e comercial.
+- Material útil:
+  capa final em alta resolução, 2 a 3 fotografias do livro, ISBN, número de páginas, excerto curto, preço de capa e disponibilidade além da Wook se existir.
 
-O site está estruturado para mostrar que a Gentle Laughter é uma autoridade no mercado.
+### 6. Prova social
+- Faltam 2 a 4 testemunhos reais de clientes ou parceiros.
+- Ideal:
+  nome, função/empresa, frase curta e autorização para publicar.
 
-### A. Logótipos de Clientes/Parceiros
-*   **O que é:** Lista de 5 a 8 marcas, artistas ou entidades que já trabalharam convosco.
-*   **Formato:** Ficheiros PNG transparentes (se possível, todos em branco ou todos em preto para manter a estética).
+## Prioridade média/baixa
 
-### B. Testemunhos (Citações)
-*   **O que é:** 2 ou 3 frases curtas de clientes satisfeitos.
-*   **Requisito:** Nome do cliente + Cargo/Empresa (ex: "Diretor de Produção, Festival X").
+### 7. Imagens por linha de serviço
+- `efeitos-especiais.html`: foto forte de CO2, pirotecnia fria ou confetti em uso.
+- `producao.html`: imagem de cenografia, backstage ou montagem.
+- `prestacao.html`: imagem de equipa operacional em contexto real.
+- `aluguer.html`: imagem de rádios, baias ou extintores em contexto de produção.
+- `roulote.html`: foto da roulote montada com produto visível.
+- `agenciamento.html`: imagem de palco/artista autorizada para uso.
+- `eventos.html`: imagem de evento real, casamento, batizado ou corporativo.
 
----
+### 8. Ajustes de marca e ativos
+- Falta confirmar se existe um wordmark horizontal próprio além do logo atual em imagem.
+- Falta um conjunto coerente de versões do logo para:
+  favicon, header, footer e partilha social.
+- Falta uma imagem OG dedicada para partilha social da home.
 
-## 3. Conteúdo Específico (Copywriting)
+### 9. Lead magnet prometido na home
+- O site continua a prometer o guia "Como planear um evento sem ruído".
+- Falta o ficheiro PDF final.
+- Falta também confirmar a mecânica:
+  envio automático, download direto ou resposta manual.
 
-### A. Parceiros (Página Parceiros)
-*   Para cada parceiro (Stand, Imobiliária, Crédito, Contabilidade), precisamos:
-    *   Nome da empresa parceira.
-    *   Breve descrição do benefício exclusivo para clientes Gentle Laughter.
-    *   Link para o site deles (opcional).
+## Informação útil para próxima ronda
 
-### B. Lead Magnet (Guia Gratuito)
-*   O site promete um guia "Como planear um evento sem ruído".
-*   **Necessário:** Um documento PDF simples (checklist) com os vossos 20 pontos de ouro sobre produção. *Nota: Posso ajudar a estruturar o texto se me derem os pontos.*
-
----
-
-## 4. Notas Técnicas para o Fotógrafo/Designer
-*   **Rácio:** As fotos de portfólio devem ser consistentes (ex: todas 16:10).
-*   **Espaço Negativo:** As fotos de Hero devem ter "espaço vazio" do lado esquerdo para que o texto do site seja legível por cima da imagem.
+Se estes materiais chegarem, as próximas melhorias de maior impacto são:
+- substituir placeholders da home por prova social real;
+- enriquecer `livro.html` com imagem e dados editoriais;
+- transformar `parceiros.html` numa página com nomes, links e propostas concretas;
+- publicar os textos legais finais para remover o ar provisório dessas páginas.
