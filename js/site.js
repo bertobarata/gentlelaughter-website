@@ -56,54 +56,49 @@
     /* ----- Form to WhatsApp ----- */
     var form = document.getElementById('contactForm');
     if (form) {
-      // Check if URL has a specific intent
       var params = new URLSearchParams(window.location.search);
-      var isBookCall = params.get('intent') === 'book-a-call';
-      var isGuide    = params.get('intent') === 'guide';
-      
-      if (isBookCall) {
-        var asideH1 = document.querySelector('.form-aside h1');
-        if (asideH1) asideH1.textContent = 'Marcar Chamada. / Book a Call.';
-      }
-
-      if (isGuide) {
-        var asideH1 = document.querySelector('.form-aside h1');
-        if (asideH1) asideH1.textContent = 'Receber Guia Gratuito.';
-        var asideP = document.querySelector('.form-aside p');
-        if (asideP) asideP.textContent = 'Preencha os dados e peça o seu guia prático via WhatsApp.';
+      var intent = params.get('intent');
+      var asideH1 = document.querySelector('.form-aside h1');
+      var asideP = document.querySelector('.form-aside p');
+      if (intent === 'book-a-call' && asideH1) {
+        asideH1.textContent = 'Marcar chamada.';
+        if (asideP) asideP.textContent = 'Diga-nos a melhor janela. Confirmamos pelo canal que escolher.';
+      } else if (intent === 'guide' && asideH1) {
+        asideH1.textContent = 'Receber o guia.';
+        if (asideP) asideP.textContent = 'Enviamos o PDF pelo canal indicado.';
+      } else if ((intent === 'vanessa-alves' || intent === 'album') && asideH1) {
+        asideH1.textContent = 'Reservar Vanessa Alves.';
+        if (asideP) asideP.textContent = 'Indique data, local e janela. Tratamos do rider.';
       }
 
       form.addEventListener('submit', function (e) {
-        // ... (existing validation) ...
         if (form.checkValidity && !form.checkValidity()) {
           form.reportValidity();
           return;
         }
+        e.preventDefault();
         var data = new FormData(form);
         var nome     = (data.get('nome')     || '').toString().trim();
-        var apelido  = (data.get('apelido')  || '').toString().trim();
-        var telefone = (data.get('telefone') || '').toString().trim();
-        var email    = (data.get('email')    || '').toString().trim();
+        var contacto = (data.get('contacto') || '').toString().trim();
         var assunto  = (data.get('assunto')  || '').toString().trim();
         var msg      = (data.get('mensagem') || '').toString().trim();
-        var pref     = (data.get('preferencia') || 'WhatsApp').toString().trim();
 
         var lines = [];
-        if (isBookCall) {
-          lines.push('Olá Gentle Laughter, gostaria de MARCAR UMA CHAMADA:');
-        } else if (isGuide) {
-          lines.push('Olá, gostaria de receber o vosso GUIA GRATUITO de planeamento.');
+        if (intent === 'book-a-call') {
+          lines.push('Olá Gentle Laughter, gostaria de marcar uma chamada.');
+        } else if (intent === 'guide') {
+          lines.push('Olá, gostaria de receber o guia de planeamento.');
+        } else if (intent === 'vanessa-alves' || intent === 'album') {
+          lines.push('Olá, pedido de reserva — Vanessa Alves.');
         } else {
           lines.push('Olá, tenho interesse na linha: ' + assunto);
         }
         lines.push('');
-        if (nome || apelido) lines.push('Nome: ' + (nome + ' ' + apelido).trim());
-        if (email)           lines.push('Email: ' + email);
-        if (telefone)        lines.push('Telefone: ' + telefone);
-        if (pref)            lines.push('Preferência de contacto: ' + pref);
+        if (nome)     lines.push('Nome: ' + nome);
+        if (contacto) lines.push('Contacto: ' + contacto);
         if (msg) {
           lines.push('');
-          lines.push('Detalhes: ' + msg);
+          lines.push(msg);
         }
         var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
         window.open(url, '_blank', 'noopener');
@@ -114,16 +109,70 @@
           status.textContent = 'A abrir o WhatsApp com a sua mensagem. Se nada acontecer, contacte-nos directamente.';
         }
 
-        // Redirect to success page after 2 seconds
         setTimeout(function() {
           window.location.href = 'sucesso.html';
         }, 2000);
       });
     }
 
+    /* ----- Sticky mobile CTA bar (service pages + livro/parceiros) ----- */
+    var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    var ctaPages = ['eventos.html','agenciamento.html','prestacao.html','efeitos-especiais.html','producao.html','aluguer.html','roulote.html','livro.html','parceiros.html'];
+    if (ctaPages.indexOf(page) !== -1 && !document.querySelector('.form-page')) {
+      var bar = document.createElement('div');
+      bar.className = 'mobile-cta-bar';
+      bar.innerHTML = '<a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>';
+      document.body.appendChild(bar);
+      document.body.classList.add('has-mobile-cta');
+      if ('IntersectionObserver' in window) {
+        var hideOn = document.querySelectorAll('.contact-slab, .site-footer');
+        if (hideOn.length) {
+          var barObs = new IntersectionObserver(function (entries) {
+            var hide = false;
+            entries.forEach(function (e) { if (e.isIntersecting) hide = true; });
+            bar.classList.toggle('is-hidden', hide);
+          }, { threshold: 0.05 });
+          hideOn.forEach(function (t) { barObs.observe(t); });
+        }
+      }
+    }
+
+    /* ----- WhatsApp float autohide near contact slab + footer ----- */
+    var float = document.querySelector('.whatsapp-float');
+    if (float && 'IntersectionObserver' in window) {
+      var hideTargets = document.querySelectorAll('.contact-slab, .site-footer');
+      if (hideTargets.length) {
+        var hideObs = new IntersectionObserver(function (entries) {
+          var anyVisible = false;
+          entries.forEach(function (e) { if (e.isIntersecting) anyVisible = true; });
+          float.classList.toggle('is-hidden', anyVisible);
+        }, { threshold: 0.05 });
+        hideTargets.forEach(function (t) { hideObs.observe(t); });
+      }
+    }
+
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
+      var SW_GEN = 'gl-sw-v16';
+      var register = function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
+      };
+      if (window.localStorage && localStorage.getItem('sw-gen') !== SW_GEN) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          return Promise.all(regs.map(function (r) { return r.unregister(); }));
+        }).then(function () {
+          if ('caches' in window) {
+            return caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            });
+          }
+        }).then(function () {
+          try { localStorage.setItem('sw-gen', SW_GEN); } catch (e) {}
+          register();
+        }).catch(register);
+      } else {
+        register();
+      }
     }
   });
 })();

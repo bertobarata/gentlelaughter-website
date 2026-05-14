@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_partials.html
+Disallow: /em%20falta.md
+Disallow: /guia-planeamento.md
+
+Sitemap: https://gentlelaughter.com/sitemap.xml

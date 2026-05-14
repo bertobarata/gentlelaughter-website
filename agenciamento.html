@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eae0d5" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
   <title>Agenciamento de artistas — Gentle Laughter</title>
-  <meta name="description" content="Booking de artistas internacionais e dos PALOP. Representação exclusiva de Vanessa Alves. Riders técnicos e hospitalidade para promotores." />
+  <meta name="description" content="Agenciamento de fado. Representação exclusiva de Vanessa Alves. Riders técnicos, transfer e hospitalidade para promotores." />
   <meta property="og:title" content="Agenciamento de artistas — Gentle Laughter" />
-  <meta property="og:description" content="Booking de artistas internacionais e dos PALOP. Representação exclusiva de Vanessa Alves. Riders técnicos e hospitalidade para promotores." />
+  <meta property="og:description" content="Agenciamento de fado. Representação exclusiva de Vanessa Alves. Riders técnicos, transfer e hospitalidade para promotores." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
@@ -25,6 +24,7 @@
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
     </div>
   </header>
@@ -40,8 +40,26 @@
   <main>
     <section class="page-hero shell reveal">
       <p class="page-hero__num">Agenciamento</p>
-      <h1 class="page-hero__title">Agenciamento de artistas.</h1>
-      <p class="page-hero__lede">Booking de artistas internacionais e dos PALOP, com Vanessa Alves a representar o nosso fado. Riders, transfer, hospitalidade e contrato, fechados por uma só pessoa.</p>
+      <h1 class="page-hero__title">Agenciamento de fado.</h1>
+      <p class="page-hero__lede">Representação exclusiva de Vanessa Alves. Riders, transfer, hospitalidade e contrato fechados por uma só pessoa.</p>
+    </section>
+
+    <section class="album-drench reveal" aria-labelledby="album-title" style="background: var(--burgundy); color: #f4ede6; padding: clamp(4rem, 9vw, 7rem) 0; margin-block: clamp(2rem, 5vw, 4rem);">
+      <div class="shell" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center;">
+        <div>
+          <p style="font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; margin: 0 0 1.2rem;">Novo álbum · 2026</p>
+          <h2 id="album-title" style="font-family: var(--font-serif); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1; letter-spacing: -0.02em; margin: 0 0 1.4rem; color: inherit;">Vanessa Alves<br><em style="font-style: italic; opacity: 0.85;">edita o novo álbum</em>.</h2>
+          <p style="font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.6; max-width: 38ch; opacity: 0.92; margin: 0 0 2rem;">Um registo inédito de fado, com repertório próprio e clássicos relidos. Editado em 2026, disponível para escuta online, encomendas e datas de apresentação ao vivo.</p>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <a href="https://www.youtube.com/playlist?list=OLAK5uy_lTNu1NbdA9fhCP00WKHjc3Vp0CNtHYO4c" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px; transition: transform 0.2s ease;">Ouvir álbum →</a>
+            <a href="formulario.html?intent=album" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; background: transparent; color: inherit; border: 1px solid currentColor; font-weight: 500; text-decoration: none; border-radius: 999px;">Marcar concerto</a>
+          </div>
+          <p style="font-family: var(--font-sans); font-size: 0.85rem; opacity: 0.6; margin-top: 2rem; max-width: 42ch;">Ficha técnica completa (editora, estúdio, direcção musical) divulgada quando os créditos forem confirmados.</p>
+        </div>
+        <div style="aspect-ratio: 16 / 9; width: 100%; border-radius: 6px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35);">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_lTNu1NbdA9fhCP00WKHjc3Vp0CNtHYO4c" title="Vanessa Alves — Novo álbum 2026" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%; border: 0; display: block;"></iframe>
+        </div>
+      </div>
     </section>
 
     <section class="section shell">
@@ -50,26 +68,48 @@
           <p class="eyebrow reveal">No detalhe</p>
           <ul class="index-row__sublist" style="margin-top: 0.8rem;">
             <li class="reveal delay-100">Vanessa Alves · Fado</li>
-            <li class="reveal delay-200">Roster internacional</li>
-            <li class="reveal delay-300">PALOP</li>
+            <li class="reveal delay-200">Booking &amp; rider técnico</li>
+            <li class="reveal delay-300">Transfer &amp; hospitalidade</li>
+            <li class="reveal delay-400">Contrato &amp; facturação</li>
+            <li class="reveal delay-500">Backline &amp; backstage</li>
+            <li class="reveal delay-600">Comunicação &amp; imprensa</li>
           </ul>
         </div>
         <div class="prose">
-          <h2 class="reveal">Roster atual</h2>
-          <p class="reveal">Representamos a fadista <strong>Vanessa Alves</strong> em exclusivo. Trabalhamos também, sob consulta, com artistas internacionais e dos PALOP para datas pontuais.</p>
+          <h2 class="reveal">Roster</h2>
+          <p class="reveal">Representamos a fadista <strong>Vanessa Alves</strong> em exclusivo. Voz formada no circuito das casas de fado de Lisboa, com repertório próprio e clássico, escala adaptável: quarteto íntimo (voz, guitarra portuguesa, viola, viola baixo), formato concerto com cordas, ou voz solo para eventos privados.</p>
+
+          <h2 class="reveal">Onde toca</h2>
+          <p class="reveal">Salas de espectáculo, festivais, casas de fado, eventos corporativos, casamentos, embaixadas, programações culturais municipais. Disponível para datas em Portugal, com janela para deslocações internacionais sob consulta.</p>
+
           <h2 class="reveal">O que tratamos</h2>
-          <p class="reveal">Negociação de fee, contrato, rider técnico, alojamento, transfer, refeição e backline local. O artista chega para tocar, o promotor não tem de pensar no resto.</p>
+          <p class="reveal">Negociação de <em>fee</em>, contrato, factura, rider técnico, plano de palco, alojamento, transfer, refeição, backline local, soundcheck e backstage. Comunicação com produção do promotor durante todas as fases. O artista chega para tocar, o promotor não tem de pensar no resto.</p>
+
+          <h2 class="reveal">Como funciona</h2>
+          <ol class="reveal" style="padding-left: 1.2rem; line-height: 1.7;">
+            <li><strong>Pedido</strong> — data, local, tipo de evento, lotação e orçamento de referência.</li>
+            <li><strong>Disponibilidade</strong> — confirmação da agenda e devolução com proposta escrita.</li>
+            <li><strong>Contrato</strong> — assinatura, sinal e rider técnico enviado ao promotor.</li>
+            <li><strong>Pré-produção</strong> — alinhamento técnico, transfer, hospitality e horários.</li>
+            <li><strong>Dia do concerto</strong> — chegada, soundcheck, concerto, debrief.</li>
+            <li><strong>Pós-evento</strong> — factura final e devolução de materiais.</li>
+          </ol>
+
           <h2 class="reveal">Para promotores</h2>
-          <p class="reveal">Disponibilidade e propostas em 24 horas. Para datas próximas, normalmente em horas.</p>
+          <p class="reveal">Pedido de disponibilidade e proposta por escrito, sem ronda de chamadas. Rider técnico e contrato-tipo enviados em PDF. Disponibilidade para reuniões prévias com a produção do promotor sempre que a escala do evento justifique.</p>
+
+          <h2 class="reveal">Para imprensa &amp; programadores</h2>
+          <p class="reveal">Pedidos de entrevista, material gráfico em alta resolução, biografia e historial recente fornecidos sob consulta. Confirmação prévia de agenda obrigatória.</p>
         </div>
       </div>
     </section>
+
 
     <section class="contact-slab reveal">
       <div class="shell contact-slab__inner">
         <div class="contact-slab__info">
           <h2 class="contact-slab__heading">Quer reservar uma data ou pedir uma proposta?</h2>
-          <p class="contact-slab__lede">Resposta no próprio dia. Estamos disponíveis 24/7 para produções em todo o país.</p>
+          <p class="contact-slab__lede">Diga-nos o contexto. Estruturamos a solução certa.</p>
           <div class="contact-slab__cta">
             <a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>
           </div>
@@ -100,8 +140,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -118,6 +158,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>

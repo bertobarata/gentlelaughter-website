@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eae0d5" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
   <title>Parceiros — Gentle Laughter</title>
   <meta name="description" content="Negócios próximos com quem trabalhamos: stand de carros, imobiliária, intermediação de crédito e contabilidade." />
   <meta property="og:title" content="Parceiros — Gentle Laughter" />
@@ -11,9 +12,7 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
@@ -25,6 +24,7 @@
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
     </div>
   </header>
@@ -46,32 +46,11 @@
 
     <section class="section shell">
       <div class="prose reveal" style="max-width: 70ch;">
-        <p>A Gentle Laughter orgulha-se de colaborar com parceiros que partilham o nosso rigor e discrição. Estes contactos são disponibilizados sob consulta direta.</p>
-        <div class="partner-directory">
-          <article class="partner-entry">
-            <h2>Stand de carros <span class="inline-note">· em breve</span></h2>
-            <p>Seleção de viaturas premium e assistência personalizada na aquisição ou aluguer de longa duração.</p>
-          </article>
-
-          <article class="partner-entry">
-            <h2>Imobiliária <span class="inline-note">· em breve</span></h2>
-            <p>Mediação focada em propriedades exclusivas e investimentos de alto valor.</p>
-          </article>
-
-          <article class="partner-entry">
-            <h2>Intermediação de crédito <span class="inline-note">· em breve</span></h2>
-            <p>Estruturação financeira ágil para projetos pessoais ou empresariais.</p>
-          </article>
-
-          <article class="partner-entry">
-            <h2>Contabilidade <span class="inline-note">· em breve</span></h2>
-            <p>Gestão técnica e fiscal para profissionais e empresas do setor criativo.</p>
-          </article>
-
-          <article class="partner-entry">
-            <h2>Developer Berto Barata <span class="inline-note">· website em breve</span></h2>
-            <p>Desenvolvimento web e suporte digital para projetos que exigem uma presença online clara, funcional e bem executada.</p>
-          </article>
+        <p>Trabalhamos com uma rede de parceiros para valências fora do nosso <em>core</em>: stand de viaturas, mediação imobiliária, intermediação de crédito, contabilidade e desenvolvimento web. As introduções são feitas caso a caso, conforme o contexto do pedido.</p>
+        <p>A lista pública de parceiros está em construção. Para propor uma colaboração ou pedir uma introdução, contacte-nos directamente.</p>
+        <div style="margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <a class="btn btn--accent" href="formulario.html?intent=parceria">Propor parceria</a>
+          <a class="btn btn--ghost" href="https://wa.me/351961154740" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
         </div>
       </div>
     </section>
@@ -80,7 +59,7 @@
       <div class="shell contact-slab__inner">
         <div class="contact-slab__info">
           <h2 class="contact-slab__heading">Quer ser apresentado a um parceiro?</h2>
-          <p class="contact-slab__lede">Resposta no próprio dia. Estamos disponíveis 24/7 para produções em todo o país.</p>
+          <p class="contact-slab__lede">Diga-nos o contexto. Estruturamos a solução certa.</p>
           <div class="contact-slab__cta">
             <a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>
           </div>
@@ -111,8 +90,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -129,6 +108,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eae0d5" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
   <title>A noite de Célio Correia — Gentle Laughter</title>
   <meta name="description" content="Livro editado pela Gentle Laughter que explora as nuances da noite e do espetáculo." />
   <meta property="og:title" content="A noite de Célio Correia — Gentle Laughter" />
@@ -11,9 +12,19 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "A noite de Célio Correia",
+    "author": { "@type": "Person", "name": "Célio Correia" },
+    "publisher": { "@type": "Organization", "name": "Gentle Laughter" },
+    "inLanguage": "pt",
+    "url": "https://gentlelaughter.com/livro.html",
+    "offers": { "@type": "Offer", "url": "https://www.wook.pt/livro/a-noite-celio-correia/19051244", "availability": "https://schema.org/InStock" }
+  }
+  </script>
 </head>
 <body>
 
@@ -25,6 +36,7 @@
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -32,7 +44,7 @@
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
     </div>
   </header>
@@ -71,7 +83,7 @@
       <div class="shell contact-slab__inner">
         <div class="contact-slab__info">
           <h2 class="contact-slab__heading">Quer falar sobre o livro ou pedir em quantidade?</h2>
-          <p class="contact-slab__lede">Resposta no próprio dia. Estamos disponíveis 24/7 para produções em todo o país.</p>
+          <p class="contact-slab__lede">Diga-nos o contexto. Estruturamos a solução certa.</p>
           <div class="contact-slab__cta">
             <a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>
           </div>
@@ -102,8 +114,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -120,6 +132,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>

@@ -7,3 +7,5 @@ css/styles.purged.css
 analyze_css.js
 .idea/
 .vscode/
+playwright-report/
+test-results/

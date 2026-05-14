@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eae0d5" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
 
-  <title>Gentle Laughter — da cerimónia ao palco, da roulote aos livros</title>
-  <meta name="description" content="Gentle Laughter. Produção de eventos, agenciamento de artistas, logística, efeitos especiais e experiências com um só interlocutor, em Portugal, 24/7." />
+  <title>Gentle Laughter — produção, agenciamento e logística em Lisboa</title>
+  <meta name="description" content="Gentle Laughter. Produção de eventos, agenciamento de fado, stagehands, motoristas, aluguer técnico, efeitos especiais e cenografia. Lisboa, desde 2025." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Gentle Laughter" />
-  <meta property="og:description" content="Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e operação com um só interlocutor, 24/7." />
+  <meta property="og:description" content="Produção, agenciamento e logística com um só interlocutor. Lisboa, desde 2025." />
   <meta property="og:url" content="https://gentlelaughter.com" />
   <meta property="og:site_name" content="Gentle Laughter" />
   <link rel="canonical" href="https://gentlelaughter.com" />
@@ -19,9 +20,21 @@
   <link rel="apple-touch-icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gentle Laughter",
+    "url": "https://gentlelaughter.com",
+    "telephone": "+351961154740",
+    "email": "geral@gentlelaughter.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" },
+    "areaServed": "PT",
+    "sameAs": ["https://instagram.com/gentlelaughteroficial"],
+    "description": "Produção de eventos, agenciamento de fado, logística, efeitos especiais e experiências, em Lisboa."
+  }
+  </script>
 </head>
 <body>
 
@@ -33,6 +46,7 @@
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -40,47 +54,40 @@
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow reveal">Gentle Laughter · Produção e logística premium</p>
+      <p class="eyebrow reveal">Gentle Laughter · Lisboa</p>
       <h1 class="hero__wordmark reveal" id="hero-title">
-        Produção premium.<br>Execução silenciosa.
+        Produção, agenciamento e logística.<br>Lisboa, desde 2025.
       </h1>
       <p class="hero__lede reveal">
-        Removemos a complexidade da logística e produção para que se foque no essencial. Eventos, agenciamento e operação com resposta no próprio dia.
+        Stagehands, motoristas, aluguer técnico, efeitos especiais, cenografia, agenciamento de fado e eventos. Um interlocutor para o que precisa em palco e à volta dele.
       </p>
       <div class="hero__meta reveal">
         <div>
-          <strong>Resposta</strong>
-          Em poucas horas.
+          <strong>Sede</strong>
+          Lisboa, Santa Clara.
         </div>
         <div>
           <strong>Modelo</strong>
           Coordenação total.
         </div>
         <div>
-          <strong>Foco</strong>
-          Rigor e discrição.
+          <strong>Linhas</strong>
+          Nove, sob o mesmo telhado.
         </div>
       </div>
     </section>
 
-    <!-- Seção de Prova Social (Logos) -->
-    <section class="section--tight shell reveal">
-      <p class="eyebrow" style="text-align: center; margin-bottom: 2rem;">Confiam na nossa coordenação</p>
-      <div class="logo-cloud">
-        <!-- Substituir os spans por <img> quando tiver os logos dos clientes -->
-        <div class="logo-cloud__item">Cliente 01</div>
-        <div class="logo-cloud__item">Cliente 02</div>
-        <div class="logo-cloud__item">Cliente 03</div>
-        <div class="logo-cloud__item">Cliente 04</div>
-        <div class="logo-cloud__item">Cliente 05</div>
-      </div>
+    <section class="shell section--tight reveal" aria-label="Lineage">
+      <p style="max-width: 64ch; margin: 0 auto; text-align: center; color: var(--ink); font-size: 0.95rem; line-height: 1.6;">
+        Colaborámos em <strong>Multiusos de Odivelas</strong>, <strong>Coliseu de Lisboa</strong>, <strong>Campo Pequeno</strong> e <strong>MEO Arena</strong>, entre outros espaços de Lisboa. <a href="sobre.html">Sobre a Gentle Laughter →</a>
+      </p>
     </section>
 
     <section class="shell" id="servicos" aria-labelledby="index-title">
@@ -93,21 +100,21 @@
         <a href="eventos.html" class="service-card reveal delay-100">
           <span class="service-card__num">01</span>
           <h3 class="service-card__title">Organização de Eventos</h3>
-          <p class="service-card__desc">Casamentos, batizados e eventos privados com coordenação ponta a ponta.</p>
+          <p class="service-card__desc">Casamentos, batizados, eventos privados e produções de grande escala &mdash; festivais e arenas.</p>
           <span class="service-card__cta">Explorar linha →</span>
         </a>
 
         <a href="agenciamento.html" class="service-card reveal delay-200">
           <span class="service-card__num">02</span>
           <h3 class="service-card__title">Agenciamento de Artistas</h3>
-          <p class="service-card__desc">Booking nacional e internacional com foco no Fado e PALOP.</p>
+          <p class="service-card__desc">Representação exclusiva de Vanessa Alves &mdash; novo álbum de fado em 2026.</p>
           <span class="service-card__cta">Explorar linha →</span>
         </a>
 
         <a href="prestacao.html" class="service-card reveal delay-300">
           <span class="service-card__num">03</span>
           <h3 class="service-card__title">Prestação de Serviços</h3>
-          <p class="service-card__desc">Stagehands, motoristas e equipas operacionais para produções.</p>
+          <p class="service-card__desc">Stagehands, staff de produção, motoristas, segurança humana e emergência médica.</p>
           <span class="service-card__cta">Explorar linha →</span>
         </a>
 
@@ -128,43 +135,69 @@
         <a href="aluguer.html" class="service-card reveal delay-600">
           <span class="service-card__num">06</span>
           <h3 class="service-card__title">Aluguer de Equipamento</h3>
-          <p class="service-card__desc">Rádios, baias e material técnico com entrega imediata.</p>
+          <p class="service-card__desc">Truss, estrados, som, luz, vídeo, geradores. Stock próprio em Lisboa.</p>
+          <span class="service-card__cta">Explorar linha →</span>
+        </a>
+
+        <a href="roulote.html" class="service-card reveal delay-700">
+          <span class="service-card__num">07</span>
+          <h3 class="service-card__title">Roulote &amp; Catering</h3>
+          <p class="service-card__desc">Chamuças e <em>food trailer</em> &mdash; serviço de comida no local para eventos e equipas.</p>
           <span class="service-card__cta">Explorar linha →</span>
         </a>
       </div>
     </section>
 
-    <!-- Nova Secção: Portfólio / Casos de Estudo -->
-    <section class="section shell reveal">
-      <div class="two-col">
+    <!-- Vanessa Alves — album teaser strip -->
+    <section class="album-drench reveal" aria-labelledby="album-teaser" style="background: var(--burgundy); color: #f4ede6; padding: clamp(3rem, 6vw, 5rem) 0; margin-block: clamp(2rem, 4vw, 3.5rem);">
+      <div class="shell" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(1.5rem, 4vw, 3rem); align-items: center;">
         <div>
-          <p class="eyebrow">No Terreno</p>
-          <h2 class="section__title">Resultados que falam por nós.</h2>
-          <p class="lede">Da discrição de um casamento privado à energia de um festival. Veja como aplicamos o rigor Gentle Laughter em cada projeto.</p>
-          <a href="formulario.html" class="btn btn--ghost" style="margin-top: 1.5rem;">Pedir referências</a>
+          <p style="font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; margin: 0 0 0.8rem;">Novo álbum · 2026</p>
+          <h2 id="album-teaser" style="font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.02em; margin: 0 0 1rem; color: inherit;">Vanessa Alves &mdash; <em style="font-style: italic; opacity: 0.85;">novo registo de fado</em>.</h2>
+          <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.6; max-width: 52ch; opacity: 0.9; margin: 0;">Representação exclusiva pela Gentle Laughter. Editado em 2026, disponível para escuta online e datas ao vivo.</p>
         </div>
-        <div class="portfolio-highlight">
-          <div class="portfolio-item">
-            <div class="portfolio-item__img" style="background: var(--rule);">
-              <!-- Substituir por foto real: assets/hero-background.webp ou específica -->
-              <span style="opacity: 0.3;">Galeria em breve</span>
-            </div>
-            <div class="portfolio-item__meta">
-              <strong>Produção de Palco</strong>
-              <span>Festival Tejo · 2025</span>
-            </div>
-          </div>
+        <div style="display: flex; gap: 0.7rem; flex-wrap: wrap;">
+          <a href="agenciamento.html" style="display: inline-flex; align-items: center; padding: 0.8rem 1.4rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px;">Sobre o álbum →</a>
         </div>
       </div>
     </section>
 
-    <!-- Nova Secção: Lead Magnet -->
-    <section class="section--tight shell reveal">
-      <div class="lead-magnet">
-        <div class="lead-magnet__content">
-          <h2 class="lead-magnet__title">Guia: Como planear um evento sem ruído.</h2>
-          <p>Um checklist prático de 20 pontos sobre o que não pode falhar na produção, logística e segurança.</p>
-          <a href="formulario.html?intent=guide" class="btn btn--accent">Receber Guia Gratuito</a>
+    <!-- Visual proof — 3-col collage -->
+    <section class="shell reveal" aria-labelledby="proof-title" style="padding-block: clamp(2rem, 5vw, 4rem);">
+      <div class="section-header">
+        <p class="eyebrow" id="proof-title">No terreno</p>
+        <p class="section-lede">Palco, frota e operação técnica. Imagens de produções recentes.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+        <a href="producao.html" style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 4px; display: block; background: #000;">
+          <img src="assets/docs/palco/Palco Orbital.jpeg" alt="Palco Orbital iluminado em concerto." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;" />
+          <span style="position: absolute; left: 1rem; bottom: 1rem; right: 1rem; color: #f4ede6; font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.2; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Produção &mdash; palco Orbital →</span>
+        </a>
+        <a href="prestacao.html" style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 4px; display: block; background: #000;">
+          <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (2).jpeg" alt="Mercedes V250 preto pronto para transfer de artista." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span style="position: absolute; left: 1rem; bottom: 1rem; right: 1rem; color: #f4ede6; font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.2; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Prestação &mdash; frota e stagehands →</span>
+        </a>
+        <a href="efeitos-especiais.html" style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 4px; display: block; background: #000;">
+          <img src="assets/docs/APRESENTAÇAO EFXS 2026 - celio correia.jpg" alt="Efeitos especiais em palco com fogo e iluminação." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span style="position: absolute; left: 1rem; bottom: 1rem; right: 1rem; color: #f4ede6; font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.2; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Efeitos &mdash; EFXS em palco →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Livro feature compacto -->
+    <section class="shell reveal" style="padding-block: clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: clamp(2rem, 5vw, 3rem);">
+      <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 4rem); align-items: center;">
+        <div>
+          <p class="eyebrow">Livro</p>
+          <h2 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; margin: 0.5rem 0 1rem;"><em>A noite de Célio Correia</em>.</h2>
+          <p style="line-height: 1.7; margin: 0 0 1.2rem;">Publicado em 2016 por Célio Correia, sobre a organização de eventos de diversão nocturna. Lançado em Lisboa, na Feira do Livro de Lisboa e do Porto, e em Cabo Verde. Disponível na Wook.</p>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+            <a href="livro.html" class="btn btn--ghost">Ver mais</a>
+            <a href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer" class="btn">Comprar na Wook</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.4; font-style: italic; max-width: 38ch; margin: 0; padding-left: 1.5rem; border-left: 3px solid var(--burgundy);">&ldquo;Um relato e uma imersão na cultura que moldou a forma como hoje trabalhamos.&rdquo;</p>
         </div>
       </div>
     </section>
@@ -214,8 +247,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação com resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -232,6 +265,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>

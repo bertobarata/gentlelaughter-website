@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#fafbfc" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
   <title>Contacto — Gentle Laughter</title>
-  <meta name="description" content="Preencha o formulário e a sua mensagem chega-nos no WhatsApp. Resposta no próprio dia." />
+  <meta name="description" content="Diga-nos a linha, o contexto e como prefere ser contactado. Estruturamos a solução certa." />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
   <header class="site-header">
     <div class="shell site-header__inner">
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -62,34 +62,12 @@
         </aside>
 
         <form id="contactForm" class="form" novalidate>
-          <div class="row">
-            <div>
-              <label for="f-nome">Nome *</label>
-              <input id="f-nome" type="text" name="nome" required autocomplete="given-name" />
-            </div>
-            <div>
-              <label for="f-apelido">Apelido</label>
-              <input id="f-apelido" type="text" name="apelido" autocomplete="family-name" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div>
-              <label for="f-tel">Telemóvel *</label>
-              <input id="f-tel" type="tel" name="telefone" required autocomplete="tel" placeholder="+351 …" />
-            </div>
-            <div>
-              <label for="f-email">Email</label>
-              <input id="f-email" type="email" name="email" autocomplete="email" />
-            </div>
-          </div>
-
           <div class="field">
-            <label for="f-assunto">Linha de interesse *</label>
+            <label for="f-assunto">Linha *</label>
             <select id="f-assunto" name="assunto" required>
               <option value="" disabled selected>Escolher…</option>
               <option>01 · Organização de eventos</option>
-              <option>02 · Agenciamento de artistas</option>
+              <option>02 · Agenciamento de fado</option>
               <option>03 · Prestação de serviços</option>
               <option>04 · Efeitos especiais</option>
               <option>05 · Assistência de produção</option>
@@ -97,31 +75,24 @@
               <option>07 · Roulote</option>
               <option>08 · Parceiros</option>
               <option>09 · Livro</option>
+              <option>Guia de planeamento</option>
               <option>Outro</option>
             </select>
           </div>
 
           <div class="field">
             <label for="f-msg">Mensagem *</label>
-            <textarea id="f-msg" name="mensagem" required placeholder="Conte-nos os detalhes essenciais: data prevista, local, número de convidados e o que é prioritário para si."></textarea>
+            <textarea id="f-msg" name="mensagem" required placeholder="Data prevista, local, número de convidados, o que é prioritário."></textarea>
           </div>
 
           <div class="field">
-            <label>Como prefere ser contactado? *</label>
-            <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
-              <label class="check" style="margin: 0;">
-                <input type="radio" name="preferencia" value="WhatsApp" checked />
-                <span>WhatsApp</span>
-              </label>
-              <label class="check" style="margin: 0;">
-                <input type="radio" name="preferencia" value="Email" />
-                <span>Email</span>
-              </label>
-              <label class="check" style="margin: 0;">
-                <input type="radio" name="preferencia" value="Chamada" />
-                <span>Chamada</span>
-              </label>
-            </div>
+            <label for="f-nome">Nome *</label>
+            <input id="f-nome" type="text" name="nome" required autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="f-contacto">WhatsApp ou email *</label>
+            <input id="f-contacto" type="text" name="contacto" required autocomplete="tel" placeholder="+351 … ou nome@dominio.pt" />
           </div>
 
           <label class="check">
@@ -130,10 +101,10 @@
           </label>
 
           <div class="actions">
-            <button type="submit" class="btn btn--accent">Enviar Pedido
+            <button type="submit" class="btn btn--accent">Enviar pedido
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <span class="note">Iremos processar o seu pedido e responder em poucas horas.</span>
+            <span class="note">Resposta em poucas horas.</span>
           </div>
 
           <p id="formStatus" hidden role="status" style="margin-top: 1rem; color: var(--ink-soft); font-size: var(--text-sm);"></p>
@@ -147,8 +118,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -165,6 +136,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>
@@ -188,5 +160,28 @@
 
   <script src="js/site.js" defer></script>
   <script src="js/cookie-consent.js" defer></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var intent = params.get('intent');
+      if (!intent) return;
+      var sel = document.getElementById('f-assunto');
+      var msg = document.getElementById('f-msg');
+      var map = {
+        'book-a-call': { line: '', msg: 'Quero marcar uma chamada. Disponibilidade preferida: ' },
+        'guide':       { line: 'Guia de planeamento', msg: 'Pedido do guia "Como planear um evento".' },
+        'vanessa-alves': { line: '02 · Agenciamento de fado', msg: 'Reserva Vanessa Alves para a data: ' },
+        'album':       { line: '02 · Agenciamento de fado', msg: 'Pedido relacionado com o novo álbum.' }
+      };
+      var preset = map[intent];
+      if (!preset) return;
+      if (preset.line && sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text === preset.line) { sel.selectedIndex = i; break; }
+        }
+      }
+      if (preset.msg && msg && !msg.value) msg.value = preset.msg;
+    })();
+  </script>
 </body>
 </html>

@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eae0d5" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1916" media="(prefers-color-scheme: dark)" />
   <title>Prestação de serviço — Gentle Laughter</title>
-  <meta name="description" content="Stagehands em Lisboa para eventos e festivais. Motoristas privados e transfer para artistas e equipas de produção." />
+  <meta name="description" content="Stagehands, staff de produção, motoristas, segurança humana, emergência médica e apoio operacional para eventos e festivais em Lisboa." />
   <meta property="og:title" content="Prestação de serviço — Gentle Laughter" />
-  <meta property="og:description" content="Stagehands em Lisboa para eventos e festivais. Motoristas privados e transfer para artistas e equipas de produção." />
+  <meta property="og:description" content="Stagehands, staff de produção, motoristas, segurança humana, emergência médica e apoio operacional para eventos e festivais em Lisboa." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
@@ -25,6 +24,7 @@
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="parceiros.html">Parceiros</a></li>
           <li><a href="livro.html">Livro</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -32,7 +32,7 @@
         </ul>
       </nav>
       <a href="index.html" class="logo-link" aria-label="Gentle Laughter — início">
-        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
+        <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
       </a>
     </div>
   </header>
@@ -41,49 +41,216 @@
     <section class="page-hero shell reveal">
       <p class="page-hero__num">Prestação de serviço</p>
       <h1 class="page-hero__title">Prestação de serviço.</h1>
-      <p class="page-hero__lede">Equipas operacionais para produções de outras empresas: stagehands para montagens e desmontagens, motoristas e transfer para artistas e equipa.</p>
+      <p class="page-hero__lede">Equipas operacionais para produções de outras empresas e produtoras: stagehands, staff de produção, motoristas, segurança humana, emergência médica e apoio à gestão operacional. Carro-chefe da Gentle Laughter.</p>
     </section>
 
-    <section class="section shell">
-      <div class="two-col">
+    <!-- Capacidades — sinopse de 6 linhas -->
+    <section class="section shell reveal" aria-labelledby="capacidades-title">
+      <div class="section-header">
+        <p class="eyebrow" id="capacidades-title">Seis capacidades</p>
+        <p class="section-lede">Operação de eventos por linha. Contrate todas em conjunto ou uma só, conforme o que falta à sua produção.</p>
+      </div>
+      <div class="capabilities-grid">
+        <article>
+          <span class="num">01</span>
+          <h3><a href="#stagehands" style="color:inherit;text-decoration:none;">Stagehands &amp; loaders</a></h3>
+          <p>Descarga, montagem, backstage e desmontagem. Equipa fardada, com experiência em festival e tour.</p>
+        </article>
+        <article>
+          <span class="num">02</span>
+          <h3><a href="#staff" style="color:inherit;text-decoration:none;">Staff &amp; assistentes</a></h3>
+          <p>Apoio à produção, bilhética e gestão de equipas em eventos desportivos, culturais ou musicais.</p>
+        </article>
+        <article>
+          <span class="num">03</span>
+          <h3><a href="#motoristas" style="color:inherit;text-decoration:none;">Motoristas &amp; transfer</a></h3>
+          <p>Artistas, equipa e carga. Frota interna de três viaturas com motoristas experientes.</p>
+        </article>
+        <article>
+          <span class="num">04</span>
+          <h3><a href="#seguranca" style="color:inherit;text-decoration:none;">Segurança humana</a></h3>
+          <p>Operada por empresa parceira acreditada. Coordenação centralizada na Gentle Laughter.</p>
+        </article>
+        <article>
+          <span class="num">05</span>
+          <h3><a href="#medica" style="color:inherit;text-decoration:none;">Emergência médica</a></h3>
+          <p>Cuidados de saúde e apoio médico dimensionados à lotação, ao risco e à legislação aplicável.</p>
+        </article>
+        <article>
+          <span class="num">06</span>
+          <h3><a href="#operacional" style="color:inherit;text-decoration:none;">Gestão operacional</a></h3>
+          <p>Consultoria de operação e prevenção de sinistralidade para empresas e produtoras.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 01 — Stagehands -->
+    <section class="section shell reveal" id="stagehands">
+      <div class="split-block">
         <div>
-          <p class="eyebrow reveal">No detalhe</p>
-          <ul class="index-row__sublist" style="margin-top: 0.8rem;">
-            <li class="reveal delay-100">Stagehands</li>
-            <li class="reveal delay-200">Transfer</li>
-            <li class="reveal delay-300">Motoristas</li>
+          <p class="eyebrow">01 · Stagehands &amp; loaders</p>
+          <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;margin:0.5rem 0 1.2rem;">Mãos no palco e no <em>backstage</em>.</h2>
+          <p style="line-height:1.7;max-width:48ch;">Assistentes de palco para descarga, montagem de equipamento e cenários, operação em <em>backstage</em> e desmontagem. Equipas dimensionadas à escala da produção, pontuais, fardadas, com experiência em palco, festival e tour. Ferramenta básica incluída.</p>
+          <ul style="margin-top:1.2rem;padding-left:1.2rem;line-height:1.7;font-size:0.95rem;opacity:0.85;">
+            <li>Build-up &amp; load-in/out</li>
+            <li>Operação backstage e rotação de equipas</li>
+            <li>Estrados, truss, rigging e <em>set carpentry</em></li>
+            <li>Coordenação com régie e road manager</li>
           </ul>
         </div>
-        <div class="prose">
-          <h2 class="reveal">Stagehands</h2>
-          <p class="reveal">Equipas dimensionadas à dimensão da produção. Pontuais, fardadas, com experiência em palco, festival e tour. Ferramenta básica incluída.</p>
-          <h2 class="reveal">Transfer e motoristas</h2>
-          <p class="reveal">Para artistas, equipa técnica ou convidados. Viaturas próprias e parceiras, motoristas com TVDE quando exigido.</p>
-          <h2 class="reveal">Como contratar</h2>
-          <p class="reveal">Indique a data, o local e o número de pessoas. Confirmamos em horas.</p>
+        <div class="split-block__media split-block__media--stack">
+          <figure>
+            <img src="assets/docs/palco/Palco Orbital.jpeg" alt="Palco Orbital iluminado em contexto de concerto." loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/docs/palco/Palco Orbital 2.jpeg" alt="Frente de palco Orbital antes do soundcheck." loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/docs/palco/Palco duas Leguas 2.jpeg" alt="Palco duas águas montado em ambiente outdoor." loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section shell transfer-gallery reveal">
-      <div class="transfer-gallery__intro">
-        <p class="eyebrow">Transfer</p>
-        <h2 class="transfer-gallery__title">Viaturas preparadas para artistas, equipa e convidados.</h2>
-        <p class="transfer-gallery__lede">As imagens disponíveis encaixam melhor na componente de transfer: conforto interior, apresentação cuidada e chegada em contexto profissional.</p>
+    <!-- 02 — Staff & assistentes -->
+    <section class="section shell reveal" id="staff" style="background:var(--paper-soft);padding-block:clamp(3rem,5vw,4.5rem);">
+      <div style="max-width:62ch;margin:0 auto;text-align:left;">
+        <p class="eyebrow">02 · Staff &amp; assistentes de produção</p>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;margin:0.5rem 0 1.2rem;">Operação no terreno, do checkpoint ao briefing.</h2>
+        <p style="line-height:1.7;">Apoio em produções, venda e validação de bilhética, gestão de equipas e operação no terreno em eventos desportivos, culturais ou musicais. <em>Briefing</em> prévio com o promotor e linha de reporte clara durante o evento.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.8rem;">
+          <div style="border-top:1px solid var(--rule);padding-top:0.8rem;"><strong style="display:block;margin-bottom:0.3rem;">Bilhética</strong><span style="font-size:0.88rem;opacity:0.8;">Venda, validação, controlo de acessos.</span></div>
+          <div style="border-top:1px solid var(--rule);padding-top:0.8rem;"><strong style="display:block;margin-bottom:0.3rem;">Hospitality</strong><span style="font-size:0.88rem;opacity:0.8;">Camarins, catering, convidados, VIP.</span></div>
+          <div style="border-top:1px solid var(--rule);padding-top:0.8rem;"><strong style="display:block;margin-bottom:0.3rem;">Gestão de equipas</strong><span style="font-size:0.88rem;opacity:0.8;">Escalas, rotações, fardamento.</span></div>
+        </div>
       </div>
-      <div class="transfer-gallery__grid">
-        <figure class="transfer-gallery__item transfer-gallery__item--wide">
-          <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (2).jpeg" alt="Viatura de transfer Gentle Laughter estacionada à porta de um hotel." loading="lazy" />
-          <figcaption>Chegada e recolha com apresentação cuidada.</figcaption>
-        </figure>
-        <figure class="transfer-gallery__item">
-          <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19.jpeg" alt="Interior com bancos em pele preparado para transporte de pequenos grupos." loading="lazy" />
-          <figcaption>Interior preparado para conforto e discrição.</figcaption>
-        </figure>
-        <figure class="transfer-gallery__item">
-          <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.18 (5).jpeg" alt="Vista lateral de viatura de apoio para transfer executivo." loading="lazy" />
-          <figcaption>Apoio a artistas, técnica e convidados.</figcaption>
-        </figure>
+    </section>
+
+    <!-- 03 — Motoristas & transfer -->
+    <section class="section shell reveal" id="motoristas">
+      <div class="section-header">
+        <p class="eyebrow">03 · Motoristas &amp; transfer</p>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.1;margin:0.5rem 0 1rem;">Três viaturas, três funções.</h2>
+        <p class="section-lede">Artistas, equipa técnica e convidados, com viatura própria, do cliente ou alugada. Motoristas experientes, alvará TVDE quando exigido.</p>
+      </div>
+
+      <div class="fleet-cards">
+        <article class="fleet-card">
+          <div class="fleet-card__media">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (2).jpeg" alt="Mercedes V250 preto pronto para transfer de artista." loading="lazy" />
+          </div>
+          <div class="fleet-card__body">
+            <span class="fleet-card__role">Artista · VIP</span>
+            <h3 class="fleet-card__name">Mercedes V250</h3>
+            <ul>
+              <li>8 lugares</li>
+              <li>Interior em pele</li>
+              <li>Classe 1 Via Verde</li>
+            </ul>
+          </div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-card__media">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (5).jpeg" alt="Mercedes 300 DE vista lateral exterior." loading="lazy" />
+          </div>
+          <div class="fleet-card__body">
+            <span class="fleet-card__role">Direcção · Técnica</span>
+            <h3 class="fleet-card__name">Mercedes 300 DE</h3>
+            <ul>
+              <li>5 lugares</li>
+              <li>Conforto executivo</li>
+              <li>Classe 1 Via Verde</li>
+            </ul>
+          </div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-card__media">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.18 (3).jpeg" alt="Ford Transit branca vista lateral exterior." loading="lazy" />
+          </div>
+          <div class="fleet-card__body">
+            <span class="fleet-card__role">Equipa · Backline</span>
+            <h3 class="fleet-card__name">Ford Transit 330 L3 H2</h3>
+            <ul>
+              <li>9 lugares + carga</li>
+              <li>Configuração modular</li>
+              <li>Classe 2 Via Verde</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <details style="margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:1.2rem;">
+        <summary style="cursor:pointer;font-family:var(--font-sans);font-size:0.9rem;letter-spacing:0.06em;opacity:0.75;list-style:none;">Ver mais imagens da frota →</summary>
+        <div class="transfer-gallery__grid" style="margin-top:1.5rem;">
+          <figure class="transfer-gallery__item">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (1).jpeg" alt="Interior do Mercedes V250 em pele preta, vista para fila traseira." loading="lazy" />
+            <figcaption>V250 — interior em pele.</figcaption>
+          </figure>
+          <figure class="transfer-gallery__item">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.19 (3).jpeg" alt="Interior do Mercedes 300 DE bege com iluminação ambiente." loading="lazy" />
+            <figcaption>300 DE — interior bege.</figcaption>
+          </figure>
+          <figure class="transfer-gallery__item">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.18 (1).jpeg" alt="Interior do Ford Transit com bancos em tecido para transporte de equipa." loading="lazy" />
+            <figcaption>Transit — interior modular.</figcaption>
+          </figure>
+          <figure class="transfer-gallery__item">
+            <img src="assets/docs/carros/WhatsApp Image 2026-02-24 at 00.04.18.jpeg" alt="Ford Transit com portas traseiras abertas e compartimento de carga limpo." loading="lazy" />
+            <figcaption>Transit — modo carga.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </section>
+
+    <!-- 04 + 05 — Segurança & Emergência médica (par) -->
+    <section class="section shell reveal" style="background:var(--paper-soft);padding-block:clamp(3rem,5vw,4.5rem);">
+      <div class="section-header">
+        <p class="eyebrow">04 &amp; 05 · Segurança humana &amp; Emergência médica</p>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;margin:0.5rem 0 0.8rem;">Linhas críticas, sob parceiros acreditados.</h2>
+        <p class="section-lede">Coordenamos as duas linhas que carregam responsabilidade legal e operacional, sempre com parceiros qualificados para a função.</p>
+      </div>
+      <div class="paired-cards">
+        <article class="paired-card" id="seguranca">
+          <h3>04 · Segurança humana</h3>
+          <p>Serviço executado por empresa parceira devidamente acreditada para a função. Coordenado pela Gentle Laughter como ponto único de contacto com o promotor, da escala ao reporte de ocorrências.</p>
+        </article>
+        <article class="paired-card" id="medica">
+          <h3>05 · Emergência médica</h3>
+          <p>Prestação de cuidados de saúde, consultoria e apoio médico para eventos e espaços com público. Dimensionamento conforme a lotação, o tipo de risco e as exigências legais aplicáveis.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 06 — Apoio à gestão operacional -->
+    <section class="section shell reveal" id="operacional">
+      <div class="split-block split-block--reverse">
+        <div>
+          <p class="eyebrow">06 · Apoio à gestão operacional</p>
+          <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;margin:0.5rem 0 1.2rem;">Consultoria de operação e prevenção de sinistralidade.</h2>
+          <p style="line-height:1.7;">Para empresas e produtoras que precisam de estruturar a sua operação ou rever procedimentos. Trabalhamos como ponto único de contacto, com presença em reuniões periódicas e disponibilidade contínua entre elas.</p>
+          <ul style="margin-top:1.2rem;padding-left:1.2rem;line-height:1.75;font-size:0.95rem;opacity:0.85;">
+            <li>Reuniões periódicas com o responsável do cliente</li>
+            <li>Atendimento contínuo por telefone e correio electrónico</li>
+            <li>Vistorias não programadas a sistemas de gestão, <em>stocking</em> e <em>shipping</em></li>
+            <li>Análise prévia de riscos e pareceres técnicos</li>
+            <li>Relatórios de ocorrências e propostas de remediação</li>
+          </ul>
+        </div>
+        <div class="split-block__media">
+          <figure>
+            <img src="assets/docs/radios.jpg" alt="Conjunto de rádios portáteis com auriculares, baterias e carregador para coordenação operacional." loading="lazy" />
+            <figcaption>Rádios isentos de licenciamento — coordenação entre equipas no terreno.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como contratar -->
+    <section class="section shell reveal" style="border-top:1px solid var(--rule);padding-top:clamp(3rem,5vw,4rem);">
+      <div style="max-width:62ch;margin:0 auto;">
+        <p class="eyebrow">Como contratar</p>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.6rem,2.5vw,2.2rem);line-height:1.15;margin:0.5rem 0 1rem;">Um pedido, uma proposta, uma escala.</h2>
+        <p style="line-height:1.7;">Indique a data, o local, o tipo de evento e o número de pessoas necessárias por função. Devolvemos proposta escrita com escala, fardamento, transporte interno e logística associada.</p>
       </div>
     </section>
 
@@ -91,7 +258,7 @@
       <div class="shell contact-slab__inner">
         <div class="contact-slab__info">
           <h2 class="contact-slab__heading">Tem uma produção a precisar de mãos?</h2>
-          <p class="contact-slab__lede">Resposta no próprio dia. Estamos disponíveis 24/7 para produções em todo o país.</p>
+          <p class="contact-slab__lede">Diga-nos o contexto. Estruturamos a solução certa.</p>
           <div class="contact-slab__cta">
             <a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>
           </div>
@@ -122,8 +289,8 @@
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" />
-          <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
+          <img src="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" loading="lazy" decoding="async" width="200" height="60" />
+          <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
           <h4>Serviços</h4>
@@ -140,6 +307,7 @@
         <div class="footer-col">
           <h4>Mais</h4>
           <ul>
+            <li><a href="sobre.html">Sobre</a></li>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
             <li><a href="faq.html">FAQ</a></li>
