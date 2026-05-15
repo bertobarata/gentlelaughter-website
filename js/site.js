@@ -50,7 +50,15 @@
     var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.top-nav a').forEach(function (a) {
       var href = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
-      if (href === current) a.classList.add('active');
+      if (href === current) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+        var dropdown = a.closest('.dropdown');
+        if (dropdown) {
+          var parent = dropdown.parentElement.querySelector(':scope > a');
+          if (parent) parent.classList.add('active');
+        }
+      }
     });
 
     /* ----- Form to WhatsApp ----- */
@@ -153,7 +161,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v26';
+      var SW_GEN = 'gl-sw-v27';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };

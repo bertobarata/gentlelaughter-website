@@ -2014,6 +2014,21 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   max-width: 52ch;
 }
 
+/* ===== Top-nav active link ===== */
+.top-nav a.active {
+  color: var(--ink);
+  position: relative;
+}
+.top-nav > ul > li > a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+}
+
 /* ===== Top-nav dropdown (Serviços) ===== */
 .top-nav .has-dropdown {
   position: relative;
