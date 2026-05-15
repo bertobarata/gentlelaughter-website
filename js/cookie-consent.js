@@ -20,10 +20,26 @@
       policy: 'Cookie Policy',
       accept: 'Accept',
       decline: 'Essential Only'
+    },
+    fr: {
+      message: 'Nous utilisons uniquement des <strong>cookies essentiels</strong> au fonctionnement du site. Pas de suivi.',
+      policy: 'Politique des cookies',
+      accept: 'Accepter',
+      decline: 'Uniquement essentiels'
+    },
+    de: {
+      message: 'Wir verwenden ausschließlich <strong>essentielle Cookies</strong> für die Funktion der Seite. Kein Tracking.',
+      policy: 'Cookie-Richtlinie',
+      accept: 'Akzeptieren',
+      decline: 'Nur essentielle'
     }
   };
 
   function getLang() {
+    try {
+      var stored = localStorage.getItem('gl-lang');
+      if (stored && TEXTS[stored]) return stored;
+    } catch (e) {}
     var lang = (document.documentElement.lang || 'pt').slice(0, 2).toLowerCase();
     return TEXTS[lang] ? lang : 'pt';
   }

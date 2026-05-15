@@ -2013,6 +2013,57 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   max-width: 52ch;
 }
 
+/* ===== Language switcher (4 flag buttons in nav) ===== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.6rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--rule);
+}
+.lang-switcher [data-lang] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out), background 0.2s var(--ease-out);
+}
+.lang-switcher [data-lang]:hover {
+  color: var(--ink);
+  background: var(--paper-soft);
+}
+.lang-switcher [data-lang].is-active {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.lang-switcher [data-lang]:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .lang-switcher {
+    margin: 1rem 0 0;
+    padding: 1rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+    justify-content: center;
+  }
+  .lang-switcher [data-lang] { width: 36px; height: 36px; font-size: 0.78rem; }
+}
+
 /* ===== Logo inversion for dark mode (logo file is dark on transparent) ===== */
 @media (prefers-color-scheme: dark) {
   .logo { filter: invert(1) hue-rotate(180deg) brightness(1.05); }
