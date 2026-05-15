@@ -1749,7 +1749,35 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   .case-cards { grid-template-columns: 1fr; }
 }
 
-/* ===== Instagram link card (opens IG in new tab) ===== */
+/* ===== Inline video grid (case studies + mais-momentos) ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.video-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.video-card video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #000;
+  border-radius: 4px;
+  display: block;
+}
+.video-card figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: color-mix(in srgb, var(--ink) 80%, transparent);
+}
+
+/* ===== Instagram link card (legacy, kept for compatibility) ===== */
 .ig-embed {
   position: relative;
   display: block;

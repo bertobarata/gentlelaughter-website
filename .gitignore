@@ -9,3 +9,5 @@ analyze_css.js
 .vscode/
 playwright-report/
 test-results/
+assets/casos/_downloaded/
+assets/fotos/
