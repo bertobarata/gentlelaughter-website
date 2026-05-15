@@ -693,6 +693,26 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   color: var(--ink);
 }
 
+/* Anchor variant — for the home services index */
+a.index-row {
+  display: grid;
+  grid-template-columns: 4ch 1fr auto;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+a.index-row:hover .index-row__sigil {
+  border-color: var(--ink);
+  color: var(--ink);
+  transform: translateX(3px);
+}
+@media (max-width: 480px) {
+  a.index-row { grid-template-columns: 3ch 1fr auto; gap: 0.8rem; }
+  .index-row__name { font-size: var(--text-xl); }
+  .index-row__hint { font-size: var(--text-sm); }
+}
+
 .index-row__body {
   padding-top: clamp(1.2rem, 2.5vw, 1.8rem);
   padding-left: calc(4ch + clamp(1rem, 3vw, 2rem));
