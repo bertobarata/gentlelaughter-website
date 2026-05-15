@@ -13,5 +13,5 @@ test('home renders dark with parchment ink on near-black paper', async ({ page }
 test('theme-color meta has dark variant', async ({ page }) => {
   await page.goto('/');
   const dark = await page.locator('meta[name="theme-color"][media*="dark"]').getAttribute('content');
-  expect(dark).toBe('#1c1916');
+  expect(dark).toBe('#13110e');
 });
