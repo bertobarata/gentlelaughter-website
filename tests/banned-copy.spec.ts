@@ -13,7 +13,7 @@ const BANNED = [
   /Galeria em breve/,
 ];
 
-const PAGES = ['/', '/agenciamento.html', '/eventos.html', '/parceiros.html', '/livro.html', '/faq.html'];
+const PAGES = ['/', '/agenciamento.html', '/eventos.html', '/parceiros.html', '/livro.html', '/faq.html', '/casos.html', '/sobre.html'];
 
 for (const path of PAGES) {
   test(`${path} has no banned phrases`, async ({ page }) => {

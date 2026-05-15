@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const PAGES = ['/', '/agenciamento.html', '/formulario.html', '/livro.html', '/parceiros.html'];
+const PAGES = ['/', '/agenciamento.html', '/formulario.html', '/livro.html', '/parceiros.html', '/casos.html', '/sobre.html'];
 
 for (const path of PAGES) {
   test(`${path} has no {{...}} placeholders`, async ({ page }) => {

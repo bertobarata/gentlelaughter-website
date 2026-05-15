@@ -4,14 +4,15 @@
  * Bump CACHE_NAME when shipping changes that touch precached assets.
  */
 
-const CACHE_NAME = 'gl-cache-v16';
-const RUNTIME_CACHE = 'gl-runtime-v16';
+const CACHE_NAME = 'gl-cache-v17';
+const RUNTIME_CACHE = 'gl-runtime-v17';
 
 const PRECACHE_ASSETS = [
   './',
   'index.html',
   'sobre.html',
-  'css/styles.css?v=16',
+  'casos.html',
+  'css/styles.css?v=17',
   'js/site.js',
   'js/cookie-consent.js',
   'manifest.json',
@@ -48,6 +49,9 @@ self.addEventListener('fetch', (event) => {
 
   if (url.origin !== location.origin) return;
   if (request.method !== 'GET') return;
+
+  // Never cache MP4s — they're heavy and would inflate user storage.
+  if (url.pathname.endsWith('.mp4')) return;
 
   if (request.mode === 'navigate' || request.destination === 'document') {
     event.respondWith(
