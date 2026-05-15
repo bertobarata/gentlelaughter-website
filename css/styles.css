@@ -31,7 +31,7 @@
   font-family: var(--font-serif);
   font-size: 0.95rem;
   letter-spacing: 0.16em;
-  opacity: 0.5;
+  color: var(--ink-soft);
 }
 .capabilities-grid > article h3 {
   font-family: var(--font-serif);
@@ -88,7 +88,7 @@
 }
 .split-block__media figcaption {
   font-size: 0.78rem;
-  opacity: 0.6;
+  color: var(--ink-soft);
   margin-top: 0.4rem;
   font-family: var(--font-sans);
   letter-spacing: 0.04em;
@@ -142,7 +142,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  opacity: 0.55;
+  color: var(--ink-soft);
 }
 .fleet-card ul {
   margin: 0.6rem 0 0;
@@ -1581,11 +1581,10 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--ink);
-  opacity: 0.6;
-  transition: opacity 0.3s;
+  color: var(--ink-soft);
+  transition: color 0.3s;
 }
-.service-card:hover .service-card__cta { opacity: 1; }
+.service-card:hover .service-card__cta { color: var(--ink); }
 
 /* ===== Lead Magnet ===== */
 .lead-magnet {

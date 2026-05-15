@@ -20,21 +20,62 @@
   <link rel="apple-touch-icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <link rel="stylesheet" href="css/styles.css?v=27" />
+  <link rel="stylesheet" href="css/styles.css?v=28" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Gentle Laughter",
-    "url": "https://gentlelaughter.com",
-    "telephone": "+351961154740",
-    "email": "geral@gentlelaughter.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" },
-    "areaServed": "PT",
-    "sameAs": ["https://instagram.com/gentlelaughteroficial"],
-    "description": "Produção de eventos, agenciamento de fado, logística, efeitos especiais e experiências, em Lisboa."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://gentlelaughter.com/#organization",
+        "name": "Gentle Laughter",
+        "legalName": "Gentle Laughter Unipessoal Lda.",
+        "foundingDate": "2025",
+        "founder": { "@type": "Person", "name": "Célio Correia" },
+        "url": "https://gentlelaughter.com/",
+        "logo": "https://gentlelaughter.com/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png",
+        "sameAs": ["https://instagram.com/gentlelaughteroficial"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+351961154740",
+          "email": "geral@gentlelaughter.com",
+          "contactType": "customer service",
+          "availableLanguage": ["Portuguese", "English"],
+          "areaServed": "PT"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://gentlelaughter.com/#business",
+        "name": "Gentle Laughter",
+        "url": "https://gentlelaughter.com/",
+        "image": "https://gentlelaughter.com/assets/hero-background.png",
+        "telephone": "+351961154740",
+        "email": "geral@gentlelaughter.com",
+        "priceRange": "€€",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressRegion": "Lisboa", "addressCountry": "PT" },
+        "areaServed": [{ "@type": "Country", "name": "Portugal" }],
+        "description": "Produção de eventos, agenciamento de fado, stagehands, motoristas, aluguer técnico, efeitos especiais e roulote de catering, em Lisboa.",
+        "knowsAbout": ["Produção de eventos", "Agenciamento de fado", "Stagehands", "Efeitos especiais", "Aluguer técnico para eventos", "Roulote de catering", "Transfer de artistas"],
+        "parentOrganization": { "@id": "https://gentlelaughter.com/#organization" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gentlelaughter.com/#website",
+        "url": "https://gentlelaughter.com/",
+        "name": "Gentle Laughter",
+        "inLanguage": "pt-PT",
+        "publisher": { "@id": "https://gentlelaughter.com/#organization" }
+      }
+    ]
   }
   </script>
+  <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gentle Laughter — produção, agenciamento e logística em Lisboa" />
+  <meta name="twitter:description" content="Gentle Laughter. Produção de eventos, agenciamento de fado, stagehands, motoristas, aluguer técnico, efeitos especiais e cenografia." />
+  <meta name="twitter:image" content="https://gentlelaughter.com/assets/hero-background.png" />
 </head>
 <body>
 
