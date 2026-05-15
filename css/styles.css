@@ -2013,6 +2013,12 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   max-width: 52ch;
 }
 
+/* ===== Logo inversion for dark mode (logo file is dark on transparent) ===== */
+@media (prefers-color-scheme: dark) {
+  .logo { filter: invert(1) hue-rotate(180deg) brightness(1.05); }
+}
+:root[data-theme="dark"] .logo { filter: invert(1) hue-rotate(180deg) brightness(1.05); }
+
 /* ===== Top-nav active link ===== */
 .top-nav a.active {
   color: var(--ink);

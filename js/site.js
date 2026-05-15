@@ -161,7 +161,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v29';
+      var SW_GEN = 'gl-sw-v30';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
