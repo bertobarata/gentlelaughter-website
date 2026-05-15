@@ -151,9 +151,30 @@
       }
     }
 
+    /* ----- Instagram lite embed (click → load iframe) ----- */
+    document.querySelectorAll('.ig-embed[data-ig-id]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (el.dataset.igLoaded === '1') return;
+        e.preventDefault();
+        var id = el.getAttribute('data-ig-id');
+        var type = el.getAttribute('data-ig-type') === 'p' ? 'p' : 'reel';
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.instagram.com/' + type + '/' + id + '/embed/';
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('allow', 'encrypted-media; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('title', el.getAttribute('aria-label') || 'Instagram');
+        iframe.className = 'ig-embed__iframe';
+        el.innerHTML = '';
+        el.appendChild(iframe);
+        el.dataset.igLoaded = '1';
+        el.classList.add('is-loaded');
+      });
+    });
+
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v16';
+      var SW_GEN = 'gl-sw-v18';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
