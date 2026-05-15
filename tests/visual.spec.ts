@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const PAGES = ['/', '/agenciamento.html', '/formulario.html'];
+const PAGES = ['/', '/agenciamento.html', '/formulario.html', '/casos.html'];
 
 for (const path of PAGES) {
   test(`visual baseline ${path}`, async ({ page }) => {
