@@ -7,6 +7,7 @@
     "serve": "npx serve .",
     "purge": "npx purgecss --css css/styles.css --content '*.html' --output css/styles.purged.css",
     "build:pages": "node scripts/build-pages.mjs",
+    "build:i18n": "node scripts/i18n-build.mjs",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:update": "playwright test --update-snapshots"

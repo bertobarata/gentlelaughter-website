@@ -67,10 +67,18 @@
       b.addEventListener('click', function (e) {
         e.preventDefault();
         var l = b.getAttribute('data-lang');
-        setLang(l);
-        var url = new URL(location.href);
-        url.searchParams.set('lang', l);
-        history.replaceState(null, '', url.toString());
+        try { localStorage.setItem(STORAGE_KEY, l); } catch (e2) {}
+        // Route to /<lang>/<page> for non-PT, root for PT
+        var path = location.pathname.replace(/\/(en|fr|de)\//, '/');
+        var pageOnly = path.split('/').pop() || 'index.html';
+        if (l === 'pt') {
+          location.href = path;
+        } else {
+          var prefix = path.substring(0, path.lastIndexOf('/') + 1);
+          // Strip any existing /xx/ prefix
+          prefix = prefix.replace(/\/(en|fr|de)\//, '/');
+          location.href = prefix + l + '/' + pageOnly;
+        }
       });
     });
   });
