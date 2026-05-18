@@ -9,7 +9,7 @@
   <meta name="description" content="Tell us the line, the context and your preferred channel. We'll structure the right solution." />
   <link rel="icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="/css/styles.css?v=34" />
+  <link rel="stylesheet" href="/css/styles.css?v=35" />
   <link rel="canonical" href="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:url" content="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
@@ -66,10 +66,10 @@
             <ul class="dropdown" aria-label="Serviços">
               <li><a href="/eventos.html" data-i18n="nav.events">Events</a></li>
               <li><a href="/agenciamento.html" data-i18n="nav.booking">Artist booking</a></li>
-              <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & staff</a></li>
+              <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & stagehands</a></li>
               <li><a href="/efeitos-especiais.html" data-i18n="nav.fx">Special effects</a></li>
-              <li><a href="/producao.html" data-i18n="nav.production">Stage production</a></li>
-              <li><a href="/aluguer.html" data-i18n="nav.rental">Equipment rental</a></li>
+              <li><a href="/producao.html" data-i18n="nav.production">Production</a></li>
+              <li><a href="/aluguer.html" data-i18n="nav.rental">Rental</a></li>
               <li><a href="/roulote.html" data-i18n="nav.roulote">Food trailer</a></li>
             </ul>
           </li>
@@ -161,7 +161,7 @@
             <button type="submit" class="btn btn--accent">Enviar pedido
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <span class="note" data-i18n="formulario.t2">Reply within hours.</span>
+            <span class="note" data-i18n="formulario.t2">Same-day reply.</span>
           </div>
 
           <p id="formStatus" hidden role="status" style="margin-top: 1rem; color: var(--ink-soft); font-size: var(--text-sm);"></p>
@@ -183,10 +183,10 @@
           <ul>
             <li><a href="/eventos.html" data-i18n="nav.events">Events</a></li>
             <li><a href="/agenciamento.html" data-i18n="nav.booking">Artist booking</a></li>
-            <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & staff</a></li>
+            <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & stagehands</a></li>
             <li><a href="/efeitos-especiais.html">Efeitos</a></li>
-            <li><a href="/producao.html" data-i18n="nav.production">Stage production</a></li>
-            <li><a href="/aluguer.html" data-i18n="nav.rental">Equipment rental</a></li>
+            <li><a href="/producao.html" data-i18n="nav.production">Production</a></li>
+            <li><a href="/aluguer.html" data-i18n="nav.rental">Rental</a></li>
             <li><a href="/roulote.html" data-i18n="nav.roulote">Food trailer</a></li>
           </ul>
         </div>
@@ -231,7 +231,8 @@
         'guide':       { line: 'Guia de planeamento', msg: 'Pedido do guia "Como planear um evento".' },
         'vanessa-alves': { line: '02 · Agenciamento de fado', msg: 'Reserva Vanessa Alves para a data: ' },
         'album':       { line: '02 · Agenciamento de fado', msg: 'Pedido relacionado com o novo álbum.' },
-        'parceria':    { line: '08 · Parceiros', msg: 'Proposta de parceria. Contexto: ' }
+        'parceria':    { line: '08 · Parceiros', msg: 'Proposta de parceria. Contexto: ' },
+        'apresentacao':{ line: '08 · Parceiros', msg: 'Pedido de apresentação à rede Gentle Laughter. Valência procurada: ' }
       };
       var preset = map[intent];
       if (!preset) return;
