@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" />
   <link rel="manifest" href="/manifest.json" />
 
-  <link rel="stylesheet" href="/css/styles.css?v=37" />
+  <link rel="stylesheet" href="/css/styles.css?v=60" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,8 +92,17 @@
 
   <header class="site-header">
     <div class="shell site-header__inner">
+      <details class="menu-langs header-langs" aria-label="Idioma">
+        <summary><span data-current-lang>PT</span></summary>
+        <ul>
+          <li><a href="/index.html" data-lang="pt">PT</a></li>
+          <li><a href="/en/index.html" data-lang="en">EN</a></li>
+          <li><a href="/fr/index.html" data-lang="fr">FR</a></li>
+          <li><a href="/de/index.html" data-lang="de">DE</a></li>
+        </ul>
+      </details>
       <div class="header-tools">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Abrir menu"></button>
+        <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"></a>
       </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul id="mainnav">
@@ -115,12 +124,6 @@
           <li><a href="/parceiros.html" data-i18n="nav.partners">Partenaires</a></li>
           <li><a href="/livro.html" data-i18n="nav.book">Livre</a></li>
           <li><a href="/faq.html" data-i18n="nav.faq">FAQ</a></li>
-<li><div class="lang-switcher" role="group" aria-label="Idioma">
-            <button type="button" data-lang="pt" aria-pressed="false" title="Português">PT</button>
-            <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
-            <button type="button" data-lang="fr" aria-pressed="true" title="Français">FR</button>
-            <button type="button" data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
-          </div></li>
           <li><a href="/formulario.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -134,7 +137,12 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow reveal" data-i18n="index.hero.eyebrow">Gentle Laughter · Lisbonne</p>
       <h1 class="hero__wordmark reveal" id="hero-title" data-i18n="index.hero.title">Production, booking et logistique.</h1>
-      <p class="hero__lede reveal" data-i18n="index.hero.lede">Production d'événements à Lisbonne : personnel technique, chauffeurs, location de matériel, effets spéciaux, scénographie, booking de fado et coordination de cérémonies. Un seul interlocuteur pour la scène et tout ce qui l'entoure.</p>
+      <p class="hero__lede hero__lede--desktop reveal" data-i18n="index.hero.lede">Production d'événements à Lisbonne : personnel technique, chauffeurs, location de matériel, effets spéciaux, scénographie, booking de fado et coordination de cérémonies. Un seul interlocuteur pour la scène et tout ce qui l'entoure.</p>
+      <p class="hero__lede hero__lede--mobile reveal" data-i18n="index.hero.lede.mobile">Production d’événements à Lisbonne. Tout pour votre scène, un seul partenaire.</p>
+      <div class="hero-cta hero-cta--mobile reveal">
+        <a href="/sobre.html" class="btn btn--ghost" data-i18n="index.hero.cta.about">À propos</a>
+        <a href="/formulario.html?intent=book-a-call" class="btn btn--accent" data-i18n="index.hero.cta.contact">Nous contacter</a>
+      </div>
       <div class="hero__meta reveal">
         <div>
           <strong data-i18n="index.hero.meta.hq">Siège</strong>
@@ -232,7 +240,7 @@
           <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.6; max-width: 52ch; opacity: 0.9; margin: 0;" data-i18n="index.album.lede">Représentation exclusive par Gentle Laughter. Sorti en 2026, disponible en streaming et pour les dates live.</p>
         </div>
         <div style="display: flex; gap: 0.7rem; flex-wrap: wrap;">
-          <a href="/agenciamento.html" style="display: inline-flex; align-items: center; padding: 0.8rem 1.4rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px;"><span data-i18n="index.album.cta">À propos de l'album →</span></a>
+          <a href="/agenciamento.html" style="display: inline-flex; align-items: center; padding: 0.8rem 1.4rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px;"><span data-i18n="index.album.cta">Écouter l’album</span></a>
         </div>
       </div>
     </section>
@@ -267,9 +275,9 @@
           <p class="eyebrow">Livro</p>
           <h2 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; margin: 0.5rem 0 1rem;"><em>A noite de Célio Correia</em>.</h2>
           <p style="line-height: 1.7; margin: 0 0 1.2rem;">Publicado em 2016 por Célio Correia, sobre a organização de eventos de diversão nocturna. Lançado em Lisboa, na Feira do Livro de Lisboa e do Porto, e em Cabo Verde. Disponível na Wook.</p>
-          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <a href="/livro.html" class="btn btn--ghost">Ver mais</a>
-            <a href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer" class="btn">Comprar na Wook</a>
+          <div class="cta-inline">
+            <a href="/livro.html" class="btn btn--ghost" data-i18n="index.livro.cta">Découvrir le livre</a>
+            <a href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="index.livro.buy">Acheter le livre</a>
           </div>
         </div>
         <div>

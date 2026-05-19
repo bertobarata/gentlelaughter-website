@@ -26,20 +26,29 @@
       reveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
-    /* ----- Mobile nav ----- */
-    var navToggle = document.querySelector('.nav-toggle');
-    var nav = document.querySelector('.top-nav');
-    if (navToggle && nav) {
-      navToggle.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', String(open));
-      });
-      nav.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          nav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
+    /* ----- Mobile nav: hamburger is now a plain link to menu.html (no JS) ----- */
+
+    /* ----- Generic lang switcher (.menu-langs outside menu.html) ----- */
+    if (!document.body.classList.contains('menu-page')) {
+      var langEl = document.querySelector('.menu-langs');
+      if (langEl) {
+        var curLang = (document.documentElement.lang || 'pt').toLowerCase();
+        var curSpan = langEl.querySelector('[data-current-lang]');
+        if (curSpan) curSpan.textContent = curLang.toUpperCase();
+        langEl.querySelectorAll('a').forEach(function (a) {
+          var isActive = a.getAttribute('data-lang') === curLang;
+          a.classList.toggle('is-active', isActive);
+          if (a.parentElement) a.parentElement.classList.toggle('is-current', isActive);
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (isActive) return;
+            location.assign(a.getAttribute('href'));
+          });
         });
-      });
+        document.addEventListener('click', function (e) {
+          if (langEl.open && !langEl.contains(e.target)) langEl.open = false;
+        });
+      }
     }
 
     /* ----- Footer year ----- */
@@ -161,7 +170,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v34';
+      var SW_GEN = 'gl-sw-v57';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };

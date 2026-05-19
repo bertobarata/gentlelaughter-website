@@ -40,7 +40,7 @@ function head(title, description) {
 const header = `  <header class="site-header">
     <div class="shell site-header__inner">
       <div class="header-tools">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menu"></button>
+        <a class="nav-toggle" href="menu.html" aria-label="Abrir menu"></a>
       </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#eae0d5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#13110e" media="(prefers-color-scheme: dark)" />
+
+  <title>Menu — Gentle Laughter</title>
+  <meta name="description" content="Menu de navegação Gentle Laughter." />
+  <meta name="robots" content="noindex,follow" />
+
+  <link rel="icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/css/styles.css?v=60" />
+  <link rel="canonical" href="https://gentlelaughter.com/en/menu.html" />
+
+  <link rel="alternate" hreflang="pt" href="https://gentlelaughter.com/menu.html" />
+  <link rel="alternate" hreflang="en" href="https://gentlelaughter.com/en/menu.html" />
+  <link rel="alternate" hreflang="fr" href="https://gentlelaughter.com/fr/menu.html" />
+  <link rel="alternate" hreflang="de" href="https://gentlelaughter.com/de/menu.html" />
+  <link rel="alternate" hreflang="x-default" href="https://gentlelaughter.com/menu.html" />
+</head>
+<body class="menu-page">
+  <header class="menu-header">
+    <details class="menu-langs" aria-label="Idioma">
+      <summary><span data-current-lang>PT</span></summary>
+      <ul>
+        <li><a href="/menu.html" data-lang="pt">PT</a></li>
+        <li><a href="/en/menu.html" data-lang="en">EN</a></li>
+        <li><a href="/fr/menu.html" data-lang="fr">FR</a></li>
+        <li><a href="/de/menu.html" data-lang="de">DE</a></li>
+      </ul>
+    </details>
+    <a href="/index.html" class="menu-logo" aria-label="Gentle Laughter — início">
+      <img src="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" />
+    </a>
+    <button class="menu-close" type="button" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </header>
+
+  <nav class="menu-nav" aria-label="Navegação">
+    <ul>
+      <li><a href="/sobre.html" data-i18n="nav.about">About</a></li>
+      <li class="has-sub">
+        <details>
+          <summary data-i18n="nav.services">Services</summary>
+          <ul>
+            <li><a href="/eventos.html" data-i18n="nav.events">Events</a></li>
+            <li><a href="/agenciamento.html" data-i18n="nav.booking">Artist booking</a></li>
+            <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & stagehands</a></li>
+            <li><a href="/efeitos-especiais.html" data-i18n="nav.fx">Special effects</a></li>
+            <li><a href="/producao.html" data-i18n="nav.production">Production</a></li>
+            <li><a href="/aluguer.html" data-i18n="nav.rental">Rental</a></li>
+            <li><a href="/roulote.html" data-i18n="nav.roulote">Food trailer</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/casos.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="/parceiros.html" data-i18n="nav.partners">Partners</a></li>
+      <li><a href="/livro.html" data-i18n="nav.book">Book</a></li>
+      <li><a href="/faq.html" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="/formulario.html" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <footer class="menu-footer">
+    <a href="https://instagram.com/gentlelaughteroficial" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://wa.me/351961154740" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </footer>
+
+  <script>
+    (function () {
+      var LANGS = ['en','fr','de'];
+      var lang = (document.documentElement.lang || 'pt').toLowerCase();
+
+      function stripLang(path) {
+        var m = path.match(/^\/(en|fr|de)(\/.*)?$/);
+        if (!m) return path.replace(/^\//, '') || 'index.html';
+        return (m[2] || '/').replace(/^\//, '') || 'index.html';
+      }
+      function buildClosePath(targetLang, originPath) {
+        var p = originPath || 'index.html';
+        return targetLang === 'pt' ? '/' + p : '/' + targetLang + '/' + p;
+      }
+
+      // Capture origin (referrer) once per menu session
+      var stored = sessionStorage.getItem('menuOrigin');
+      if (!stored) {
+        var ref = document.referrer;
+        var originPath = 'index.html';
+        if (ref) {
+          try {
+            var u = new URL(ref);
+            if (u.origin === location.origin && !/\/menu\.html$/.test(u.pathname)) {
+              originPath = stripLang(u.pathname);
+            }
+          } catch (e) {}
+        }
+        sessionStorage.setItem('menuOrigin', originPath);
+        stored = originPath;
+      }
+
+      var cur = document.querySelector('[data-current-lang]');
+      if (cur) cur.textContent = lang.toUpperCase();
+
+      document.querySelectorAll('.menu-langs a').forEach(function (a) {
+        var isActive = a.getAttribute('data-lang') === lang;
+        a.classList.toggle('is-active', isActive);
+        if (a.parentElement) a.parentElement.classList.toggle('is-current', isActive);
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (isActive) return;
+          var targetLang = a.getAttribute('data-lang');
+          location.replace('/' + (targetLang === 'pt' ? '' : targetLang + '/') + 'menu.html');
+        });
+      });
+
+      var closeBtn = document.querySelector('.menu-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+          var origin = sessionStorage.getItem('menuOrigin') || 'index.html';
+          sessionStorage.removeItem('menuOrigin');
+          location.assign(buildClosePath(lang, origin));
+        });
+      }
+
+      document.addEventListener('click', function (e) {
+        var d = document.querySelector('.menu-langs');
+        if (d && d.open && !d.contains(e.target)) d.open = false;
+      });
+    })();
+  </script>
+</body>
+</html>

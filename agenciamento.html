@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/styles.css?v=37" />
+  <link rel="stylesheet" href="css/styles.css?v=60" />
   <link rel="canonical" href="https://gentlelaughter.com/agenciamento.html" />
   <meta property="og:url" content="https://gentlelaughter.com/agenciamento.html" />
   <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
@@ -55,7 +55,7 @@
   <header class="site-header">
     <div class="shell site-header__inner">
       <div class="header-tools">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Abrir menu"></button>
+        <a class="nav-toggle" href="menu.html" aria-label="Abrir menu"></a>
       </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul id="mainnav">
@@ -77,12 +77,6 @@
           <li><a href="parceiros.html" data-i18n="nav.partners">Parceiros</a></li>
           <li><a href="livro.html" data-i18n="nav.book">Livro</a></li>
           <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-<li><div class="lang-switcher" role="group" aria-label="Idioma">
-            <button type="button" data-lang="pt" aria-pressed="true" title="Português">PT</button>
-            <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
-            <button type="button" data-lang="fr" aria-pressed="false" title="Français">FR</button>
-            <button type="button" data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
-          </div></li>
           <li><a href="formulario.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
@@ -104,9 +98,9 @@
           <p style="font-family: var(--font-sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.92; margin: 0 0 1.2rem;" data-i18n="agenciamento.t3">Novo álbum · 2026</p>
           <h2 id="album-title" style="font-family: var(--font-serif); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1; letter-spacing: -0.02em; margin: 0 0 1.4rem; color: inherit;">Vanessa Alves<br><em style="font-style: italic; opacity: 0.85;" data-i18n="agenciamento.t4">edita o novo álbum</em>.</h2>
           <p style="font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.6; max-width: 38ch; opacity: 0.92; margin: 0 0 2rem;" data-i18n="agenciamento.t5">Um registo inédito de fado, com repertório próprio e clássicos relidos. Editado em 2026, disponível para escuta online, encomendas e datas de apresentação ao vivo.</p>
-          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <a href="https://www.youtube.com/playlist?list=OLAK5uy_lTNu1NbdA9fhCP00WKHjc3Vp0CNtHYO4c" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px; transition: transform 0.2s ease;">Ouvir álbum →</a>
-            <a href="formulario.html?intent=album" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; background: transparent; color: inherit; border: 1px solid currentColor; font-weight: 500; text-decoration: none; border-radius: 999px;">Marcar concerto</a>
+          <div class="cta-inline">
+            <a href="https://www.youtube.com/playlist?list=OLAK5uy_lTNu1NbdA9fhCP00WKHjc3Vp0CNtHYO4c" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="agenciamento.cta.listen">Ouvir o álbum</a>
+            <a href="formulario.html?intent=album" class="btn btn--ghost" data-i18n="agenciamento.cta.book">Marcar concerto</a>
           </div>
           <p style="font-family: var(--font-sans); font-size: 0.85rem; opacity: 0.92; margin-top: 2rem; max-width: 42ch;" data-i18n="agenciamento.t6">Ficha técnica completa (editora, estúdio, direcção musical) divulgada quando os créditos forem confirmados.</p>
         </div>

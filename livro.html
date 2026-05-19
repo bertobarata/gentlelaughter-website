@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/styles.css?v=37" />
+  <link rel="stylesheet" href="css/styles.css?v=60" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +45,7 @@
   <header class="site-header">
     <div class="shell site-header__inner">
       <div class="header-tools">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Abrir menu"></button>
+        <a class="nav-toggle" href="menu.html" aria-label="Abrir menu"></a>
       </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul id="mainnav">
@@ -67,12 +67,6 @@
           <li><a href="parceiros.html" data-i18n="nav.partners">Parceiros</a></li>
           <li><a href="livro.html" data-i18n="nav.book">Livro</a></li>
           <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-<li><div class="lang-switcher" role="group" aria-label="Idioma">
-            <button type="button" data-lang="pt" aria-pressed="true" title="Português">PT</button>
-            <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
-            <button type="button" data-lang="fr" aria-pressed="false" title="Français">FR</button>
-            <button type="button" data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
-          </div></li>
           <li><a href="formulario.html" class="nav-cta" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
@@ -101,11 +95,9 @@
         <div class="prose reveal">
           <h2 data-i18n="livro.t5">Sobre o livro</h2>
           <p data-i18n="livro.t6">«A noite de Célio Correia» é mais do que um relato; é uma imersão na cultura que moldou a nossa forma de trabalhar. O livro está disponível directamente na Wook. Para pedidos em quantidade ou edições corporativas, contacte-nos.</p>
-          <div style="margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <a class="btn btn--accent" href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer">Comprar na Wook
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-            <a class="btn btn--ghost" href="formulario.html">Pedido em quantidade</a>
+          <div class="cta-inline" style="margin-top: 2rem;">
+            <a class="btn btn--accent" href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer" data-i18n="livro.cta.buy">Comprar o livro</a>
+            <a class="btn btn--ghost" href="formulario.html" data-i18n="livro.cta.bulk">Pedir várias cópias</a>
           </div>
         </div>
       </div>
