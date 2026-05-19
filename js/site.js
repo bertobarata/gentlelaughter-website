@@ -31,23 +31,17 @@
     /* ----- Generic lang switcher (.menu-langs outside menu.html) ----- */
     if (!document.body.classList.contains('menu-page')) {
       var langEl = document.querySelector('.menu-langs');
-      console.log('[lang] init', { langEl: !!langEl, bodyClasses: document.body.className });
       if (langEl) {
         var curLang = (document.documentElement.lang || 'pt').toLowerCase();
-        console.log('[lang] curLang =', curLang);
         var curSpan = langEl.querySelector('[data-current-lang]');
         if (curSpan) curSpan.textContent = curLang.toUpperCase();
-        var anchors = langEl.querySelectorAll('a');
-        console.log('[lang] anchors found:', anchors.length);
-        anchors.forEach(function (a) {
+        langEl.querySelectorAll('a').forEach(function (a) {
           var isActive = a.getAttribute('data-lang') === curLang;
           a.classList.toggle('is-active', isActive);
           if (a.parentElement) a.parentElement.classList.toggle('is-current', isActive);
           a.addEventListener('click', function (e) {
-            console.log('[lang] click', { lang: a.getAttribute('data-lang'), href: a.getAttribute('href'), isActive: isActive });
             e.preventDefault();
             if (isActive) return;
-            console.log('[lang] navigating to', a.getAttribute('href'));
             location.assign(a.getAttribute('href'));
           });
         });
@@ -138,28 +132,6 @@
       });
     }
 
-    /* ----- Sticky mobile CTA bar (service pages + livro/parceiros) ----- */
-    var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    var ctaPages = ['eventos.html','agenciamento.html','prestacao.html','efeitos-especiais.html','producao.html','aluguer.html','roulote.html','livro.html','parceiros.html'];
-    if (ctaPages.indexOf(page) !== -1 && !document.querySelector('.form-page')) {
-      var bar = document.createElement('div');
-      bar.className = 'mobile-cta-bar';
-      bar.innerHTML = '<a href="formulario.html?intent=book-a-call" class="btn">Marcar chamada</a>';
-      document.body.appendChild(bar);
-      document.body.classList.add('has-mobile-cta');
-      if ('IntersectionObserver' in window) {
-        var hideOn = document.querySelectorAll('.contact-slab, .site-footer');
-        if (hideOn.length) {
-          var barObs = new IntersectionObserver(function (entries) {
-            var hide = false;
-            entries.forEach(function (e) { if (e.isIntersecting) hide = true; });
-            bar.classList.toggle('is-hidden', hide);
-          }, { threshold: 0.05 });
-          hideOn.forEach(function (t) { barObs.observe(t); });
-        }
-      }
-    }
-
     /* ----- WhatsApp float autohide near contact slab + footer ----- */
     var float = document.querySelector('.whatsapp-float');
     if (float && 'IntersectionObserver' in window) {
@@ -176,7 +148,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v58';
+      var SW_GEN = 'gl-sw-v59';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };

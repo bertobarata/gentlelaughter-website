@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <link rel="stylesheet" href="css/styles.css?v=60" />
+  <link rel="stylesheet" href="css/styles.css?v=61" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -226,19 +226,6 @@
     </section>
 
     <!-- Vanessa Alves, album teaser strip -->
-    <section class="album-drench reveal" aria-labelledby="album-teaser" style="background: var(--burgundy); color: #f4ede6; padding: clamp(3rem, 6vw, 5rem) 0; margin-block: clamp(2rem, 4vw, 3.5rem);">
-      <div class="shell" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(1.5rem, 4vw, 3rem); align-items: center;">
-        <div>
-          <p style="font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; margin: 0 0 0.8rem;" data-i18n="index.album.eyebrow">Novo álbum · 2026</p>
-          <h2 id="album-teaser" style="font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.02em; margin: 0 0 1rem; color: inherit;">Vanessa Alves, <span data-i18n="index.album.headline">Vanessa Alves, novo registo de fado.</span></h2>
-          <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.6; max-width: 52ch; opacity: 0.9; margin: 0;" data-i18n="index.album.lede">Representação exclusiva pela Gentle Laughter. Editado em 2026, disponível para escuta online e datas ao vivo.</p>
-        </div>
-        <div style="display: flex; gap: 0.7rem; flex-wrap: wrap;">
-          <a href="agenciamento.html" style="display: inline-flex; align-items: center; padding: 0.8rem 1.4rem; background: #f4ede6; color: var(--burgundy); font-weight: 600; text-decoration: none; border-radius: 999px;"><span data-i18n="index.album.cta">Ouvir o álbum</span></a>
-        </div>
-      </div>
-    </section>
-
     <!-- Casos reais, 3-col -->
     <section class="shell reveal" aria-labelledby="proof-title" style="padding-block: clamp(2rem, 5vw, 4rem);">
       <div class="section-header">
@@ -264,19 +251,17 @@
 
     <!-- Livro feature compacto -->
     <section class="shell reveal" style="padding-block: clamp(2rem, 5vw, 4rem); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-top: clamp(2rem, 5vw, 3rem);">
-      <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 4rem); align-items: center;">
+      <div class="livro-feature">
         <div>
           <p class="eyebrow">Livro</p>
-          <h2 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; margin: 0.5rem 0 1rem;"><em>A noite de Célio Correia</em>.</h2>
-          <p style="line-height: 1.7; margin: 0 0 1.2rem;">Publicado em 2016 por Célio Correia, sobre a organização de eventos de diversão nocturna. Lançado em Lisboa, na Feira do Livro de Lisboa e do Porto, e em Cabo Verde. Disponível na Wook.</p>
+          <h2 class="livro-feature__title"><em>A noite de Célio Correia</em>.</h2>
+          <p class="livro-feature__lede">Publicado em 2016 por Célio Correia, sobre a organização de eventos de diversão nocturna. Lançado em Lisboa, na Feira do Livro de Lisboa e do Porto, e em Cabo Verde. Disponível na Wook.</p>
           <div class="cta-inline">
             <a href="livro.html" class="btn btn--ghost" data-i18n="index.livro.cta">Ler sobre o livro</a>
             <a href="https://www.wook.pt/livro/a-noite-celio-correia/19051244" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="index.livro.buy">Comprar o livro</a>
           </div>
         </div>
-        <div>
-          <p style="font-family: var(--font-serif); font-size: 1.5rem; line-height: 1.4; font-style: italic; max-width: 38ch; margin: 0; padding-left: 1.5rem; border-left: 3px solid var(--burgundy);">&ldquo;Um relato e uma imersão na cultura que moldou a forma como hoje trabalhamos.&rdquo;</p>
-        </div>
+        <blockquote class="livro-feature__quote">Um relato e uma imersão na cultura que moldou a forma como hoje trabalhamos.</blockquote>
       </div>
     </section>
 
