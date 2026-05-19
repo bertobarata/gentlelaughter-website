@@ -31,17 +31,23 @@
     /* ----- Generic lang switcher (.menu-langs outside menu.html) ----- */
     if (!document.body.classList.contains('menu-page')) {
       var langEl = document.querySelector('.menu-langs');
+      console.log('[lang] init', { langEl: !!langEl, bodyClasses: document.body.className });
       if (langEl) {
         var curLang = (document.documentElement.lang || 'pt').toLowerCase();
+        console.log('[lang] curLang =', curLang);
         var curSpan = langEl.querySelector('[data-current-lang]');
         if (curSpan) curSpan.textContent = curLang.toUpperCase();
-        langEl.querySelectorAll('a').forEach(function (a) {
+        var anchors = langEl.querySelectorAll('a');
+        console.log('[lang] anchors found:', anchors.length);
+        anchors.forEach(function (a) {
           var isActive = a.getAttribute('data-lang') === curLang;
           a.classList.toggle('is-active', isActive);
           if (a.parentElement) a.parentElement.classList.toggle('is-current', isActive);
           a.addEventListener('click', function (e) {
+            console.log('[lang] click', { lang: a.getAttribute('data-lang'), href: a.getAttribute('href'), isActive: isActive });
             e.preventDefault();
             if (isActive) return;
+            console.log('[lang] navigating to', a.getAttribute('href'));
             location.assign(a.getAttribute('href'));
           });
         });
@@ -170,7 +176,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v57';
+      var SW_GEN = 'gl-sw-v58';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
