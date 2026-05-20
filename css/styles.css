@@ -1327,7 +1327,7 @@ a.index-row:hover .index-row__sigil {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: oklch(70% 0.18 145);
+  background: #25d366;
   color: white;
   display: flex;
   align-items: center;
@@ -2519,10 +2519,115 @@ a.index-row:hover .index-row__sigil {
 }
 @media (max-width: 760px) {
   .livro-feature { grid-template-columns: 1fr; gap: 1.5rem; }
-  .livro-feature__quote { display: none; }
+  .livro-feature__quote { font-size: 1.15rem; max-width: 100%; padding-left: 1.25rem; }
+  .livro-feature__quote::before { font-size: 2rem; top: -0.1em; }
 }
 
 /* ============ CASE-CARDS MOBILE DISTILL ============ */
 @media (max-width: 760px) {
   .case-cards > a:nth-child(n+2) { display: none; }
+}
+
+/* ============ A11Y SCOPE: btn--ghost on burgundy drench ============ */
+.album-drench .btn--ghost,
+.album-drench .btn,
+.album-drench a.btn {
+  color: #f4ede6;
+  border-color: #f4ede6;
+}
+.album-drench .btn--ghost:hover,
+.album-drench .btn:hover {
+  background: rgba(244, 237, 230, 0.12);
+  color: #f4ede6;
+  border-color: #f4ede6;
+  box-shadow: none;
+}
+
+/* ============ LINEAGE STRIP — left-align mobile ============ */
+.lineage-strip {
+  max-width: 64ch;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .lineage-strip {
+    margin: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+/* ============ HAMBURGER LABEL ============ */
+.nav-toggle__label {
+  display: none;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  color: var(--ink);
+}
+@media (max-width: 760px) {
+  .nav-toggle {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .nav-toggle__label { display: inline-block; }
+}
+
+/* ============ SKIP-NAV ============ */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.skip-nav:focus,
+.skip-nav:focus-visible {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* ============ HERO MOBILE — hide eyebrow + CTA hierarchy ============ */
+@media (max-width: 760px) {
+  .hero > .eyebrow { display: none; }
+  .hero-cta--mobile .btn--accent { flex: 1.4 1 0; }
+  .hero-cta--mobile .btn--ghost { flex: 1 1 0; }
+}
+
+/* ============ FORM FIELD ERRORS ============ */
+.field-error {
+  display: block;
+  min-height: 0;
+  margin-top: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #a83a3a;
+  line-height: 1.4;
+}
+.field-error:empty { display: none; }
+.form input[aria-invalid="true"],
+.form select[aria-invalid="true"],
+.form textarea[aria-invalid="true"] {
+  border-color: #a83a3a;
+  background: color-mix(in srgb, #a83a3a 6%, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  .field-error { color: #e89797; }
+  .form input[aria-invalid="true"],
+  .form select[aria-invalid="true"],
+  .form textarea[aria-invalid="true"] {
+    border-color: #e89797;
+    background: color-mix(in srgb, #e89797 8%, transparent);
+  }
 }

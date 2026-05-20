@@ -36,9 +36,9 @@
   "index.hero.meta.model": "Modèle",
   "index.hero.meta.modelValue": "Coordination intégrale.",
   "index.hero.meta.lines": "Lignes",
-  "index.hero.meta.linesValue": "Neuf, sous un seul toit.",
+  "index.hero.meta.linesValue": "Sept, sous un seul toit.",
   "index.services.eyebrow": "Lignes de service",
-  "index.services.lede": "Solutions modulaires pour chaque étape de la production.",
+  "index.services.lede": "Pour mariages, promoteurs, sociétés de production ou festivals. Sept lignes, un seul interlocuteur.",
   "index.s01.name": "Organisation d'événements",
   "index.s01.hint": "Mariages, baptêmes, événements privés et productions de grande échelle. Festivals et arénas.",
   "index.s02.name": "Booking d'artistes fado",
@@ -574,5 +574,13 @@
   "menu.title": "Menu — Gentle Laughter",
   "index.hero.lede.mobile": "Production d’événements à Lisbonne. Tout pour votre scène, un seul partenaire.",
   "index.hero.cta.about": "À propos",
-  "index.hero.cta.contact": "Nous contacter"
+  "index.hero.cta.contact": "Nous contacter",
+  "404.title": "Cette page a changé d’adresse.",
+  "404.eyebrow": "Erreur 404",
+  "404.lede": "Soit le lien était incorrect, soit la page a été déplacée. Pas de panique. Trois chemins ci-dessous.",
+  "404.cta.home": "Retour à l’accueil",
+  "404.cta.contact": "Nous contacter",
+  "404.link.services": "Voir les lignes de service →",
+  "404.link.cases": "Voir les cas sur le terrain →",
+  "404.link.faq": "Questions fréquentes →"
 }

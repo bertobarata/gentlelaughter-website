@@ -88,9 +88,48 @@
         if (asideP) asideP.textContent = 'Indique data, local e janela. Tratamos do rider.';
       }
 
+      var ERR_MSG = {
+        valueMissing: 'Campo obrigatório.',
+        typeMismatch: 'Formato inválido.',
+        patternMismatch: 'Formato inválido.',
+        default: 'Verifique o valor.'
+      };
+      function showFieldError(input) {
+        var id = input.id || input.name;
+        var slot = document.getElementById('err-' + id.replace(/^f-/, '')) || form.querySelector('[data-for="' + id + '"]');
+        if (!slot) return;
+        var v = input.validity;
+        var msg = ERR_MSG.default;
+        if (v.valueMissing) msg = ERR_MSG.valueMissing;
+        else if (v.typeMismatch) msg = ERR_MSG.typeMismatch;
+        else if (v.patternMismatch) msg = ERR_MSG.patternMismatch;
+        slot.textContent = msg;
+        input.setAttribute('aria-invalid', 'true');
+      }
+      function clearFieldError(input) {
+        var id = input.id || input.name;
+        var slot = document.getElementById('err-' + id.replace(/^f-/, '')) || form.querySelector('[data-for="' + id + '"]');
+        if (slot) slot.textContent = '';
+        input.removeAttribute('aria-invalid');
+      }
+      form.querySelectorAll('input, select, textarea').forEach(function (inp) {
+        inp.addEventListener('input', function () { clearFieldError(inp); });
+        inp.addEventListener('blur', function () {
+          if (inp.willValidate && !inp.checkValidity()) showFieldError(inp);
+        });
+      });
+
       form.addEventListener('submit', function (e) {
         if (form.checkValidity && !form.checkValidity()) {
-          form.reportValidity();
+          e.preventDefault();
+          var firstInvalid = null;
+          form.querySelectorAll('input, select, textarea').forEach(function (inp) {
+            if (inp.willValidate && !inp.checkValidity()) {
+              showFieldError(inp);
+              if (!firstInvalid) firstInvalid = inp;
+            }
+          });
+          if (firstInvalid) firstInvalid.focus();
           return;
         }
         e.preventDefault();
@@ -148,7 +187,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v59';
+      var SW_GEN = 'gl-sw-v60';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };

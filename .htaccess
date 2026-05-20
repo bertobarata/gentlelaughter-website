@@ -74,3 +74,6 @@
 <IfModule mod_http2.c>
   H2Push on
 </IfModule>
+
+# Custom 404 page
+ErrorDocument 404 /404.html

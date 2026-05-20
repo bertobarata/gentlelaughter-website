@@ -9,7 +9,7 @@
   <meta name="description" content="Tell us the line, the context and your preferred channel. We'll structure the right solution." />
   <link rel="icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="/css/styles.css?v=61" />
+  <link rel="stylesheet" href="/css/styles.css?v=62" />
   <link rel="canonical" href="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:url" content="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
@@ -51,6 +51,7 @@
   <link rel="alternate" hreflang="x-default" href="https://gentlelaughter.com/formulario.html" />
 </head>
 <body>
+  <a class="skip-nav" href="#main">Saltar para conteúdo</a>
 
   <header class="site-header">
     <div class="shell site-header__inner">
@@ -81,7 +82,7 @@
         </ul>
       </nav>
       <div class="header-tools">
-        <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"></a>
+        <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"><span class="nav-toggle__label">Menu</span></a>
       </div>
     </div>
   </header>
@@ -115,7 +116,7 @@
         <form id="contactForm" class="form" novalidate>
           <div class="field">
             <label for="f-assunto">Linha *</label>
-            <select id="f-assunto" name="assunto" required>
+            <select id="f-assunto" name="assunto" required aria-describedby="err-assunto">
               <option value="" disabled selected>Escolher…</option>
               <option>01 · Organização de eventos</option>
               <option>02 · Agenciamento de fado</option>
@@ -129,26 +130,31 @@
               <option>Guia de planeamento</option>
               <option>Outro</option>
             </select>
+            <span id="err-assunto" class="field-error" data-for="f-assunto" aria-live="polite"></span>
           </div>
 
           <div class="field">
             <label for="f-msg">Mensagem *</label>
-            <textarea id="f-msg" name="mensagem" required placeholder="Data prevista, local, número de convidados, o que é prioritário."></textarea>
+            <textarea id="f-msg" name="mensagem" required placeholder="Data prevista, local, número de convidados, o que é prioritário." aria-describedby="err-msg"></textarea>
+            <span id="err-msg" class="field-error" data-for="f-msg" aria-live="polite"></span>
           </div>
 
           <div class="field">
             <label for="f-nome">Nome *</label>
-            <input id="f-nome" type="text" name="nome" required autocomplete="name" />
+            <input id="f-nome" type="text" name="nome" required autocomplete="name" aria-describedby="err-nome" />
+            <span id="err-nome" class="field-error" data-for="f-nome" aria-live="polite"></span>
           </div>
 
           <div class="field">
             <label for="f-contacto">WhatsApp ou email *</label>
-            <input id="f-contacto" type="text" name="contacto" required autocomplete="tel" placeholder="+351 … ou nome@dominio.pt" />
+            <input id="f-contacto" type="text" name="contacto" required autocomplete="tel" placeholder="+351 … ou nome@dominio.pt" aria-describedby="err-contacto" />
+            <span id="err-contacto" class="field-error" data-for="f-contacto" aria-live="polite"></span>
           </div>
 
           <label class="check">
-            <input type="checkbox" name="rgpd" required />
+            <input type="checkbox" name="rgpd" required aria-describedby="err-rgpd" />
             <span>Li e aceito a <a href="/politica-privacidade.html">Política de Privacidade</a>.</span>
+            <span id="err-rgpd" class="field-error" data-for="rgpd" aria-live="polite"></span>
           </label>
 
           <div class="actions">

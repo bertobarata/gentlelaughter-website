@@ -36,9 +36,9 @@
   "index.hero.meta.model": "Modell",
   "index.hero.meta.modelValue": "Vollständige Koordination.",
   "index.hero.meta.lines": "Bereiche",
-  "index.hero.meta.linesValue": "Neun, unter einem Dach.",
+  "index.hero.meta.linesValue": "Sieben, unter einem Dach.",
   "index.services.eyebrow": "Leistungsbereiche",
-  "index.services.lede": "Modulare Lösungen für jede Phase der Produktion.",
+  "index.services.lede": "Für Hochzeiten, Veranstalter, Produktionsfirmen oder Festivals. Sieben Linien, ein Ansprechpartner.",
   "index.s01.name": "Eventorganisation",
   "index.s01.hint": "Hochzeiten, Taufen, Privatveranstaltungen und Großproduktionen. Festivals und Arenen.",
   "index.s02.name": "Fado-Künstlerbuchung",
@@ -574,5 +574,13 @@
   "menu.title": "Menü — Gentle Laughter",
   "index.hero.lede.mobile": "Eventproduktion in Lissabon. Alles für Ihre Bühne, ein Partner.",
   "index.hero.cta.about": "Über uns",
-  "index.hero.cta.contact": "Kontaktieren"
+  "index.hero.cta.contact": "Kontaktieren",
+  "404.title": "Diese Seite wurde verschoben.",
+  "404.eyebrow": "Fehler 404",
+  "404.lede": "Der Link war falsch oder die Seite wurde umorganisiert. Kein Drama. Drei Wege unten.",
+  "404.cta.home": "Zur Startseite",
+  "404.cta.contact": "Kontaktieren",
+  "404.link.services": "Leistungslinien ansehen →",
+  "404.link.cases": "Fälle auf der Bühne →",
+  "404.link.faq": "Häufige Fragen →"
 }

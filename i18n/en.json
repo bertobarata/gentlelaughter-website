@@ -36,9 +36,9 @@
   "index.hero.meta.model": "Model",
   "index.hero.meta.modelValue": "Full coordination.",
   "index.hero.meta.lines": "Lines",
-  "index.hero.meta.linesValue": "Nine, under one roof.",
+  "index.hero.meta.linesValue": "Seven, under one roof.",
   "index.services.eyebrow": "Service lines",
-  "index.services.lede": "Modular solutions for every step of production.",
+  "index.services.lede": "For weddings, promoters, production houses or festivals. Seven lines, one point of contact.",
   "index.s01.name": "Events organisation",
   "index.s01.hint": "Weddings, christenings, private events and large-scale productions. Festivals and arenas.",
   "index.s02.name": "Fado artist booking",
@@ -574,5 +574,13 @@
   "menu.title": "Menu — Gentle Laughter",
   "index.hero.lede.mobile": "Event production in Lisbon. Everything for your stage, one partner.",
   "index.hero.cta.about": "About us",
-  "index.hero.cta.contact": "Contact us"
+  "index.hero.cta.contact": "Contact us",
+  "404.title": "This page has moved.",
+  "404.eyebrow": "Error 404",
+  "404.lede": "Either the link was wrong, or it was reorganized. No drama. Three paths below.",
+  "404.cta.home": "Back to home",
+  "404.cta.contact": "Talk to us",
+  "404.link.services": "See the lines of work →",
+  "404.link.cases": "See cases on the ground →",
+  "404.link.faq": "Frequently asked questions →"
 }

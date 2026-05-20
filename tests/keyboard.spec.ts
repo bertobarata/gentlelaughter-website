@@ -17,11 +17,12 @@ test('every focusable shows visible focus ring on /formulario.html', async ({ pa
   }
 });
 
-test('mobile nav toggle opens menu', async ({ page }) => {
+test('mobile nav toggle navigates to /menu.html', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   const toggle = page.locator('.nav-toggle');
   await expect(toggle).toBeVisible();
   await toggle.click();
-  await expect(page.locator('.top-nav.open')).toBeVisible();
+  await expect(page).toHaveURL(/\/menu\.html$/);
+  await expect(page.locator('.menu-nav')).toBeVisible();
 });
