@@ -2528,19 +2528,34 @@ a.index-row:hover .index-row__sigil {
   .case-cards > a:nth-child(n+2) { display: none; }
 }
 
-/* ============ A11Y SCOPE: btn--ghost on burgundy drench ============ */
-.album-drench .btn--ghost,
+/* ============ A11Y SCOPE: CTAs on burgundy album-drench ============ */
+/* Primary (.btn): paper fill + burgundy text — matches drench color palette */
 .album-drench .btn,
 .album-drench a.btn {
+  background: #f4ede6;
+  color: #3d1820;
+  border-color: #f4ede6;
+  box-shadow: none;
+}
+.album-drench .btn:hover,
+.album-drench a.btn:hover {
+  background: #ffffff;
+  color: #3d1820;
+  border-color: #ffffff;
+  box-shadow: none;
+}
+/* Ghost: paper outline only */
+.album-drench .btn--ghost,
+.album-drench a.btn--ghost {
+  background: transparent;
   color: #f4ede6;
   border-color: #f4ede6;
 }
 .album-drench .btn--ghost:hover,
-.album-drench .btn:hover {
-  background: rgba(244, 237, 230, 0.12);
+.album-drench a.btn--ghost:hover {
+  background: rgba(244, 237, 230, 0.14);
   color: #f4ede6;
   border-color: #f4ede6;
-  box-shadow: none;
 }
 
 /* ============ LINEAGE STRIP — left-align mobile ============ */
