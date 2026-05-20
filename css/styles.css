@@ -2365,12 +2365,12 @@ a.index-row:hover .index-row__sigil {
   text-decoration: none;
 }
 .menu-nav details > ul li a:hover,
-.menu-nav details > ul li a:focus-visible { color: var(--burgundy); }
+.menu-nav details > ul li a:focus-visible { color: var(--ink); }
 .menu-nav > ul > li > a:hover,
 .menu-nav > ul > li > a:focus-visible,
 .menu-nav summary:hover,
 .menu-nav summary:focus-visible {
-  color: var(--burgundy);
+  color: var(--ink);
   background: var(--paper-soft);
   outline: none;
 }
@@ -2395,7 +2395,7 @@ a.index-row:hover .index-row__sigil {
   align-items: center;
   text-decoration: none;
 }
-.menu-footer a:hover { color: var(--burgundy); }
+.menu-footer a:hover { color: var(--ink-soft); }
 
 /* ============ MOBILE BUTTON BUMP (all pages) ============ */
 @media (max-width: 760px) {
@@ -2637,9 +2637,128 @@ a.index-row:hover .index-row__sigil {
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
-    padding: 0.4rem 0;
+    padding: 0.75rem 0;
+    min-height: 44px;
   }
   .hero-cta--mobile .hero-cta__secondary:hover { color: var(--ink-soft); }
+  .hero-cta__quick {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    min-height: 44px;
+  }
+  .hero-cta__quick:hover { color: var(--ink); }
+}
+
+/* ============ DESKTOP HEADER — langs left + logo left + hamburger right ============ */
+@media (min-width: 761px) {
+  .header-langs { order: 0; margin-right: 0.75rem; }
+  .logo-link { order: 1; margin-right: auto; }
+  .header-tools { order: 3; }
+}
+
+/* ============ FORM SUBMIT PREVIEW (confirmation step) ============ */
+.form-preview {
+  background: var(--paper-soft);
+  border-top: 1px solid var(--ink);
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
+  margin-top: 1rem;
+}
+.form-preview__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+.form-preview__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+}
+.form-preview__body {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 1rem 1.1rem;
+  margin: 0 0 1.5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 4px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.form-preview__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.form-preview__actions .btn { min-width: 0; }
+@media (max-width: 760px) {
+  .form-preview__actions { flex-direction: column; align-items: stretch; }
+  .form-preview__actions .btn { width: 100%; }
+}
+
+/* ============ APPLICATIONS LIST (numbered editorial) ============ */
+.applications-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.applications-row {
+  display: grid;
+  grid-template-columns: 4ch 1fr;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  padding: clamp(1.4rem, 3vw, 2rem) 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.applications-row__num {
+  font-family: var(--font-sans);
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+.applications-row__name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  line-height: 1.15;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+.applications-row__hint {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ============ FOOTER SIGNOFF ============ */
+.footer-signoff {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--ink);
+  margin: clamp(2rem, 4vw, 3rem) 0 1.5rem;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+@media (max-width: 760px) {
+  .footer-signoff { text-align: left; }
 }
 
 /* ============ FORM FIELD ERRORS ============ */

@@ -88,21 +88,23 @@
         if (asideP) asideP.textContent = 'Indique data, local e janela. Tratamos do rider.';
       }
 
-      var ERR_MSG = {
-        valueMissing: 'Campo obrigatório.',
-        typeMismatch: 'Formato inválido.',
-        patternMismatch: 'Formato inválido.',
-        default: 'Verifique o valor.'
+      var FIELD_MSG = {
+        'f-assunto': { valueMissing: 'Escolha a linha aplicável.' },
+        'f-msg': { valueMissing: 'Indique data, local e o que precisa.' },
+        'f-nome': { valueMissing: 'Como o tratamos?' },
+        'f-contacto': { valueMissing: 'WhatsApp (+351 …) ou email.', typeMismatch: 'Formato não reconhecido.' },
+        rgpd: { valueMissing: 'Aceite a Política de Privacidade para continuar.' }
       };
       function showFieldError(input) {
         var id = input.id || input.name;
         var slot = document.getElementById('err-' + id.replace(/^f-/, '')) || form.querySelector('[data-for="' + id + '"]');
         if (!slot) return;
         var v = input.validity;
-        var msg = ERR_MSG.default;
-        if (v.valueMissing) msg = ERR_MSG.valueMissing;
-        else if (v.typeMismatch) msg = ERR_MSG.typeMismatch;
-        else if (v.patternMismatch) msg = ERR_MSG.patternMismatch;
+        var fieldMsgs = FIELD_MSG[id] || {};
+        var msg = 'Verifique o valor.';
+        if (v.valueMissing) msg = fieldMsgs.valueMissing || 'Campo obrigatório.';
+        else if (v.typeMismatch) msg = fieldMsgs.typeMismatch || 'Formato inválido.';
+        else if (v.patternMismatch) msg = fieldMsgs.patternMismatch || 'Formato inválido.';
         slot.textContent = msg;
         input.setAttribute('aria-invalid', 'true');
       }
@@ -156,19 +158,47 @@
           lines.push('');
           lines.push(msg);
         }
-        var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
-        window.open(url, '_blank', 'noopener');
+        var msgText = lines.join('\n');
+        var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msgText);
 
-        var status = document.getElementById('formStatus');
-        if (status) {
-          status.hidden = false;
-          status.textContent = 'A abrir o WhatsApp com a sua mensagem. Se nada acontecer, contacte-nos directamente.';
-        }
-
-        setTimeout(function() {
-          window.location.href = 'sucesso.html';
-        }, 2000);
+        showSubmitPreview(msgText, url);
       });
+
+      function showSubmitPreview(msgText, waUrl) {
+        var existing = form.querySelector('.form-preview');
+        if (existing) existing.remove();
+        form.querySelectorAll('.field, .check, .actions').forEach(function (el) { el.hidden = true; });
+
+        var panel = document.createElement('div');
+        panel.className = 'form-preview';
+        panel.setAttribute('role', 'region');
+        panel.setAttribute('aria-label', 'Pré-visualização da mensagem');
+        panel.innerHTML =
+          '<p class="form-preview__eyebrow">Confirme antes de enviar</p>' +
+          '<h2 class="form-preview__title">Esta é a mensagem que vai abrir no WhatsApp.</h2>' +
+          '<pre class="form-preview__body"></pre>' +
+          '<div class="form-preview__actions">' +
+            '<a href="' + waUrl + '" class="btn btn--accent" target="_blank" rel="noopener noreferrer" data-preview-send>Abrir WhatsApp</a>' +
+            '<button type="button" class="btn btn--ghost" data-preview-back>Voltar e editar</button>' +
+          '</div>';
+        panel.querySelector('.form-preview__body').textContent = msgText;
+        form.appendChild(panel);
+
+        panel.querySelector('[data-preview-send]').addEventListener('click', function () {
+          var status = document.getElementById('formStatus');
+          if (status) {
+            status.hidden = false;
+            status.textContent = 'Pedido enviado. Redirecionando…';
+          }
+          setTimeout(function () { window.location.href = 'sucesso.html'; }, 800);
+        });
+        panel.querySelector('[data-preview-back]').addEventListener('click', function () {
+          panel.remove();
+          form.querySelectorAll('.field, .check, .actions').forEach(function (el) { el.hidden = false; });
+        });
+
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     /* ----- WhatsApp float autohide near contact slab + footer ----- */
@@ -187,7 +217,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v62';
+      var SW_GEN = 'gl-sw-v63';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
