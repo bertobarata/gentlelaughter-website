@@ -101,4 +101,4 @@ Playwright suite under `tests/` with 11 spec files: smoke, banned copy, axe a11y
 
 ## Cache busting
 
-CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=74`.
+CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=75`.
