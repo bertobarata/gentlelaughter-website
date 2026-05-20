@@ -176,7 +176,7 @@
         panel.innerHTML =
           '<p class="form-preview__eyebrow">Confirme antes de enviar</p>' +
           '<h2 class="form-preview__title">Esta é a mensagem que vai abrir no WhatsApp.</h2>' +
-          '<pre class="form-preview__body"></pre>' +
+          '<div class="form-preview__body"></div>' +
           '<div class="form-preview__actions">' +
             '<a href="' + waUrl + '" class="btn btn--accent" target="_blank" rel="noopener noreferrer" data-preview-send>Abrir WhatsApp</a>' +
             '<button type="button" class="btn btn--ghost" data-preview-back>Voltar e editar</button>' +
@@ -217,7 +217,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v63';
+      var SW_GEN = 'gl-sw-v65';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };

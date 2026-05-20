@@ -65,6 +65,8 @@ Line length capped at `--measure: 68ch` for body prose.
 - `.contact-slab` — closer block on every page. Heading + lede + CTA on left, contact list on right. Collapses to single column ≤760px.
 - `.mobile-cta-bar` — fixed-bottom CTA bar injected by `js/site.js` on service pages and `livro.html` / `parceiros.html` only. Hides when `.contact-slab` or footer enters viewport.
 - `.whatsapp-float` — fixed bottom-right WhatsApp circle. Auto-hides via IntersectionObserver when contact slab or footer is visible.
+- `.bento` — home services index, 9-tile editorial asymmetric grid (desktop 4-col, 2-col ≤960px). Tile sizes: `--hero` (01, 2×2 span), `--medium` (02, 2-col), `--small` (03-08), `--wide` (09, full-width). Mobile ≤760px collapses to single-column hairline rows. `.bento__footer` carries the venues caption (`Multiusos · Coliseu · Campo Pequeno · MEO Arena`) and link to `sobre.html`. Replaces former `.index` + `.lineage-strip` on home only.
+- `.album-drench__eyebrow|title|lede|aside|media|grid` — typed class hooks for the burgundy album section on `agenciamento.html`. All previously-inline declarations now live in `styles.css`. Burgundy reservation still applies (this section only).
 
 ## Motion
 
@@ -99,4 +101,4 @@ Playwright suite under `tests/` with 11 spec files: smoke, banned copy, axe a11y
 
 ## Cache busting
 
-CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=10`.
+CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=67`.
