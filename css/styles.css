@@ -2863,12 +2863,13 @@ a.index-row:hover .index-row__sigil {
   .hero-cta__quick:hover { color: var(--ink); }
 }
 
-/* ============ DESKTOP HEADER — logo left, nav center, langs+hamburger right ============ */
+/* ============ DESKTOP HEADER — logo left, nav center, langs flush right ============ */
 @media (min-width: 761px) {
   .site-header__inner { display: flex; justify-content: space-between; align-items: center; }
-  .logo-link { order: 0; flex: 1; display: flex; justify-content: flex-start; }
+  .logo-link { order: 0; flex: 0 0 auto; }
   .top-nav { order: 1; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; z-index: 10; }
-  .header-tools { order: 2; flex: 1; display: flex; flex-direction: row-reverse; justify-content: flex-start; align-items: center; gap: 1.5rem; position: relative; z-index: 20; }
+  .header-tools { order: 2; display: none; }
+  .header-langs { order: 3; margin-left: auto; position: relative; z-index: 20; }
   .header-langs > ul { left: auto; right: 0; z-index: 20; }
 }
 
@@ -2994,3 +2995,71 @@ a.index-row:hover .index-row__sigil {
     background: color-mix(in srgb, #e89797 8%, transparent);
   }
 }
+
+/* ============ UTILITY CLASSES — extracted from inline-style hotspots ============ */
+/* Used across prestacao.html / aluguer.html / producao.html (and any future page) */
+
+.section-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 0.8rem;
+}
+.section-h2--lg {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0.5rem 0 1rem;
+}
+.section-h2--sm {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0 1rem;
+}
+
+.section--band {
+  background: var(--paper-soft);
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+}
+.section--ruled {
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(3rem, 5vw, 4rem);
+}
+.section--compact {
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.prose-narrow {
+  max-width: 62ch;
+  margin: 0 auto;
+}
+.prose-narrow--left { text-align: left; }
+
+.prose-relaxed { line-height: 1.7; }
+
+.list-tight {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.list-spec {
+  margin-top: 0.8rem;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.link-bare { color: var(--ink); }
+
+.more-toggle {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2rem;
+}
+.more-toggle > summary {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  list-style: none;
+}
+.more-toggle > summary::-webkit-details-marker { display: none; }

@@ -12,7 +12,9 @@ These visitors arrive curious but uncertain whether the same company really deli
 
 ## Product Purpose
 
-A single trustworthy index for an umbrella production and services company with nine distinct lines of business. The site exists to make a wide, unconventional portfolio look intentional rather than scattered: every line gets equal weight, no line is buried, and the brand carries the coherence the offerings cannot carry on their own.
+A single trustworthy index for an umbrella production and services company with nine distinct lines of business. The site exists to make a wide, unconventional portfolio look intentional rather than scattered: every line is reachable in one click, none is buried in a sub-menu or footer, and the brand carries the coherence the offerings cannot carry on their own.
+
+The home bento applies one calibrated asymmetry: 01 Organização de eventos and 02 Agenciamento de fado occupy hero and medium tiles respectively, because these two lines drive the highest-intent inbound traffic (weddings, batizados, fado bookings) and are the company's signature offer. Lines 03–08 take equal small tiles. Line 09 (the book) takes the full-width footer tile because it belongs to a different register (memoir, not service). Equal weight applies at the level of numbering, treatment and reachability; visual hierarchy reflects business reality.
 
 Success: a visitor lands, scans the index, finds the line that applies to them in under thirty seconds, reaches a contact path with confidence, and never wonders whether they are in the right place.
 
