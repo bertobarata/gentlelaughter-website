@@ -67,7 +67,7 @@ const footer = `  <footer class="site-footer">
           <p class="footer-tagline">Produção, agenciamento e eventos. Disponíveis 24/7. Resposta no próprio dia.</p>
         </div>
         <div class="footer-col">
-          <h4>Serviços</h4>
+          <h3>Serviços</h3>
           <ul>
             <li><a href="eventos.html">Eventos</a></li>
             <li><a href="agenciamento.html">Agenciamento</a></li>
@@ -79,7 +79,7 @@ const footer = `  <footer class="site-footer">
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Mais</h4>
+          <h3>Mais</h3>
           <ul>
             <li><a href="parceiros.html">Parceiros</a></li>
             <li><a href="livro.html">Livro</a></li>
@@ -88,7 +88,7 @@ const footer = `  <footer class="site-footer">
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contacto</h4>
+          <h3>Contacto</h3>
           <ul>
             <li><a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer">${WHATSAPP_DISPLAY}</a></li>
             <li><a href="mailto:${EMAIL}">${EMAIL}</a></li>

@@ -32,10 +32,10 @@ PRODUCT.md mandates dark parity. Both modes are warm parchment: light is paper-o
 
 | Token | Family | Use |
 |---|---|---|
-| `--font-serif` | Tenor Sans | Headings, page-hero titles, hero wordmark, service-card titles, contact-slab heading |
-| `--font-sans` | Public Sans | Body, eyebrows, labels, navigation, button text, .spine label |
+| `--font-serif` | Gambarino | Headings, page-hero titles, hero wordmark, service-card titles, contact-slab heading |
+| `--font-sans` | Switzer | Body, eyebrows, labels, navigation, button text, .spine label |
 
-Loaded via Google Fonts CDN (`@import` at top of styles.css). Self-hosted woff2 still pending — see `em falta.md` §16.
+Loaded as self-hosted woff2 files in `assets/fonts/` via `@font-face` in `styles.css`.
 
 Numerals: lining figures only. `service-card__num` uses `font-variant-numeric: lining-nums` and is **roman, not italic**. Italicised digits read as decorative reflex.
 
@@ -65,7 +65,7 @@ Line length capped at `--measure: 68ch` for body prose.
 - `.contact-slab` — closer block on every page. Heading + lede + CTA on left, contact list on right. Collapses to single column ≤760px.
 - `.mobile-cta-bar` — fixed-bottom CTA bar injected by `js/site.js` on service pages and `livro.html` / `parceiros.html` only. Hides when `.contact-slab` or footer enters viewport.
 - `.whatsapp-float` — fixed bottom-right WhatsApp circle. Auto-hides via IntersectionObserver when contact slab or footer is visible.
-- `.bento` — home services index, 9-tile editorial asymmetric grid (desktop 4-col, 2-col ≤960px). Tile sizes: `--hero` (01, 2×2 span), `--medium` (02, 2-col), `--small` (03-08), `--wide` (09, full-width). Mobile ≤760px collapses to single-column hairline rows. `.bento__footer` carries the venues caption (`Multiusos · Coliseu · Campo Pequeno · MEO Arena`) and link to `sobre.html`. Replaces former `.index` + `.lineage-strip` on home only.
+- `.bento` — home services index, 9-tile editorial asymmetric grid (desktop 4-col, 2-col ≤960px). Tile sizes: `--hero` (01, 2×2 span), `--medium` (02, 2-col), `--small` (03-08), `--wide` (09, full-width). Mobile ≤760px collapses to single-column hairline rows. `.bento__masthead` (above the grid) carries the accreditation caption: eyebrow `Já estivemos em` + venues `Multiusos · Coliseu · Campo Pequeno · MEO Arena` + Sobre link. Replaces former `.index` + `.lineage-strip` on home only.
 - `.album-drench__eyebrow|title|lede|aside|media|grid` — typed class hooks for the burgundy album section on `agenciamento.html`. All previously-inline declarations now live in `styles.css`. Burgundy reservation still applies (this section only).
 
 ## Motion
@@ -101,4 +101,4 @@ Playwright suite under `tests/` with 11 spec files: smoke, banned copy, axe a11y
 
 ## Cache busting
 
-CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=70`.
+CSS shipped with `?v=N` query string in every HTML `<link>` tag. Bump on every CSS ship. Service worker `CACHE_NAME` and `RUNTIME_CACHE` versions follow the same number. Currently at `v=74`.

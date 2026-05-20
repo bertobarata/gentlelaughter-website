@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" />
   <link rel="manifest" href="/manifest.json" />
 
-  <link rel="stylesheet" href="/css/styles.css?v=70" />
+  <link rel="stylesheet" href="/css/styles.css?v=74" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,22 +88,22 @@
   <link rel="alternate" hreflang="de" href="https://gentlelaughter.com/de/" />
   <link rel="alternate" hreflang="x-default" href="https://gentlelaughter.com/" />
 </head>
-<body>
+<body class="index-page">
   <a class="skip-nav" href="#main">Saltar para conteúdo</a>
 
   <header class="site-header">
     <div class="shell site-header__inner">
-      <details class="menu-langs header-langs" aria-label="Idioma">
-        <summary><span data-current-lang>PT</span></summary>
-        <ul>
-          <li><a href="/index.html" data-lang="pt">PT</a></li>
-          <li><a href="/en/index.html" data-lang="en">EN</a></li>
-          <li><a href="/fr/index.html" data-lang="fr">FR</a></li>
-          <li><a href="/de/index.html" data-lang="de">DE</a></li>
-        </ul>
-      </details>
       <div class="header-tools">
         <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"><span class="nav-toggle__label">Menu</span></a>
+        <details class="menu-langs header-langs" aria-label="Idioma">
+          <summary><span data-current-lang>PT</span></summary>
+          <ul>
+            <li><a href="/index.html" data-lang="pt">PT</a></li>
+            <li><a href="/en/index.html" data-lang="en">EN</a></li>
+            <li><a href="/fr/index.html" data-lang="fr">FR</a></li>
+            <li><a href="/de/index.html" data-lang="de">DE</a></li>
+          </ul>
+        </details>
       </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul id="mainnav">
@@ -167,6 +167,14 @@
         <p class="section-lede reveal" data-i18n="index.services.lede">Für Hochzeiten, Veranstalter, Produktionsfirmen oder Festivals. Neun Linien, ein Ansprechpartner.</p>
       </div>
 
+      <div class="bento__masthead reveal">
+        <span class="bento__masthead-eyebrow" data-i18n="index.bento.lineageEyebrow">Wir waren bei</span>
+        <span class="bento__masthead-venues">
+          <span>Multiusos de Odivelas</span><span>Coliseu de Lisboa</span><span>Campo Pequeno</span><span>MEO Arena</span>
+        </span>
+        <a href="/sobre.html" class="bento__masthead-link" data-i18n="index.bento.lineageLink">Über Gentle Laughter →</a>
+      </div>
+
       <div class="bento reveal">
         <a href="/eventos.html" class="bento__tile bento__tile--hero">
           <span class="bento__tile-num">01</span>
@@ -224,13 +232,6 @@
         </a>
       </div>
 
-      <div class="bento__footer">
-        <span class="bento__footer-eyebrow" data-i18n="index.bento.lineageEyebrow">Wir waren bei</span>
-        <span class="bento__footer-venues">
-          <span>Multiusos de Odivelas</span><span>Coliseu de Lisboa</span><span>Campo Pequeno</span><span>MEO Arena</span>
-        </span>
-        <a href="/sobre.html" class="bento__footer-link" data-i18n="index.bento.lineageLink">Über Gentle Laughter →</a>
-      </div>
     </section>
 
 
@@ -321,7 +322,7 @@
           <p class="footer-tagline">Da cerimónia ao palco, da roulote aos livros. Produção, agenciamento e coordenação, Lisboa.</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.services">Leistungen</h4>
+          <h3 data-i18n="footer.services">Leistungen</h3>
           <ul>
             <li><a href="/eventos.html" data-i18n="nav.events">Events</a></li>
             <li><a href="/agenciamento.html" data-i18n="nav.booking">Booking</a></li>
@@ -333,7 +334,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.more">Mehr</h4>
+          <h3 data-i18n="footer.more">Mehr</h3>
           <ul>
             <li><a href="/sobre.html" data-i18n="nav.about">Über uns</a></li>
             <li><a href="/casos.html" data-i18n="nav.portfolio">Portfolio</a></li>
@@ -344,7 +345,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <h3 data-i18n="footer.contact">Kontakt</h3>
           <ul>
             <li><a href="https://wa.me/351961154740" target="_blank" rel="noopener noreferrer">+351 961 154 740</a></li>
             <li><a href="mailto:geral@gentlelaughter.com">geral@gentlelaughter.com</a></li>
