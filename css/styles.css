@@ -164,9 +164,9 @@
 }
 .paired-card {
   background: var(--paper-soft);
-  border-left: 3px solid var(--burgundy);
+  border-top: 1px solid var(--rule);
   padding: 1.6rem 1.6rem 1.8rem;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0;
 }
 .paired-card h3 {
   font-family: var(--font-serif);
@@ -2523,9 +2523,10 @@ a.index-row:hover .index-row__sigil {
   .livro-feature__quote::before { font-size: 2rem; top: -0.1em; }
 }
 
-/* ============ CASE-CARDS MOBILE DISTILL ============ */
+/* ============ CASE-CARDS MOBILE DISTILL — show 2 ============ */
 @media (max-width: 760px) {
-  .case-cards > a:nth-child(n+2) { display: none; }
+  .case-cards { grid-template-columns: 1fr; gap: 1rem; }
+  .case-cards > a:nth-child(n+3) { display: none; }
 }
 
 /* ============ A11Y SCOPE: CTAs on burgundy album-drench ============ */
@@ -2613,11 +2614,32 @@ a.index-row:hover .index-row__sigil {
   top: 0.5rem;
 }
 
-/* ============ HERO MOBILE — hide eyebrow + CTA hierarchy ============ */
+/* ============ HERO MOBILE — single primary CTA + text-link secondary ============ */
 @media (max-width: 760px) {
   .hero > .eyebrow { display: none; }
-  .hero-cta--mobile .btn--accent { flex: 1.4 1 0; }
-  .hero-cta--mobile .btn--ghost { flex: 1 1 0; }
+  .hero-cta--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+  .hero-cta--mobile .btn--accent {
+    width: 100%;
+    flex: none;
+  }
+  .hero-cta--mobile .hero-cta__secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    padding: 0.4rem 0;
+  }
+  .hero-cta--mobile .hero-cta__secondary:hover { color: var(--ink-soft); }
 }
 
 /* ============ FORM FIELD ERRORS ============ */
