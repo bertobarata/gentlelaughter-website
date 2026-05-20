@@ -2860,10 +2860,10 @@ a.index-row:hover .index-row__sigil {
 /* ============ DESKTOP HEADER — logo left, nav center, langs+hamburger right ============ */
 @media (min-width: 761px) {
   .logo-link { order: 0; }
-  .top-nav { order: 1; margin: 0 auto; }
-  .header-langs { order: 2; }
+  .top-nav { order: 1; }
+  .header-langs { order: 2; position: relative; z-index: 2; }
   .header-tools { order: 3; }
-  .header-langs > ul { left: auto; right: 0; }
+  .header-langs > ul { left: auto; right: 0; z-index: 20; }
 }
 
 /* ============ FORM SUBMIT PREVIEW (confirmation step) ============ */
