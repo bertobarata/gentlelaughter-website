@@ -4,8 +4,8 @@
  * Bump CACHE_NAME when shipping changes that touch precached assets.
  */
 
-const CACHE_NAME = 'gl-cache-v87';
-const RUNTIME_CACHE = 'gl-runtime-v87';
+const CACHE_NAME = 'gl-cache-v88';
+const RUNTIME_CACHE = 'gl-runtime-v88';
 
 const PRECACHE_ASSETS = [
   './',
@@ -13,11 +13,11 @@ const PRECACHE_ASSETS = [
   'sobre.html',
   'casos.html',
   'menu.html',
-  'css/styles.css?v=87',
+  'css/styles.css?v=88',
   'js/site.js',
   'js/cookie-consent.js',
   'manifest.json',
-  'assets/logos/gentle-laughter-wordmark.png',
+  'assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png',
   'assets/hero-background.webp',
   'assets/fonts/switzer-400.woff2',
   'assets/fonts/switzer-500.woff2',

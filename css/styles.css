@@ -1573,7 +1573,7 @@ a.index-row:hover .index-row__sigil {
     gap: 0.75rem;
     justify-content: unset;
     min-height: auto;
-    padding: 1.25rem clamp(1rem, 4vw, 1.5rem);
+    padding: 0.65rem clamp(1rem, 4vw, 1.5rem);
     border-bottom: 1px solid var(--rule);
     max-width: none;
   }
@@ -1586,10 +1586,14 @@ a.index-row:hover .index-row__sigil {
     line-height: 0;
     display: inline-flex;
     align-items: center;
+    overflow: hidden;
+    height: 36px;
   }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; display: inline-flex; order: 0; }
+  /* PNG has ~14px transparent top in a 178px native height. Container clips overflow so visible wordmark fills its box without baked-in offset. */
   .logo {
-    height: 46px;
+    height: 42px;
+    margin-top: -3px;
   }
 }
 
@@ -2590,11 +2594,15 @@ a.index-row:hover .index-row__sigil {
     gap: 0.75rem;
     justify-content: unset;
     min-height: auto;
-    padding: 1.25rem clamp(1rem, 4vw, 1.5rem);
+    padding: 0.65rem clamp(1rem, 4vw, 1.5rem);
     border-bottom: 1px solid var(--rule);
     max-width: none;
   }
-  .logo { height: clamp(56px, 11vw, 80px); }
+  .logo-link { height: clamp(34px, 9vw, 50px); overflow: hidden; }
+  .logo {
+    height: clamp(40px, 11vw, 58px);
+    margin-top: clamp(-4px, -0.8vw, -3px);
+  }
   .header-langs { justify-self: start; grid-column: 1; align-self: center; }
   .logo-link { justify-self: center; grid-column: 2; align-self: center; }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; }
