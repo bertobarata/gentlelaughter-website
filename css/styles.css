@@ -1578,9 +1578,21 @@ a.index-row:hover .index-row__sigil {
     max-width: none;
   }
   .header-langs { justify-self: start; grid-column: 1; align-self: center; order: 0; margin: 0; }
-  .logo-link { justify-self: center; grid-column: 2; align-self: center; order: 0; }
+  .logo-link {
+    justify-self: center;
+    grid-column: 2;
+    align-self: center;
+    order: 0;
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+  }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; display: inline-flex; order: 0; }
-  .logo { height: 46px; }
+  /* Logo PNG has ~6% transparent padding on top — compensate upward so it visually aligns with PT + hamburger baselines */
+  .logo {
+    height: 46px;
+    transform: translateY(-3px);
+  }
 }
 
 /* ===== Spacing adjustments ===== */
@@ -2584,7 +2596,7 @@ a.index-row:hover .index-row__sigil {
     border-bottom: 1px solid var(--rule);
     max-width: none;
   }
-  .logo { height: clamp(50px, 13vw, 72px); }
+  .logo { height: clamp(50px, 13vw, 72px); transform: translateY(-3px); }
   .header-langs { justify-self: start; grid-column: 1; align-self: center; }
   .logo-link { justify-self: center; grid-column: 2; align-self: center; }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; }

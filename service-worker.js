@@ -4,8 +4,8 @@
  * Bump CACHE_NAME when shipping changes that touch precached assets.
  */
 
-const CACHE_NAME = 'gl-cache-v84';
-const RUNTIME_CACHE = 'gl-runtime-v84';
+const CACHE_NAME = 'gl-cache-v85';
+const RUNTIME_CACHE = 'gl-runtime-v85';
 
 const PRECACHE_ASSETS = [
   './',
@@ -13,7 +13,7 @@ const PRECACHE_ASSETS = [
   'sobre.html',
   'casos.html',
   'menu.html',
-  'css/styles.css?v=84',
+  'css/styles.css?v=85',
   'js/site.js',
   'js/cookie-consent.js',
   'manifest.json',
