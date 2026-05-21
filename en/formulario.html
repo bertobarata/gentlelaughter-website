@@ -9,7 +9,7 @@
   <meta name="description" content="Tell us the line, the context and your preferred channel. We'll structure the right solution." />
   <link rel="icon" href="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
-  <link rel="stylesheet" href="/css/styles.css?v=77" />
+  <link rel="stylesheet" href="/css/styles.css?v=78" />
   <link rel="canonical" href="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:url" content="https://gentlelaughter.com/en/formulario.html" />
   <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
@@ -55,9 +55,18 @@
 
   <header class="site-header">
     <div class="shell site-header__inner">
-      <a href="/index.html" class="logo-link" aria-label="Gentle Laughter, início">
-        <img src="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
-      </a>
+      <details class="menu-langs header-langs" aria-label="Idioma">
+        <summary><span data-current-lang>PT</span></summary>
+        <ul>
+          <li><a href="/index.html" data-lang="pt">PT</a></li>
+          <li><a href="/en/index.html" data-lang="en">EN</a></li>
+          <li><a href="/fr/index.html" data-lang="fr">FR</a></li>
+          <li><a href="/de/index.html" data-lang="de">DE</a></li>
+        </ul>
+      </details>
+      <div class="header-tools">
+        <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"><span class="nav-toggle__label">Menu</span></a>
+      </div>
       <nav class="top-nav" aria-label="Navegação principal">
         <ul id="mainnav">
           <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
@@ -78,21 +87,12 @@
           <li><a href="/parceiros.html" data-i18n="nav.partners">Partners</a></li>
           <li><a href="/livro.html" data-i18n="nav.book">Book</a></li>
           <li><a href="/faq.html" data-i18n="nav.faq">FAQ</a></li>
-                    <li><a href="/formulario.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="/formulario.html" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
-      <details class="menu-langs header-langs" aria-label="Idioma">
-        <summary><span data-current-lang>PT</span></summary>
-        <ul>
-          <li><a href="/index.html" data-lang="pt">PT</a></li>
-          <li><a href="/en/index.html" data-lang="en">EN</a></li>
-          <li><a href="/fr/index.html" data-lang="fr">FR</a></li>
-          <li><a href="/de/index.html" data-lang="de">DE</a></li>
-        </ul>
-      </details>
-      <div class="header-tools">
-        <a class="nav-toggle" href="/menu.html" aria-label="Abrir menu"><span class="nav-toggle__label">Menu</span></a>
-      </div>
+      <a href="/index.html" class="logo-link" aria-label="Gentle Laughter, início">
+        <img src="/assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" alt="Gentle Laughter" class="logo" decoding="async" fetchpriority="high" width="200" height="60" />
+      </a>
     </div>
   </header>
 
@@ -157,7 +157,7 @@
 
           <div class="field">
             <label for="f-contacto">WhatsApp ou email *</label>
-            <input id="f-contacto" type="text" name="contacto" required autocomplete="tel" placeholder="+351 … ou nome@dominio.pt" aria-describedby="err-contacto" />
+            <input id="f-contacto" type="text" name="contacto" required inputmode="email" autocomplete="email tel" placeholder="+351 … ou nome@dominio.pt" aria-describedby="err-contacto" />
             <span id="err-contacto" class="field-error" data-for="f-contacto" aria-live="polite"></span>
           </div>
 
@@ -194,7 +194,7 @@
             <li><a href="/eventos.html" data-i18n="nav.events">Events</a></li>
             <li><a href="/agenciamento.html" data-i18n="nav.booking">Artist booking</a></li>
             <li><a href="/prestacao.html" data-i18n="nav.staffing">Crew & stagehands</a></li>
-            <li><a href="/efeitos-especiais.html">Efeitos</a></li>
+            <li><a href="/efeitos-especiais.html" data-i18n="nav.fx">Special effects</a></li>
             <li><a href="/producao.html" data-i18n="nav.production">Production</a></li>
             <li><a href="/aluguer.html" data-i18n="nav.rental">Rental</a></li>
             <li><a href="/roulote.html" data-i18n="nav.roulote">Food trailer</a></li>
