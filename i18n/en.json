@@ -21,7 +21,6 @@
   "footer.privacy": "Privacy",
   "footer.cookies": "Cookies",
   "footer.terms": "Terms",
-  "footer.tagline": "Ceremony to stage, food trailer to books. Production, booking and coordination, Lisbon.",
   "cta.bookCall": "Book a call",
   "cta.whatsapp": "WhatsApp us",
   "cta.send": "Send",
@@ -593,5 +592,6 @@
   "404.link.cases": "See cases on the ground →",
   "404.link.faq": "Frequently asked questions →",
   "footer.signoff": "We answer in hours, not days.",
+  "footer.tagline": "Production, booking and logistics under one contact. Lisbon, since 2025.",
   "index.hero.cta.call": "Call +351 961 154 740"
 }

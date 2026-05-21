@@ -21,7 +21,6 @@
   "footer.privacy": "Datenschutz",
   "footer.cookies": "Cookies",
   "footer.terms": "AGB",
-  "footer.tagline": "Von der Zeremonie zur Bühne, vom Foodtruck zum Buch. Produktion, Booking und Koordination, Lissabon.",
   "cta.bookCall": "Termin vereinbaren",
   "cta.whatsapp": "Auf WhatsApp schreiben",
   "cta.send": "Senden",
@@ -593,5 +592,6 @@
   "404.link.cases": "Fälle auf der Bühne",
   "404.link.faq": "Häufige Fragen",
   "footer.signoff": "Wir antworten in Stunden, nicht in Tagen.",
+  "footer.tagline": "Produktion, Booking und Logistik bei einem Ansprechpartner. Lissabon, seit 2025.",
   "index.hero.cta.call": "Anrufen +351 961 154 740"
 }

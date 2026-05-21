@@ -1428,38 +1428,59 @@ a.index-row:hover .index-row__sigil {
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid var(--ink);
-  padding-block: clamp(3rem, 5vw, 4.5rem) 1.5rem;
+  padding-block: clamp(2.5rem, 4vw, 3.5rem) 1.5rem;
   margin-top: clamp(4rem, 8vw, 7rem);
 }
-.footer-grid {
+.footer-shell { display: flex; flex-direction: column; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.footer-top {
   display: grid;
-  grid-template-columns: minmax(0, 4fr) repeat(3, minmax(0, 2.6fr));
-  gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: start;
+  grid-template-columns: minmax(0, auto) 1fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
 }
-@media (max-width: 900px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.4rem; }
+.footer-logo { display: inline-block; }
+.footer-logo .logo { height: clamp(48px, 6vw, 60px); display: block; }
+.footer-tagline {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  max-width: 48ch;
+  line-height: 1.45;
 }
-@media (max-width: 540px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+.footer-channels {
+  list-style: none;
+  margin: 0;
+  padding-block: clamp(1rem, 2vw, 1.4rem);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 2.2rem) clamp(1.5rem, 4vw, 3rem);
 }
-.footer-brand .logo { height: 78px; }
-.footer-tagline { margin: 1rem 0 0; color: var(--ink-soft); max-width: 32ch; font-size: var(--text-sm); }
-.footer-col h3 {
+.footer-channels li {
+  font-family: var(--font-sans);
   font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin: 0 0 0.9rem;
 }
-.footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
-.footer-col li { font-size: var(--text-sm); color: var(--ink); }
-.footer-col a:hover { color: var(--accent); }
+.footer-channels a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-channels a:hover { color: var(--ink); }
+.footer-channels a span {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
 .footer-meta {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--rule);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1467,6 +1488,14 @@ a.index-row:hover .index-row__sigil {
   font-size: var(--text-xs);
   color: var(--ink-soft);
   letter-spacing: 0.04em;
+}
+.footer-legal { display: inline-flex; gap: 1rem; flex-wrap: wrap; }
+.footer-legal a { color: var(--ink-soft); text-decoration: none; }
+.footer-legal a:hover { color: var(--ink); }
+@media (max-width: 600px) {
+  .footer-top { grid-template-columns: 1fr; gap: 1rem; }
+  .footer-channels { flex-direction: column; gap: 0.8rem; }
+  .footer-channels a span { font-size: 1rem; }
 }
 
 /* ===== Cookie banner ===== */
@@ -2949,33 +2978,10 @@ body.nav-open { overflow: hidden; }
   top: 0.5rem;
 }
 
-/* ============ HERO MOBILE — single primary CTA + text-link secondary ============ */
+/* ============ HERO MOBILE — row of two CTAs + standalone Ligar ============ */
 @media (max-width: 760px) {
   .hero > .eyebrow { display: none; }
-  .hero-cta--mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.9rem;
-  }
-  .hero-cta--mobile .btn--accent {
-    width: 100%;
-    flex: none;
-  }
-  .hero-cta--mobile .hero-cta__secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-family: var(--font-sans);
-    font-size: clamp(1rem, 2.6vw, 1.1rem);
-    color: var(--ink);
-    background: transparent;
-    border: none;
-    text-decoration: none;
-    padding: 0.85rem 0;
-    min-height: 44px;
-  }
-  .hero-cta--mobile .hero-cta__secondary:hover { color: var(--ink-soft); }
+  .hero-cta__row .btn { flex: 1 1 0; min-width: 0; }
   .hero-cta__quick {
     display: inline-flex;
     align-items: center;

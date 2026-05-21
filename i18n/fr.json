@@ -21,7 +21,6 @@
   "footer.privacy": "Confidentialité",
   "footer.cookies": "Cookies",
   "footer.terms": "Conditions",
-  "footer.tagline": "De la cérémonie à la scène, du food truck aux livres. Production, booking et coordination, Lisbonne.",
   "cta.bookCall": "Réserver un appel",
   "cta.whatsapp": "Écrire sur WhatsApp",
   "cta.send": "Envoyer",
@@ -593,5 +592,6 @@
   "404.link.cases": "Voir les cas sur le terrain",
   "404.link.faq": "Questions fréquentes",
   "footer.signoff": "Nous répondons en heures, pas en jours.",
+  "footer.tagline": "Production, booking et logistique sous un seul interlocuteur. Lisbonne, depuis 2025.",
   "index.hero.cta.call": "Appeler +351 961 154 740"
 }
