@@ -17,12 +17,18 @@ test('every focusable shows visible focus ring on /formulario.html', async ({ pa
   }
 });
 
-test('mobile nav toggle navigates to /menu.html', async ({ page }) => {
+test('mobile nav toggle opens in-place overlay (menu.html stays as no-JS fallback)', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   const toggle = page.locator('.nav-toggle');
   await expect(toggle).toBeVisible();
   await toggle.click();
-  await expect(page).toHaveURL(/\/menu\.html$/);
-  await expect(page.locator('.menu-nav')).toBeVisible();
+  // Overlay opens in place — URL unchanged, body.nav-open set, menu-nav visible inside overlay.
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.locator('body.nav-open')).toBeVisible();
+  await expect(page.locator('.nav-overlay .menu-nav')).toBeVisible();
+  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  // Second tap closes.
+  await toggle.click();
+  await expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
