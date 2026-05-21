@@ -595,12 +595,13 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--paper-soft);
+  background: transparent;
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+  color: var(--ink);
 }
-.nav-toggle:hover { background: var(--rule); }
+.nav-toggle:hover { background: var(--paper-soft); }
 .nav-toggle::before {
   content: "";
   width: 20px;
@@ -2583,7 +2584,7 @@ a.index-row:hover .index-row__sigil {
     border-bottom: 1px solid var(--rule);
     max-width: none;
   }
-  .logo { height: clamp(56px, 11vw, 80px); }
+  .logo { height: clamp(50px, 13vw, 72px); }
   .header-langs { justify-self: start; grid-column: 1; align-self: center; }
   .logo-link { justify-self: center; grid-column: 2; align-self: center; }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; }
@@ -2853,12 +2854,18 @@ a.index-row:hover .index-row__sigil {
     font-size: clamp(0.78rem, 2.5vw, 0.88rem);
   }
   .bento__tile-name {
+    display: block;
     font-size: clamp(1.35rem, 5vw, 1.65rem);
     padding-bottom: 0.55rem;
     margin-bottom: 0.55rem;
     border-bottom: 1px solid var(--rule);
   }
-  .bento__tile-hint { font-size: clamp(0.95rem, 3.5vw, 1.05rem); max-width: 100%; margin-top: 0; }
+  .bento__tile-hint {
+    display: block;
+    font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+    max-width: 100%;
+    margin-top: 0;
+  }
   .bento__tile-sigil {
     position: static;
     display: inline-block;
