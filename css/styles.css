@@ -2243,13 +2243,14 @@ a.index-row:hover .index-row__sigil {
 }
 .top-nav .has-dropdown > a::after {
   content: "";
-  width: 6px;
-  height: 6px;
-  border-right: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  transform: rotate(45deg) translateY(-3px);
   transition: transform 0.25s var(--ease-out);
-  opacity: 0.7;
+  opacity: 1;
+  margin-left: 0.15rem;
 }
 .top-nav .has-dropdown:hover > a::after,
 .top-nav .has-dropdown:focus-within > a::after,
@@ -2258,12 +2259,12 @@ a.index-row:hover .index-row__sigil {
 }
 .top-nav .dropdown {
   position: absolute;
-  top: calc(100% + 0.6rem);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-4px);
   min-width: 220px;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.6rem 0.5rem 0.5rem;
   list-style: none;
   background: var(--paper-soft);
   border: 1px solid var(--rule);
@@ -2277,6 +2278,18 @@ a.index-row:hover .index-row__sigil {
   transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
   z-index: 60;
 }
+/* Invisible hover bridge so cursor can cross from <a> to dropdown without losing :hover */
+.top-nav .has-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  display: none;
+}
+.top-nav .has-dropdown:hover::after,
+.top-nav .has-dropdown:focus-within::after { display: block; }
 .top-nav .has-dropdown:hover > .dropdown,
 .top-nav .has-dropdown:focus-within > .dropdown,
 .top-nav .has-dropdown.is-open > .dropdown {
@@ -2549,9 +2562,9 @@ a.index-row:hover .index-row__sigil {
   /* Hero stack: background image top, text below, all left-aligned */
   .hero {
     min-height: 100dvh;
-    padding-top: clamp(5.5rem, 14vw, 7rem);
+    padding-top: clamp(2.5rem, 7vw, 4rem);
     padding-bottom: 2.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
     align-items: stretch;
   }
@@ -2694,21 +2707,21 @@ a.index-row:hover .index-row__sigil {
   left: clamp(1.4rem, 2.4vw, 2.2rem);
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
-  font-size: 0.78rem;
+  font-size: clamp(0.85rem, 1vw, 1rem);
   letter-spacing: 0.08em;
   color: var(--ink-soft);
   font-weight: 500;
 }
 .bento__tile-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
 .bento__tile-hint {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
   line-height: 1.5;
   color: var(--ink-soft);
   max-width: 38ch;
@@ -2801,10 +2814,15 @@ a.index-row:hover .index-row__sigil {
     position: static;
     display: block;
     margin-bottom: 0.4rem;
-    font-size: 0.78rem;
+    font-size: clamp(0.78rem, 2.5vw, 0.88rem);
   }
-  .bento__tile-name { font-size: 1.2rem; }
-  .bento__tile-hint { font-size: 0.92rem; max-width: 100%; margin-top: 0.35rem; }
+  .bento__tile-name {
+    font-size: clamp(1.35rem, 5vw, 1.65rem);
+    padding-bottom: 0.55rem;
+    margin-bottom: 0.55rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .bento__tile-hint { font-size: clamp(0.95rem, 3.5vw, 1.05rem); max-width: 100%; margin-top: 0; }
   .bento__tile-sigil {
     position: static;
     display: inline-block;
@@ -2933,12 +2951,12 @@ body.nav-open { overflow: hidden; }
     align-items: center;
     gap: 0.3rem;
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
     color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-    padding: 0.75rem 0;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    padding: 0.85rem 0;
     min-height: 44px;
   }
   .hero-cta--mobile .hero-cta__secondary:hover { color: var(--ink-soft); }
@@ -2947,13 +2965,13 @@ body.nav-open { overflow: hidden; }
     align-items: center;
     gap: 0.4rem;
     font-family: var(--font-sans);
-    font-size: 0.9rem;
-    color: var(--ink-soft);
+    font-size: clamp(1rem, 2.6vw, 1.1rem);
+    color: var(--ink);
     text-decoration: none;
-    padding: 0.75rem 0;
+    padding: 0.85rem 0;
     min-height: 44px;
   }
-  .hero-cta__quick:hover { color: var(--ink); }
+  .hero-cta__quick:hover { color: var(--ink-soft); }
 }
 
 /* ============ DESKTOP HEADER — logo left, nav center, langs flush right ============ */

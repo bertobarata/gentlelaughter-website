@@ -26,24 +26,71 @@
       reveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
-    /* ----- Mobile nav: in-place overlay (menu.html stays as no-JS fallback) ----- */
+    /* ----- Mobile nav: in-place overlay using menu.html layout (menu.html stays as no-JS fallback) ----- */
     var navToggle = document.querySelector('.nav-toggle');
     var mainnavSrc = document.getElementById('mainnav');
     if (navToggle && mainnavSrc && !document.body.classList.contains('menu-page')) {
+      // Build menu-nav-style structure from #mainnav DOM (preserves current locale).
       var overlay = document.createElement('div');
       overlay.className = 'nav-overlay';
       overlay.id = 'nav-overlay';
       overlay.hidden = true;
       overlay.setAttribute('aria-label', 'Navegação');
 
-      var listClone = mainnavSrc.cloneNode(true);
-      listClone.id = 'nav-overlay-list';
-      listClone.removeAttribute('id');
-      overlay.appendChild(listClone);
+      var menuNav = document.createElement('nav');
+      menuNav.className = 'menu-nav';
+      menuNav.setAttribute('aria-label', 'Navegação');
+      var topList = document.createElement('ul');
+      menuNav.appendChild(topList);
 
-      // Force-open the Serviços dropdown inside the overlay (no hover on mobile)
-      var dd = overlay.querySelector('.has-dropdown');
-      if (dd) dd.classList.add('is-open');
+      Array.prototype.forEach.call(mainnavSrc.children, function (li) {
+        var clone;
+        if (li.classList.contains('has-dropdown')) {
+          // Convert to <details><summary>Serviços</summary><ul>...</ul></details>
+          var summaryA = li.querySelector(':scope > a');
+          var subList = li.querySelector(':scope > ul.dropdown');
+          if (!summaryA || !subList) return;
+          clone = document.createElement('li');
+          clone.className = 'has-sub';
+          var details = document.createElement('details');
+          var summary = document.createElement('summary');
+          summary.textContent = summaryA.textContent.trim();
+          details.appendChild(summary);
+          var ul = document.createElement('ul');
+          Array.prototype.forEach.call(subList.children, function (subLi) {
+            var subA = subLi.querySelector('a');
+            if (!subA) return;
+            var nl = document.createElement('li');
+            var na = document.createElement('a');
+            na.href = subA.getAttribute('href');
+            na.textContent = subA.textContent.trim();
+            nl.appendChild(na);
+            ul.appendChild(nl);
+          });
+          details.appendChild(ul);
+          clone.appendChild(details);
+        } else {
+          var a = li.querySelector(':scope > a');
+          if (!a) return;
+          clone = document.createElement('li');
+          var na2 = document.createElement('a');
+          na2.href = a.getAttribute('href');
+          na2.textContent = a.textContent.trim();
+          if (a.classList.contains('nav-cta')) na2.className = 'nav-cta';
+          clone.appendChild(na2);
+        }
+        topList.appendChild(clone);
+      });
+
+      overlay.appendChild(menuNav);
+
+      // Footer with IG + WhatsApp (matches menu.html)
+      var menuFooter = document.createElement('footer');
+      menuFooter.className = 'menu-footer';
+      menuFooter.innerHTML =
+        '<a href="https://instagram.com/gentlelaughteroficial" target="_blank" rel="noopener noreferrer">Instagram</a>' +
+        '<a href="https://wa.me/' + WHATSAPP_NUMBER + '" target="_blank" rel="noopener noreferrer">WhatsApp</a>';
+      overlay.appendChild(menuFooter);
 
       document.body.appendChild(overlay);
 
@@ -237,7 +284,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v80';
+      var SW_GEN = 'gl-sw-v81';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
