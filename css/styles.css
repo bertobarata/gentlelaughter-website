@@ -2915,7 +2915,7 @@ a.index-row:hover .index-row__sigil {
   z-index: 90;
   background: var(--paper);
   overflow-y: auto;
-  padding: clamp(5rem, 18vw, 7rem) clamp(1.5rem, 6vw, 3rem) clamp(2rem, 6vw, 3rem);
+  padding: clamp(7rem, 24vw, 9rem) clamp(1.5rem, 6vw, 3rem) clamp(2rem, 6vw, 3rem);
   -webkit-overflow-scrolling: touch;
 }
 .nav-overlay[hidden] { display: none; }
