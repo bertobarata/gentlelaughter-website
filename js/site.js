@@ -161,44 +161,14 @@
         var msgText = lines.join('\n');
         var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msgText);
 
-        showSubmitPreview(msgText, url);
+        var status = document.getElementById('formStatus');
+        if (status) {
+          status.hidden = false;
+          status.textContent = 'A abrir WhatsApp…';
+        }
+        window.open(url, '_blank', 'noopener,noreferrer');
+        setTimeout(function () { window.location.href = 'sucesso.html'; }, 600);
       });
-
-      function showSubmitPreview(msgText, waUrl) {
-        var existing = form.querySelector('.form-preview');
-        if (existing) existing.remove();
-        form.querySelectorAll('.field, .check, .actions').forEach(function (el) { el.hidden = true; });
-
-        var panel = document.createElement('div');
-        panel.className = 'form-preview';
-        panel.setAttribute('role', 'region');
-        panel.setAttribute('aria-label', 'Pré-visualização da mensagem');
-        panel.innerHTML =
-          '<p class="form-preview__eyebrow">Confirme antes de enviar</p>' +
-          '<h2 class="form-preview__title">Esta é a mensagem que vai abrir no WhatsApp.</h2>' +
-          '<div class="form-preview__body"></div>' +
-          '<div class="form-preview__actions">' +
-            '<a href="' + waUrl + '" class="btn btn--accent" target="_blank" rel="noopener noreferrer" data-preview-send>Abrir WhatsApp</a>' +
-            '<button type="button" class="btn btn--ghost" data-preview-back>Voltar e editar</button>' +
-          '</div>';
-        panel.querySelector('.form-preview__body').textContent = msgText;
-        form.appendChild(panel);
-
-        panel.querySelector('[data-preview-send]').addEventListener('click', function () {
-          var status = document.getElementById('formStatus');
-          if (status) {
-            status.hidden = false;
-            status.textContent = 'Pedido enviado. Redirecionando…';
-          }
-          setTimeout(function () { window.location.href = 'sucesso.html'; }, 800);
-        });
-        panel.querySelector('[data-preview-back]').addEventListener('click', function () {
-          panel.remove();
-          form.querySelectorAll('.field, .check, .actions').forEach(function (el) { el.hidden = false; });
-        });
-
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     }
 
     /* ----- WhatsApp float autohide near contact slab + footer ----- */
