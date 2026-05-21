@@ -26,7 +26,57 @@
       reveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
-    /* ----- Mobile nav: hamburger is now a plain link to menu.html (no JS) ----- */
+    /* ----- Mobile nav: in-place overlay (menu.html stays as no-JS fallback) ----- */
+    var navToggle = document.querySelector('.nav-toggle');
+    var mainnavSrc = document.getElementById('mainnav');
+    if (navToggle && mainnavSrc && !document.body.classList.contains('menu-page')) {
+      var overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.id = 'nav-overlay';
+      overlay.hidden = true;
+      overlay.setAttribute('aria-label', 'Navegação');
+
+      var listClone = mainnavSrc.cloneNode(true);
+      listClone.id = 'nav-overlay-list';
+      listClone.removeAttribute('id');
+      overlay.appendChild(listClone);
+
+      // Force-open the Serviços dropdown inside the overlay (no hover on mobile)
+      var dd = overlay.querySelector('.has-dropdown');
+      if (dd) dd.classList.add('is-open');
+
+      document.body.appendChild(overlay);
+
+      navToggle.setAttribute('role', 'button');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-controls', 'nav-overlay');
+
+      function closeNav() {
+        document.body.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        overlay.hidden = true;
+      }
+      function openNav() {
+        document.body.classList.add('nav-open');
+        navToggle.setAttribute('aria-expanded', 'true');
+        overlay.hidden = false;
+      }
+
+      navToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (document.body.classList.contains('nav-open')) closeNav();
+        else openNav();
+      });
+
+      overlay.addEventListener('click', function (e) {
+        var t = e.target;
+        if (t && t.tagName === 'A') closeNav();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) closeNav();
+      });
+    }
 
     /* ----- Generic lang switcher (.menu-langs outside menu.html) ----- */
     if (!document.body.classList.contains('menu-page')) {
@@ -187,7 +237,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v79';
+      var SW_GEN = 'gl-sw-v80';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
