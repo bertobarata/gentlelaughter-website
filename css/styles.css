@@ -1586,14 +1586,11 @@ a.index-row:hover .index-row__sigil {
     line-height: 0;
     display: inline-flex;
     align-items: center;
-    overflow: hidden;
-    height: 36px;
   }
   .header-tools { justify-self: end; grid-column: 3; align-self: center; display: inline-flex; order: 0; }
-  /* PNG has ~14px transparent top in a 178px native height. Container clips overflow so visible wordmark fills its box without baked-in offset. */
   .logo {
     height: 42px;
-    margin-top: -3px;
+    transform: translateY(-4px);
   }
 }
 
@@ -2598,10 +2595,9 @@ a.index-row:hover .index-row__sigil {
     border-bottom: 1px solid var(--rule);
     max-width: none;
   }
-  .logo-link { height: clamp(34px, 9vw, 50px); overflow: hidden; }
   .logo {
-    height: clamp(40px, 11vw, 58px);
-    margin-top: clamp(-4px, -0.8vw, -3px);
+    height: clamp(48px, 12vw, 64px);
+    transform: translateY(-5px);
   }
   .header-langs { justify-self: start; grid-column: 1; align-self: center; }
   .logo-link { justify-self: center; grid-column: 2; align-self: center; }
