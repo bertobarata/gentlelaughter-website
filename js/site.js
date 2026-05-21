@@ -43,12 +43,18 @@
       var topList = document.createElement('ul');
       menuNav.appendChild(topList);
 
+      function firstChildByTag(el, tag) {
+        var c = el.firstElementChild;
+        while (c) { if (c.tagName === tag) return c; c = c.nextElementSibling; }
+        return null;
+      }
+
       Array.prototype.forEach.call(mainnavSrc.children, function (li) {
+        if (li.tagName !== 'LI') return;
         var clone;
         if (li.classList.contains('has-dropdown')) {
-          // Convert to <details><summary>Serviços</summary><ul>...</ul></details>
-          var summaryA = li.querySelector(':scope > a');
-          var subList = li.querySelector(':scope > ul.dropdown');
+          var summaryA = firstChildByTag(li, 'A');
+          var subList = firstChildByTag(li, 'UL');
           if (!summaryA || !subList) return;
           clone = document.createElement('li');
           clone.className = 'has-sub';
@@ -58,6 +64,7 @@
           details.appendChild(summary);
           var ul = document.createElement('ul');
           Array.prototype.forEach.call(subList.children, function (subLi) {
+            if (subLi.tagName !== 'LI') return;
             var subA = subLi.querySelector('a');
             if (!subA) return;
             var nl = document.createElement('li');
@@ -70,7 +77,7 @@
           details.appendChild(ul);
           clone.appendChild(details);
         } else {
-          var a = li.querySelector(':scope > a');
+          var a = firstChildByTag(li, 'A');
           if (!a) return;
           clone = document.createElement('li');
           var na2 = document.createElement('a');
@@ -284,7 +291,7 @@
 
     /* ----- Service worker ----- */
     if ('serviceWorker' in navigator) {
-      var SW_GEN = 'gl-sw-v81';
+      var SW_GEN = 'gl-sw-v82';
       var register = function () {
         navigator.serviceWorker.register('service-worker.js').catch(function () { /* ignore */ });
       };
