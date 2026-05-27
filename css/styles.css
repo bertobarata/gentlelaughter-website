@@ -554,7 +554,7 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .top-nav ul {
   list-style: none;
   display: flex;
-  gap: clamp(1rem, 2.2vw, 2rem);
+  gap: clamp(1.4rem, 3vw, 2.6rem);
   align-items: center;
   margin: 0;
   padding: 0;
@@ -1808,11 +1808,13 @@ a.index-row:hover .index-row__sigil {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
+  max-width: 760px;
+  margin-inline: auto;
 }
 .case-card {
   position: relative;
   display: block;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 4px;
   background: var(--ink);
@@ -1875,6 +1877,46 @@ a.index-row:hover .index-row__sigil {
   line-height: 1.4;
   color: color-mix(in srgb, var(--ink) 80%, transparent);
 }
+#transfers-paradise .video-grid {
+  grid-template-columns: minmax(220px, 320px);
+  justify-content: start;
+}
+
+.people-contacts {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.people-contacts > div {
+  display: grid;
+  gap: 0.15rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid var(--rule);
+}
+.people-contacts > div:last-child { border-bottom: 1px solid var(--rule); }
+.people-contacts dt {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: baseline;
+}
+.people-contacts__role {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--ink-soft) 70%, transparent);
+}
+.people-contacts dd {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.people-contacts a { color: var(--ink); }
 
 /* ===== Instagram link card (legacy, kept for compatibility) ===== */
 .ig-embed {
@@ -2280,23 +2322,27 @@ a.index-row:hover .index-row__sigil {
 .top-nav .has-dropdown > a {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.6rem;
+  white-space: nowrap;
+  padding-inline-end: 0.3rem;
 }
 .top-nav .has-dropdown > a::after {
   content: "";
-  width: 8px;
-  height: 8px;
-  border-right: 1.5px solid var(--ink);
-  border-bottom: 1.5px solid var(--ink);
-  transform: rotate(45deg) translateY(-3px);
-  transition: transform 0.25s var(--ease-out);
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid var(--ink-soft);
+  border-bottom: 1.5px solid var(--ink-soft);
+  transform: rotate(45deg) translateY(-2px);
+  transform-origin: 50% 50%;
+  transition: transform 0.3s var(--ease-out), border-color 0.2s var(--ease-out);
   opacity: 1;
-  margin-left: 0.15rem;
+  margin-left: 0.1rem;
 }
 .top-nav .has-dropdown:hover > a::after,
 .top-nav .has-dropdown:focus-within > a::after,
 .top-nav .has-dropdown[aria-expanded="true"] > a::after {
-  transform: rotate(225deg) translateY(0);
+  transform: rotate(-135deg) translateY(2px);
+  border-color: var(--ink);
 }
 .top-nav .dropdown {
   position: absolute;
@@ -2741,9 +2787,11 @@ a.index-row:hover .index-row__sigil {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 0.6rem;
   padding: clamp(1.4rem, 2.4vw, 2.2rem);
+  padding-top: clamp(2.8rem, 4.5vw, 3.6rem);
+  padding-bottom: clamp(2.8rem, 4.5vw, 3.6rem);
   min-height: 12rem;
   background: var(--paper);
   text-decoration: none;
