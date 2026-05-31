@@ -1762,22 +1762,30 @@ a.index-row:hover .index-row__sigil {
 }
 .case-study__prose p { margin: 0; }
 .case-study__gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.8rem;
+  column-count: 4;
+  column-gap: 0.8rem;
 }
 .case-study__gallery figure {
-  margin: 0;
-  aspect-ratio: 4 / 5;
+  margin: 0 0 0.8rem;
   overflow: hidden;
-  background: var(--ink);
+  background: transparent;
   border-radius: 4px;
+  break-inside: avoid;
+  display: block;
 }
 .case-study__gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+}
+@media (max-width: 960px) {
+  .case-study__gallery { column-count: 3; }
+}
+@media (max-width: 720px) {
+  .case-study__gallery { column-count: 2; }
+}
+@media (max-width: 480px) {
+  .case-study__gallery { column-count: 1; }
 }
 .case-study__video {
   display: grid;
@@ -1794,12 +1802,6 @@ a.index-row:hover .index-row__sigil {
 .case-study__video--grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: none;
-}
-@media (max-width: 720px) {
-  .case-study__gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 480px) {
-  .case-study__gallery { grid-template-columns: 1fr; }
 }
 
 /* ===== Case-card (home tease) ===== */

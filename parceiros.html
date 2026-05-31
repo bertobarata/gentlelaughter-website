@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://gentlelaughter.com/parceiros.html" />
   <link rel="icon" href="assets/logos/WhatsApp_Image_2026-04-30_at_12.31.01-removebg-previewfinal.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/styles.css?v=98" />
+  <link rel="stylesheet" href="css/styles.css?v=103" />
   <meta property="og:url" content="https://gentlelaughter.com/parceiros.html" />
   <meta property="og:image" content="https://gentlelaughter.com/assets/hero-background.png" />
   <meta property="og:site_name" content="Gentle Laughter" />
@@ -60,28 +60,65 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="parceiros-page">
+    <style>
+      .parceiros-page { text-align: center; }
+      .parceiros-page .partner-entry { display: block; border-top: 0; border-bottom: 0; }
+      .parceiros-page .page-hero__title,
+      .parceiros-page .page-hero__lede { margin-inline: auto; }
+      .parceiros-page .logbook,
+      .parceiros-page .logbook__list,
+      .parceiros-page .logbook__list > li,
+      .parceiros-page .logbook__entry,
+      .parceiros-page .logbook__date { border: 0 !important; background: transparent !important; box-shadow: none !important; }
+      .parceiros-page .logbook { margin-inline: auto; max-width: 56ch; padding-block: 0; }
+      .parceiros-page .logbook__list { list-style: none; padding: 0; margin-inline: auto; max-width: 56ch; }
+      .parceiros-page .logbook__list { display: flex; flex-direction: column; gap: 2rem; }
+      .parceiros-page .logbook__list li { justify-content: center; flex-direction: column; align-items: center; gap: 0.3rem; }
+      .parceiros-page .logbook__entry em { display: block; margin-top: 0.4rem; font-style: italic; opacity: 0.75; }
+      .parceiros-page .partner-entry__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; max-width: 1100px; margin-inline: auto; text-align: left; }
+      .parceiros-page .partner-entry__media { order: 2; max-width: 100%; margin: 0; }
+      .parceiros-page .partner-entry__body { order: 1; max-width: none; margin: 0; align-items: flex-start; text-align: left; }
+      .parceiros-page .partner-entry__name { text-align: left; }
+      .parceiros-page .partner-entry__prose { text-align: left; max-width: 48ch; }
+      .parceiros-page .partner-entry__links { justify-content: flex-start; padding: 0; }
+      @media (max-width: 760px) {
+        .parceiros-page .partner-entry__inner { grid-template-columns: 1fr; }
+        .parceiros-page .partner-entry__media { order: 1; }
+        .parceiros-page .partner-entry__body { order: 2; }
+      }
+      .parceiros-page .pull-quote { text-align: center; }
+      .parceiros-page .section-header { text-align: center; }
+      .parceiros-page .section-lede { margin-inline: auto; max-width: 56ch; text-align: center; }
+      .parceiros-page .spine-list { max-width: 64ch; margin-inline: auto; text-align: left; }
+      .parceiros-page .contact-slab__inner { justify-items: center; text-align: center; }
+      .parceiros-page #barata-studio .partner-entry__media { aspect-ratio: 1 / 1; background: transparent; }
+      .parceiros-page #barata-studio .partner-entry__media img { object-fit: contain; transform: scale(1.15); }
+    </style>
     <section class="page-hero page-hero--compact shell reveal">
       <p class="eyebrow" data-i18n="parceiros.t1">Rede de operação</p>
       <h1 class="page-hero__title" data-i18n="parceiros.t2">Parceiros.</h1>
-      <p class="page-hero__lede" data-i18n="parceiros.t3">Quem entra connosco quando o pedido exige valências fora do nosso core. Cada parceiro tem prestação medida no terreno, em casos próprios.</p>
-
       <div class="logbook reveal" aria-label="Operações recentes">
         <ul class="logbook__list">
           <li>
-            <span class="logbook__date">2025</span>
+            <span class="logbook__date">2026</span>
             <span class="logbook__entry" data-i18n="parceiros.lb1">Festival Tremoço, Faculdade de Arquitectura. <em>Kardamomo, catering.</em></span>
           </li>
           <li>
-            <span class="logbook__date">2025</span>
+            <span class="logbook__date">2026</span>
             <span class="logbook__entry" data-i18n="parceiros.lb2">Paula Fernandes, Monsanto Open Air. <em>Paradise Streets, transfers.</em></span>
           </li>
           <li>
-            <span class="logbook__date">2025</span>
-            <span class="logbook__entry" data-i18n="parceiros.lb3">Bastidores agenciamento, Lisboa. <em>Vibe Criativa, direcção visual.</em></span>
+            <span class="logbook__date">2026</span>
+            <span class="logbook__entry" data-i18n="parceiros.lb3">Vanessa Alves, agenciamento, Lisboa. <em>Vibe Criativa, direcção visual.</em></span>
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="pull-quote shell reveal" aria-label="Citação">
+      <blockquote class="pull-quote__body" data-i18n="parceiros.quote">A rede é gente, não logos. Cada introdução custa reputação, por isso só apresentamos quem já provámos no terreno.</blockquote>
+      <p class="pull-quote__attr" data-i18n="parceiros.quote_attr">Célio Correia · Gentle Laughter</p>
     </section>
 
     <article id="kardamomo" class="partner-entry reveal">
@@ -111,7 +148,7 @@
           <span class="partner-entry__num" aria-hidden="true">02</span>
           <p class="partner-entry__role" data-i18n="parceiros.t7">Mobilidade · Transfer e motorista</p>
           <h2 class="partner-entry__name" data-i18n="parceiros.t8">Paradise Streets.</h2>
-          <p class="partner-entry__ledger" data-i18n="parceiros.led2">Em rota · Espectáculos 2024–2025</p>
+          <p class="partner-entry__ledger" data-i18n="parceiros.led2">Em rota · Espectáculos 2025–2026</p>
           <p class="partner-entry__prose" data-i18n="parceiros.t9">Frota e motoristas para banda, artista e equipa técnica. Operação conjunta em fins de semana de espectáculos: pontualidade no rider, conforto e discrição no carro. Frota interna Gentle Laughter (V250, classe E, viatura ligeira) complementada com Paradise Streets quando a escala assim o pede.</p>
           <ul class="partner-entry__links">
             <li><a href="casos.html#transfers-paradise">Ver caso →</a></li>
@@ -120,28 +157,35 @@
       </div>
     </article>
 
-    <article id="vibe-criativa" class="partner-entry reveal">
+<article id="vibe-criativa-amadora" class="partner-entry partner-entry--alt reveal">
       <div class="shell partner-entry__inner">
         <figure class="partner-entry__media">
-          <img src="assets/casos/mais-momentos/ig-DMqFQnut-sS.poster.jpg" alt="Conteúdo audiovisual produzido em parceria com a Vibe Criativa." loading="lazy" decoding="async" />
+          <img src="assets/casos/mais-momentos/ig-DMqFQnut-sS.poster.jpg" alt="Vibe Criativa Amadora — espaço de festas e eventos particulares." loading="lazy" decoding="async" />
         </figure>
         <div class="partner-entry__body">
           <span class="partner-entry__num" aria-hidden="true">03</span>
-          <p class="partner-entry__role" data-i18n="parceiros.t10">Imagem · Direcção criativa</p>
-          <h2 class="partner-entry__name" data-i18n="parceiros.t11">Vibe Criativa.</h2>
-          <p class="partner-entry__ledger" data-i18n="parceiros.led3">Bastidores · Conteúdo contínuo</p>
-          <p class="partner-entry__prose" data-i18n="parceiros.t12">Direcção criativa e conteúdo audiovisual para campanhas, lançamentos e bastidores. Em colaboração na narrativa visual de eventos e produções, da pré-produção ao corte final.</p>
-          <ul class="partner-entry__links">
-            <li><a href="casos.html#mais-momentos">Ver registo →</a></li>
-          </ul>
+          <p class="partner-entry__role">Espaço · Festas de criança e eventos particulares</p>
+          <h2 class="partner-entry__name">Vibe Criativa Amadora.</h2>
+          <p class="partner-entry__ledger">Eventos particulares · Amadora</p>
+          <p class="partner-entry__prose">Espaço dedicado a festas de aniversário e eventos particulares em Amadora. Parceria para eventos de menor escala onde a Gentle Laughter apoia na logística e produção.</p>
         </div>
       </div>
     </article>
 
-    <section class="pull-quote shell reveal" aria-label="Citação">
-      <blockquote class="pull-quote__body" data-i18n="parceiros.quote">A rede é gente, não logos. Cada introdução custa reputação, por isso só apresentamos quem já provámos no terreno.</blockquote>
-      <p class="pull-quote__attr" data-i18n="parceiros.quote_attr">Célio Correia · Gentle Laughter</p>
-    </section>
+    <article id="barata-studio" class="partner-entry reveal">
+      <div class="shell partner-entry__inner">
+        <figure class="partner-entry__media">
+          <img src="assets/logos/barata-studio.png" alt="Barata Studio — desenvolvimento web." loading="lazy" decoding="async" style="object-fit:contain;background:var(--paper-soft);" />
+        </figure>
+        <div class="partner-entry__body">
+          <span class="partner-entry__num" aria-hidden="true">04</span>
+          <p class="partner-entry__role">Digital · Desenvolvimento web</p>
+          <h2 class="partner-entry__name"><a href="https://baratastudio.com" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">Barata Studio.</a></h2>
+          <p class="partner-entry__ledger">Dev · Site que está a ler</p>
+          <p class="partner-entry__prose">Estúdio de desenvolvimento web responsável pela concepção e manutenção deste site. Sites institucionais, alojamento e suporte contínuo.</p>
+        </div>
+      </div>
+    </article>
 
     <section class="section shell reveal" aria-labelledby="adjacentes-title">
       <div class="section-header">
@@ -150,47 +194,30 @@
         <p class="section-lede" data-i18n="parceiros.t15">Outras valências da rede, fora da operação de eventos. Introduções caso a caso, conforme contexto do pedido. Nomes apresentados após acordo.</p>
       </div>
       <ul class="spine-list">
-        <li class="spine-list__feature">
-          <span class="spine-list__label" data-i18n="parceiros.t28">08 · Digital</span>
-          <div class="spine-list__name" data-i18n="parceiros.t29">Desenvolvimento web.</div>
-          <p class="spine-list__note" data-i18n="parceiros.t30">Sites institucionais e ecommerce, alojamento e suporte. Inclui o site que está a ler.</p>
-        </li>
         <li>
-          <span class="spine-list__label" data-i18n="parceiros.t16">04 · Imobiliária</span>
+          <span class="spine-list__label" data-i18n="parceiros.t16">05 · Imobiliária</span>
           <div class="spine-list__name" data-i18n="parceiros.t17">Mediação imobiliária.</div>
           <p class="spine-list__note" data-i18n="parceiros.t18">Arrendamento e venda residencial, com foco em Lisboa e arredores.</p>
         </li>
         <li>
-          <span class="spine-list__label" data-i18n="parceiros.t19">05 · Mobilidade</span>
+          <span class="spine-list__label" data-i18n="parceiros.t19">06 · Mobilidade</span>
           <div class="spine-list__name" data-i18n="parceiros.t20">Stand de viaturas.</div>
           <p class="spine-list__note" data-i18n="parceiros.t21">Compra, venda e crédito automóvel, com acompanhamento do processo.</p>
         </li>
         <li>
-          <span class="spine-list__label" data-i18n="parceiros.t22">06 · Financeiro</span>
+          <span class="spine-list__label" data-i18n="parceiros.t22">07 · Financeiro</span>
           <div class="spine-list__name" data-i18n="parceiros.t23">Intermediação de crédito.</div>
           <p class="spine-list__note" data-i18n="parceiros.t24">Crédito habitação, consolidado e automóvel, em mediador autorizado pelo Banco de Portugal.</p>
         </li>
         <li>
-          <span class="spine-list__label" data-i18n="parceiros.t25">07 · Contabilidade</span>
+          <span class="spine-list__label" data-i18n="parceiros.t25">08 · Contabilidade</span>
           <div class="spine-list__name" data-i18n="parceiros.t26">Gabinete de contabilidade.</div>
           <p class="spine-list__note" data-i18n="parceiros.t27">Apoio fiscal e contabilístico a empresas e profissionais liberais.</p>
         </li>
       </ul>
     </section>
 
-    <section class="section shell reveal" aria-labelledby="terreno-title">
-      <div class="section-header">
-        <p class="eyebrow" id="terreno-title" data-i18n="parceiros.t31">No terreno</p>
-        <h2 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.1; letter-spacing: -0.015em; margin: 0.4rem 0 0;" data-i18n="parceiros.t32">Imagens da operação conjunta.</h2>
-      </div>
-      <div class="terreno-asym">
-        <figure class="terreno-asym__tall"><img src="assets/casos/caso-05-paula-fernandes-monsanto/ig-DX5DLnOu-zf.poster.jpg" alt="Paula Fernandes em Monsanto Open Air, com transfer Paradise Streets e stagehands Gentle Laughter." loading="lazy" decoding="async" /></figure>
-        <figure class="terreno-asym__wide"><picture><source type="image/avif" srcset="assets/casos/parceiros/01.avif"><img src="assets/casos/parceiros/01.webp" alt="Operação Gentle Laughter no terreno, em parceria com a rede." loading="lazy" decoding="async" /></picture></figure>
-        <figure class="terreno-asym__detail"><picture><source type="image/avif" srcset="assets/casos/parceiros/02.avif"><img src="assets/casos/parceiros/02.webp" alt="Detalhe da operação Gentle Laughter com parceiros." loading="lazy" decoding="async" /></picture></figure>
-      </div>
-    </section>
-
-    <section class="contact-slab reveal">
+<section class="contact-slab reveal">
       <div class="shell contact-slab__inner">
         <div class="contact-slab__info">
           <h2 class="contact-slab__heading" data-i18n="parceiros.t33">Propor parceria ou pedir introdução.</h2>
